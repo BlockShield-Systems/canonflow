@@ -1,13 +1,14 @@
 import os
 
 from google.adk.agents import LlmAgent
+from google.adk.models.google_llm import Gemini
+from google.genai import types as genai_types
 from google.adk.tools.mcp_tool.mcp_session_manager import (
     StreamableHTTPConnectionParams,
 )
 from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
 
 from .policy import enforce_read_only_clickhouse
-from google.genai import types as genai_types
 from .rate_limit import pace_gemini_requests
 
 
@@ -24,7 +25,7 @@ def required_env(name: str) -> str:
 
 MCP_URL = required_env("CANONFLOW_MCP_URL")
 MCP_AUTH_TOKEN = required_env("CLICKHOUSE_MCP_AUTH_TOKEN")
-MODEL = os.getenv("CANONFLOW_MODEL", "gemini-3.7-flash")
+MODEL = os.getenv("CANONFLOW_MODEL", "gemini-3.1-pro-preview")
 PROJECT_SLUG = os.getenv(
     "CANONFLOW_PROJECT_SLUG",
     "yd-when-paradise-glitches",
@@ -52,7 +53,10 @@ clickhouse_toolset = McpToolset(
 
 root_agent = LlmAgent(
     name="canonflow_agent",
-    model=MODEL,
+    model=Gemini(
+        model=MODEL,
+        use_interactions_api=True,
+    ),
     description=(
         "CanonFlow is a source-grounded cinematic development agent for "
         "canon auditing, continuity analysis, screenplay development, "
@@ -169,10 +173,9 @@ Clearly separate retrieved facts from assessments and recommendations.
 """.strip(),
     tools=[clickhouse_toolset],
     generate_content_config=genai_types.GenerateContentConfig(
-        temperature=0,
         max_output_tokens=16_384,
         thinking_config=genai_types.ThinkingConfig(
-            thinking_level="medium",
+            thinking_level="high",
         ),
     ),
     before_model_callback=pace_gemini_requests,
