@@ -1,0 +1,9 @@
+[project]
+name = "canonflow-source-pipeline"
+version = "0.1.0"
+description = "Deterministic source extraction and provenance pipeline for CanonFlow"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "pypdf==6.16.2",
+    "clickhouse-connect==1.7.2",
+]

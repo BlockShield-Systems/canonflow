@@ -1,0 +1,20 @@
+[project]
+name = "canonflow-mcp-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Demian Lienert", email = "contact@ai-techart.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "clickhouse-connect==1.7.2",
+    "mcp-clickhouse>=0.4,<0.5",
+]
+
+[project.scripts]
+mcp-clickhouse = "mcp_clickhouse:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
