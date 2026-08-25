@@ -7,6 +7,7 @@ from google.adk.tools.mcp_tool.mcp_session_manager import (
 from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
 
 from .policy import enforce_read_only_clickhouse
+from .rate_limit import pace_gemini_requests
 
 
 def required_env(name: str) -> str:
@@ -166,5 +167,6 @@ When the audit is requested, return:
 Clearly separate retrieved facts from assessments and recommendations.
 """.strip(),
     tools=[clickhouse_toolset],
+    before_model_callback=pace_gemini_requests,
     before_tool_callback=enforce_read_only_clickhouse,
 )
