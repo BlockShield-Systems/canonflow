@@ -61,6 +61,58 @@ def test_allows_system_metadata() -> None:
     assert result is None
 
 
+def test_allows_aliased_project_join() -> None:
+    result = evaluate(
+        f"""
+        SELECT
+            c.chunk_id,
+            c.locator,
+            d.source_path
+        FROM canonflow.source_chunks AS c
+        INNER JOIN canonflow.source_documents AS d
+            ON d.document_id = c.document_id
+           AND d.project_id = c.project_id
+        WHERE c.project_id = toUUID('{PROJECT_ID}')
+          AND c.indexable = true
+        ORDER BY d.source_path, c.locator
+        LIMIT 10
+        """
+    )
+
+    assert result is None
+
+
+def test_allows_information_schema_metadata() -> None:
+    result = evaluate(
+        """
+        SELECT
+            table_schema,
+            table_name,
+            column_name
+        FROM information_schema.columns
+        WHERE table_schema = 'canonflow'
+        ORDER BY table_name, ordinal_position
+        """
+    )
+
+    assert result is None
+
+
+def test_blocks_external_database_with_alias() -> None:
+    result = evaluate(
+        f"""
+        SELECT e.chunk_id
+        FROM external_database.source_chunks AS e
+        WHERE e.project_id = toUUID('{PROJECT_ID}')
+        LIMIT 10
+        """
+    )
+
+    assert result is not None
+    assert result["status"] == "blocked"
+    assert "external_database" in result["reason"]
+
+
 def test_blocks_insert() -> None:
     result = evaluate(
         f"""
@@ -119,6 +171,9 @@ def main() -> None:
         test_allows_scoped_select,
         test_allows_project_slug_lookup,
         test_allows_system_metadata,
+        test_allows_aliased_project_join,
+        test_allows_information_schema_metadata,
+        test_blocks_external_database_with_alias,
         test_blocks_insert,
         test_blocks_unscoped_project_query,
         test_blocks_multiple_statements,

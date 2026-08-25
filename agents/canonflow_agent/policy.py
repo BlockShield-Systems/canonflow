@@ -3,6 +3,9 @@ from __future__ import annotations
 import re
 from typing import Any
 
+from sqlglot import exp, parse
+from sqlglot.errors import ParseError
+
 
 PROJECT_ID = "e8627781-5bf3-4c4d-905f-8dda49ab53d6"
 PROJECT_SLUG = "yd-when-paradise-glitches"
@@ -41,9 +44,11 @@ BLOCKED_SQL = re.compile(
     re.IGNORECASE | re.VERBOSE,
 )
 
-DATABASE_QUALIFIER = re.compile(
-    r"\b([A-Za-z_][A-Za-z0-9_]*)\s*\.",
-)
+ALLOWED_DATABASES = {
+    "canonflow",
+    "system",
+    "information_schema",
+}
 
 PROJECT_TABLES = {
     "projects",
@@ -176,6 +181,49 @@ def _sanitize_sql(sql: str) -> str:
     return "".join(output)
 
 
+def _referenced_databases(sql: str) -> set[str]:
+    """
+    Parse ClickHouse SQL and return actual database qualifiers from table
+    references.
+
+    Column qualifiers such as ``c.chunk_id`` are represented as column/table
+    aliases by the AST and are therefore not mistaken for databases.
+    """
+    try:
+        statements = parse(sql, read="clickhouse")
+    except ParseError as exc:
+        raise ValueError(f"Unable to parse ClickHouse SQL: {exc}") from exc
+
+    statements = [
+        statement
+        for statement in statements
+        if statement is not None
+    ]
+
+    if len(statements) != 1:
+        raise ValueError("Exactly one SQL statement is required.")
+
+    databases: set[str] = set()
+
+    for table in statements[0].find_all(exp.Table):
+        database = table.args.get("db")
+
+        if database is None:
+            continue
+
+        database_name = getattr(database, "name", None)
+
+        if not database_name:
+            database_name = str(database)
+
+        normalized = database_name.strip('`"').lower()
+
+        if normalized:
+            databases.add(normalized)
+
+    return databases
+
+
 def _blocked(reason: str) -> dict[str, Any]:
     return {
         "status": "blocked",
@@ -237,19 +285,17 @@ def enforce_read_only_clickhouse(
             f"{blocked_match.group(0)!r}."
         )
 
-    qualifiers = {
-        match.group(1).lower()
-        for match in DATABASE_QUALIFIER.finditer(
-            without_trailing_semicolon
-        )
-    }
+    try:
+        referenced_databases = _referenced_databases(query)
+    except ValueError as exc:
+        return _blocked(str(exc))
 
-    disallowed_databases = qualifiers - {"canonflow", "system"}
+    disallowed_databases = referenced_databases - ALLOWED_DATABASES
 
     if disallowed_databases:
         return _blocked(
             "Queries may access only canonflow or approved system metadata. "
-            f"Disallowed qualifiers: {sorted(disallowed_databases)}."
+            f"Disallowed databases: {sorted(disallowed_databases)}."
         )
 
     normalized_upper = without_trailing_semicolon.upper()
