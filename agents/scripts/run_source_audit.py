@@ -22,6 +22,25 @@ APP_NAME = "canonflow-source-audit"
 USER_ID = "demian"
 PROJECT_ID = "e8627781-5bf3-4c4d-905f-8dda49ab53d6"
 
+NO_CONTENT_ERROR_CODE = "MODEL_RETURNED_NO_CONTENT"
+
+RECOVERY_PROMPT = """
+The preceding source-audit turn completed all requested read-only tool calls,
+and all tool responses are already present in this same session, but no final
+textual response was produced.
+
+Continue from the existing session context. Do not call any tools again.
+Using only the source evidence, metadata, approved canon decisions, and tool
+responses already available in this session, produce the complete final
+Markdown source-audit report now.
+
+The report must follow every requirement and required section from the
+original source-audit request. Clearly distinguish verified source facts,
+approved canon decisions, contradictions, unresolved questions, and proposed
+findings. Do not invent canon and do not make autonomous canon decisions.
+Return only the final Markdown report.
+""".strip()
+
 SENSITIVE_KEYS = {
     "authorization",
     "password",
@@ -187,53 +206,122 @@ async def execute(args: argparse.Namespace) -> int:
     final_responses: list[str] = []
     tool_calls: list[dict[str, Any]] = []
     tool_responses: list[dict[str, Any]] = []
+    model_errors: list[dict[str, Any]] = []
+    recovery_attempted = False
+    recovery_succeeded = False
 
     with events_path.open(
         "w",
         encoding="utf-8",
         newline="\n",
     ) as events_file:
-        async for event in runner.run_async(
-            user_id=USER_ID,
-            session_id=session.id,
-            new_message=message,
-        ):
-            event_count += 1
-            collect_tool_activity(
-                event,
-                tool_calls,
-                tool_responses,
-            )
 
-            serialized = event_as_dict(event)
-            events_file.write(
-                json.dumps(
-                    serialized,
-                    ensure_ascii=False,
-                    separators=(",", ":"),
-                )
-                + "\n"
-            )
+        async def run_turn(
+            turn_message: types.Content,
+            phase: str,
+        ) -> None:
+            nonlocal event_count
 
-            is_final = getattr(
-                event,
-                "is_final_response",
-                lambda: False,
-            )()
+            async for event in runner.run_async(
+                user_id=USER_ID,
+                session_id=session.id,
+                new_message=turn_message,
+            ):
+                event_count += 1
 
-            if is_final:
-                text = content_text(
-                    getattr(event, "content", None)
+                collect_tool_activity(
+                    event,
+                    tool_calls,
+                    tool_responses,
                 )
 
-                if text:
-                    final_responses.append(text)
+                error_code = getattr(event, "error_code", None)
+                error_message = getattr(event, "error_message", None)
+
+                if error_code:
+                    model_errors.append(
+                        {
+                            "phase": phase,
+                            "code": str(error_code),
+                            "message": str(error_message or ""),
+                        }
+                    )
+
+                serialized = event_as_dict(event)
+                serialized["canonflow_phase"] = phase
+
+                events_file.write(
+                    json.dumps(
+                        serialized,
+                        ensure_ascii=False,
+                        separators=(",", ":"),
+                    )
+                    + "\n"
+                )
+                events_file.flush()
+
+                is_final = getattr(
+                    event,
+                    "is_final_response",
+                    lambda: False,
+                )()
+
+                if is_final:
+                    response_text = content_text(
+                        getattr(event, "content", None)
+                    )
+
+                    if response_text:
+                        final_responses.append(response_text)
+
+        await run_turn(
+            turn_message=message,
+            phase="primary",
+        )
+
+        primary_error_code = (
+            model_errors[-1]["code"]
+            if model_errors
+            else None
+        )
+
+        eligible_for_recovery = (
+            not final_responses
+            and primary_error_code == NO_CONTENT_ERROR_CODE
+            and len(tool_calls) > 0
+            and len(tool_calls) == len(tool_responses)
+        )
+
+        if eligible_for_recovery:
+            recovery_attempted = True
+
+            recovery_message = types.Content(
+                role="user",
+                parts=[types.Part(text=RECOVERY_PROMPT)],
+            )
+
+            await run_turn(
+                turn_message=recovery_message,
+                phase="no_content_recovery",
+            )
+
+            recovery_succeeded = bool(final_responses)
 
     completed_at = utc_now()
 
     if not final_responses:
+        last_model_error = (
+            model_errors[-1]
+            if model_errors
+            else None
+        )
+
         raise RuntimeError(
-            "The ADK run completed without a final textual response."
+            "The ADK run completed without a final textual response. "
+            f"Recovery attempted={recovery_attempted}; "
+            f"tool calls={len(tool_calls)}; "
+            f"tool responses={len(tool_responses)}; "
+            f"last model error={last_model_error!r}."
         )
 
     report_text = final_responses[-1].strip() + "\n"
@@ -261,6 +349,16 @@ async def execute(args: argparse.Namespace) -> int:
         "request_path": str(request_path),
         "request_sha256": request_hash,
         "event_count": event_count,
+        "recovery": {
+            "attempted": recovery_attempted,
+            "trigger": (
+                NO_CONTENT_ERROR_CODE
+                if recovery_attempted
+                else None
+            ),
+            "succeeded": recovery_succeeded,
+        },
+        "model_errors": model_errors,
         "tool_call_count": len(tool_calls),
         "tool_response_count": len(tool_responses),
         "tool_calls": tool_calls,
@@ -285,6 +383,8 @@ async def execute(args: argparse.Namespace) -> int:
     print(f"Session ID      : {session.id}")
     print(f"Model           : {root_agent.model}")
     print(f"Events          : {event_count}")
+    print(f"Recovery used   : {recovery_attempted}")
+    print(f"Recovery success: {recovery_succeeded}")
     print(f"Tool calls      : {len(tool_calls)}")
     print(f"Tool responses  : {len(tool_responses)}")
     print(f"Report chars    : {len(report_text)}")
