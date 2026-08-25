@@ -7,6 +7,7 @@ from google.adk.tools.mcp_tool.mcp_session_manager import (
 from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
 
 from .policy import enforce_read_only_clickhouse
+from google.genai import types as genai_types
 from .rate_limit import pace_gemini_requests
 
 
@@ -167,6 +168,13 @@ When the audit is requested, return:
 Clearly separate retrieved facts from assessments and recommendations.
 """.strip(),
     tools=[clickhouse_toolset],
+    generate_content_config=genai_types.GenerateContentConfig(
+        temperature=0,
+        max_output_tokens=16_384,
+        thinking_config=genai_types.ThinkingConfig(
+            thinking_level="medium",
+        ),
+    ),
     before_model_callback=pace_gemini_requests,
     before_tool_callback=enforce_read_only_clickhouse,
 )
