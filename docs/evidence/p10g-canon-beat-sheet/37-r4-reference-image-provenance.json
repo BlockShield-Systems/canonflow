@@ -1,0 +1,67 @@
+{
+  "artifact_type": "p10g_r4_character_reference_provenance",
+  "created_at_utc": "2026-08-26T23:49:57.301747Z",
+  "policy": {
+    "automatic_canon_release": false,
+    "automatic_publication": false,
+    "clickhouse_mutation_executed": false,
+    "frozen_r3_artifacts_modified": false,
+    "preserve_original_bytes": true,
+    "provider_calls_executed": false
+  },
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches"
+  },
+  "references": [
+    {
+      "byte_length": 1786170,
+      "character_id": "demian",
+      "controlled_path": "reference-images/r4/demian-character-reference.jpg",
+      "creation_provenance": "creator_owned_generated_with_gemini_pro",
+      "display_name": "Demian",
+      "identity_context": "creator_self_reference",
+      "intended_use": [
+        "private_character_reference",
+        "r4_visual_continuity",
+        "nscl_visual_design"
+      ],
+      "media_type": "image/jpeg",
+      "public_export": false,
+      "sha256": "5ba8287cafa2fce14b03f4b505649bfc42a4a7aa916962a8dc2fbd16f0bc8c7f",
+      "source_filename": "Demian (Y.D. - When Paradise Glitches).jpg"
+    },
+    {
+      "byte_length": 2163875,
+      "character_id": "yd",
+      "controlled_path": "reference-images/r4/yd-character-reference.jpg",
+      "creation_provenance": "creator_owned_generated_with_gemini_pro",
+      "display_name": "Y.D.",
+      "identity_context": "fictional_composite_character",
+      "intended_use": [
+        "private_character_reference",
+        "r4_visual_continuity",
+        "yd_character_design"
+      ],
+      "media_type": "image/jpeg",
+      "public_export": false,
+      "sha256": "589a886dd5f7fcf86055e6c6aedbafe67ec238bcf3b9f8f06936a63dd7f62ef1",
+      "source_filename": "Y.D (Y.D. - When Paradise Glitches).jpg"
+    }
+  ],
+  "revision": {
+    "parent_draft_sha256": "1b99ba8d6a3c5dddf68883ad95ffec926e858c79162b054515495caa19bbd6a3",
+    "parent_revision_run_id": "a8f16e58-7316-4415-b1a8-83131f96f7c7",
+    "revision": "R4",
+    "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0",
+    "status": "controlled_revision_in_progress"
+  },
+  "rights_and_provenance": {
+    "creator_owned": true,
+    "generated_with": "Google Gemini Pro",
+    "public_export_authorized": false,
+    "repository_scope": "private_development_and_evidence",
+    "third_party_character_claim": false
+  },
+  "schema_version": "1.0"
+}
