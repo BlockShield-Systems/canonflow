@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_beat_sheet_revision",
+  "attempt": 1,
+  "status": "provider_response_failed_immediate_local_validation",
+  "model": "gemini-3.1-pro-preview",
+  "transport": "Chat.send_message",
+  "validation_failures": [
+    "Physically implausible countdown wording remains: sub-two-minute",
+    "Human-approved amendment fact classification is absent"
+  ],
+  "revised_draft_persisted": false,
+  "revision_summary_persisted": false,
+  "database_access_performed": false,
+  "database_mutation_performed": false,
+  "automatic_canon_release_performed": false,
+  "retry_authorized": false
+}

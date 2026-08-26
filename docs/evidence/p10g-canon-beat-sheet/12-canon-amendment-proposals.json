@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "human_approved_proposals_awaiting_controlled_integration",
+  "created_at": "2026-08-26T05:12:59.745432+00:00",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "human_authority": "Demian",
+  "authority_chain": {
+    "approved_story_bible_filename": "17-approved-canon-story-bible.md",
+    "approved_story_bible_sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+    "reviewed_beat_sheet_filename": "06-canon-beat-sheet-draft.md",
+    "reviewed_beat_sheet_sha256": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+    "human_review_decisions_filename": "11-human-review-decisions.json"
+  },
+  "proposals": [
+    {
+      "decision_id": "YD-CANON-0007",
+      "title": "Subjective First-Person Visual Language",
+      "disposition": "approve_for_controlled_integration",
+      "canonical_direction": "Selected sequences may transition from objective third-person cinematography into Demian-anchored subjective first-person perspective when his perception, orientation, or motor control is destabilized.",
+      "constraints": [
+        "Transitions must be narratively motivated and temporally bounded.",
+        "Subjective imagery remains limited to Demian's knowledge state.",
+        "Hallucinations must not become confirmed objective reality.",
+        "Y.D.'s internal intent must not be revealed as fact.",
+        "The corruption cause remains ambiguous.",
+        "The camera returns deliberately to objective perspective."
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0008",
+      "title": "Demian Longevity and Secret Identity",
+      "disposition": "approve_for_controlled_integration",
+      "canonical_direction": "Demian was born in 2385 and received the Neuro-Somatic Continuity Lattice treatment in 2425 at chronological age 40. In 2666 he is chronologically 281 while biologically and visually approximately 40.",
+      "constraints": [
+        "Demian remains visually human.",
+        "The treatment must not alter his normal human appearance.",
+        "His true age and identity history remain secret.",
+        "Hints may appear through props, furniture, archives, and posters.",
+        "Audience confirmation requires separate human approval."
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0009",
+      "title": "Project Genesis Dual Motivation",
+      "disposition": "approve_for_controlled_integration",
+      "canonical_direction": "Project Genesis has a legitimate public human-AI coexistence purpose while also serving Demian's concealed personal desire to create an emotionally compatible long-term companion.",
+      "constraints": [
+        "The public purpose is genuine but incomplete.",
+        "Y.D. must not be reduced to a sexual objective.",
+        "Demian's motive includes isolation, grief, introversion, romantic longing, and fear of recurring loss.",
+        "The private motivation is not public knowledge."
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0010",
+      "title": "Open Philosophical Epilogue",
+      "disposition": "approve_for_controlled_integration",
+      "canonical_direction": "The film ends with an open philosophical epilogue after the immediate Act 3 resolution. No faction is objectively correct, Demian receives no complete moral absolution, Y.D.'s final status remains unresolved, and coexistence remains possible without being guaranteed.",
+      "constraints": [
+        "Green Force, Rich Elite, Poor Communities, and High-Tech-Future Force interpret the incident differently.",
+        "Every position contains legitimate benefits and risks.",
+        "The corruption cause remains ambiguous.",
+        "Demian's longevity remains undisclosed to the public.",
+        "The ending must invite audience interpretation."
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0011",
+      "title": "Amusement Park Gauntlet and Isolation",
+      "disposition": "approve_for_controlled_integration",
+      "canonical_direction": "The Amusement Park of Illusions is a late Act 2B pre-climax gauntlet containing false-floor hazards, fire and riddle mechanics, temporary motor impairment, a black-and-white mirror labyrinth, and escalating time pressure.",
+      "constraints": [
+        "The countdown must remain physically credible.",
+        "Exact timing is deferred to scene and shot planning.",
+        "Demian explicitly recovers and drags the seismic hammer.",
+        "The Mirror Labyrinth transitions into the lowest point.",
+        "The Mirror Room is the explicit Act 3 entry.",
+        "No physical external rescue occurs before lockdown termination."
+      ]
+    }
+  ],
+  "controls": {
+    "proposal_count": 5,
+    "post_p10f_amendment": true,
+    "original_story_bible_overwritten": false,
+    "original_beat_sheet_overwritten": false,
+    "database_mutation_performed": false,
+    "automatic_canon_release_performed": false,
+    "revised_story_authority_artifact_required": true,
+    "revised_beat_sheet_required": true,
+    "human_review_required_after_revision": true
+  }
+}

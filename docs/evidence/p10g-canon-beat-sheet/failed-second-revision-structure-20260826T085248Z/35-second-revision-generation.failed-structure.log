@@ -1,0 +1,23 @@
+P10G second revision process: FAILED
+Starting one controlled P10G second Beat Sheet revision...
+Timeout: 30 minutes
+Model: gemini-3.1-pro-preview
+AFC route: Chat.send_message
+Streaming: disabled
+External tools: disabled
+Database access: disabled
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 795, in <module>
+    main()
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 701, in main
+    metrics = validate_candidate(revised_text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 420, in validate_candidate
+    beat_037 = extract_beat(text, "P10G-BEAT-037")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 208, in extract_beat
+    raise RuntimeError(f"Unable to extract beat: {beat_id}")
+RuntimeError: Unable to extract beat: P10G-BEAT-037

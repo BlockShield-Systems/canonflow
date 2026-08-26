@@ -1,0 +1,59 @@
+P10G second revision process: FAILED
+Starting one controlled P10G second Beat Sheet revision...
+Timeout: 30 minutes
+Model: gemini-3.1-pro-preview
+AFC route: Chat.send_message
+Streaming: disabled
+External tools: disabled
+Database access: disabled
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 795, in <module>
+    main()
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 694, in main
+    response = chat.send_message(generation_input)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/chats.py", line 331, in send_message
+    response = self._modules.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/models.py", line 6509, in generate_content
+    return self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/models.py", line 4978, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1747, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1534, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1511, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 173, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 204, in raise_error
+    raise ServerError(status_code, response_json, response)
+google.genai.errors.ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision",
+  "attempt": 1,
+  "classification": "provider_transport_failure",
+  "status": "provider_http_503_unavailable",
+  "model": "gemini-3.1-pro-preview",
+  "transport": "Chat.send_message",
+  "recorded_at_utc": "2026-08-26T07:07:08+00:00",
+  "provider_markers_found": [
+    "503",
+    "UNAVAILABLE"
+  ],
+  "failed_log": {
+    "archived_filename": "35-second-revision-generation.failed-provider-503.log",
+    "sha256": "76d98ceb999d909422e05b63f38784728b2625988184cc487f9ddba66be460d9"
+  },
+  "provider_response_persisted_as_draft": false,
+  "runner_modified": false,
+  "generation_input_modified": false,
+  "authority_artifacts_modified": false,
+  "database_access": false,
+  "database_mutation": false,
+  "automatic_canon_release": false,
+  "retry_authorized": true,
+  "retry_condition": "Retry the exact frozen runner after provider availability recovers."
+}

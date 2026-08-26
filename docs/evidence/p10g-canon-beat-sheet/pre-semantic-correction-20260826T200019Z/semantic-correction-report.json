@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "operation": "deterministic_semantic_conformance_correction",
+  "provider_calls_executed": false,
+  "database_mutation": false,
+  "automatic_canon_release": false,
+  "human_review_required": true,
+  "source_authority": [
+    "25-final-human-review-revision-authority.json",
+    "26-second-revision-canon-amendments.json",
+    "27-second-revision-contract.json",
+    "29-second-revision-generation-input.md",
+    "29a-canon-beat-sheet-second-revision-runner.py"
+  ],
+  "corrections": [
+    {
+      "part_number": 1,
+      "beat_id": "P10G-BEAT-002",
+      "rule": "explicit 2666 public introduction"
+    },
+    {
+      "part_number": 1,
+      "beat_id": "P10G-BEAT-005",
+      "rule": "VirtualCrew commercial element"
+    },
+    {
+      "part_number": 1,
+      "beat_id": "P10G-BEAT-008",
+      "rule": "small water request"
+    },
+    {
+      "part_number": 2,
+      "beat_id": "P10G-BEAT-012",
+      "rule": "epistemic boundary"
+    },
+    {
+      "part_number": 4,
+      "beat_id": "P10G-BEAT-042",
+      "rule": "external timer expiration"
+    },
+    {
+      "part_number": 1,
+      "beat_id": null,
+      "rule": "objective-love-motive false positive"
+    },
+    {
+      "part_number": 4,
+      "beat_id": null,
+      "rule": "sarcasm-preservation wording"
+    },
+    {
+      "part_number": 4,
+      "beat_id": null,
+      "rule": "non-final integration wording"
+    }
+  ],
+  "validation": {
+    "characters": 176869,
+    "beat_heading_count": 44,
+    "numbered_section_count": 24,
+    "beat_field_count": 16,
+    "sha256": "1b99ba8d6a3c5dddf68883ad95ffec926e858c79162b054515495caa19bbd6a3",
+    "strict_validation_passed": true
+  }
+}

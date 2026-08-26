@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "multipart": true,
+  "part_number": 2,
+  "part_count": 4,
+  "part_run_id": "e47503d6-56f5-4bc8-895e-9dfc3db2bad3",
+  "parent_revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+  "parent_revised_draft_sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+  "model": "gemini-3.1-pro-preview",
+  "started_at_utc": "2026-08-26T18:05:54.654230+00:00",
+  "completed_at_utc": "2026-08-26T18:48:34.195986+00:00",
+  "transport": {
+    "route": "Chat.send_message_stream",
+    "streaming": true,
+    "external_tools": false,
+    "temperature": 0.15,
+    "maximum_output_tokens": 65536,
+    "timeout_ms": 3600000,
+    "subdivision": true,
+    "provider_request_count": 2
+  },
+  "output": {
+    "filename": "30b-second-revision-part-02-beats-012-022.md",
+    "part_number": 2,
+    "characters": 43415,
+    "sha256": "8cba3c8c7f5d49ab17e6dbcd9a9c71cedb8632daa860578b37037de43732552a",
+    "first_beat_id": "P10G-BEAT-012",
+    "last_beat_id": "P10G-BEAT-022",
+    "beat_heading_count": 11,
+    "numbered_section_count": 3,
+    "numbered_section_ids": [
+      "8",
+      "9",
+      "10"
+    ],
+    "numbered_section_headings": [
+      "# 8. First Act Turning Point",
+      "# 9. Act 2A – Escalation and Dependency",
+      "# 10. Midpoint"
+    ],
+    "beat_field_count": 16,
+    "malformed_beat_blocks": [],
+    "immediate_part_validation_passed": true,
+    "persisted_sha256": "a3dbf31763c005f1168d416a608df517f1b2512211f8e48ef8e9fa6f8eeef050"
+  },
+  "subparts": [
+    {
+      "subpart_id": "2a",
+      "run_id": "095bf333-1e75-4a80-ad12-c0e85aac7200",
+      "filename": "30b1-second-revision-subpart-02a-beats-012-017.md",
+      "sha256": "33e78865c004065b8bda2e8bfe6c41a59c9a088641175d320c5a97e816204f84"
+    },
+    {
+      "subpart_id": "2b",
+      "run_id": "2ca32787-f08f-4e3f-b994-f1a367470c7c",
+      "filename": "30b2-second-revision-subpart-02b-beats-018-022.md",
+      "sha256": "71be797480336ef7b1433b49e3f16d116b44554352b0c4bb608b4538144f8162"
+    }
+  ],
+  "controls": {
+    "database_access": false,
+    "database_mutation": false,
+    "automatic_canon_release": false,
+    "human_review_required": true,
+    "strict_validation_required": true,
+    "frozen_inputs_modified": false
+  },
+  "status": "multipart_segment_locally_corrected_and_strictly_validated",
+  "post_generation_deterministic_corrections": [
+    {
+      "part_number": 2,
+      "beat_id": "P10G-BEAT-012",
+      "rule": "epistemic boundary"
+    }
+  ]
+}

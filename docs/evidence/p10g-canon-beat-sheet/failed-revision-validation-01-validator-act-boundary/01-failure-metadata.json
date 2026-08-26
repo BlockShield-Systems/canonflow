@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "strict_revised_beat_sheet_validation",
+  "status": "validator_false_negative_archived",
+  "failed_check": "P10G-R2-VAL-013",
+  "validation_checks": 22,
+  "validation_passed": 21,
+  "validation_failures": 1,
+  "cause": "Validator incorrectly required P10G-BEAT-031 and P10G-BEAT-032 to be Act 2B instead of Lowest-Point Transition.",
+  "draft_structure_correct": true,
+  "revised_draft_modified": false,
+  "gemini_retry_required": false,
+  "database_access_performed": false,
+  "database_mutation_performed": false,
+  "automatic_canon_release_performed": false
+}

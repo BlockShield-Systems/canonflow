@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "strict_revised_beat_sheet_validation",
+  "status": "failed_strict_validation",
+  "created_at": "2026-08-26T05:44:42.956533+00:00",
+  "human_authority": "Demian",
+  "artifact": {
+    "filename": "19-canon-beat-sheet-revised-draft.md",
+    "sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+    "characters": 98355,
+    "revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+    "parent_generation_run_id": "002a27d3-a414-4a25-b21e-d3c924b2a391"
+  },
+  "summary": {
+    "checks": 22,
+    "passed": 21,
+    "failures": 1,
+    "beat_entries": 44,
+    "beat_body_fields": 16,
+    "numbered_sections": 24,
+    "canon_decisions": 11,
+    "amendment_classification_occurrences": 44,
+    "source_filename_matches": 48,
+    "page_locator_matches": 0,
+    "line_locator_matches": 2
+  },
+  "checks": [
+    {
+      "check_id": "P10G-R2-VAL-001",
+      "subject": "Revised artifact SHA-256 identity",
+      "passed": true,
+      "evidence": {
+        "expected": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+        "actual": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0"
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-002",
+      "subject": "Immutable predecessor identities",
+      "passed": true,
+      "evidence": {
+        "original_beat_sheet_sha256": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+        "approved_story_bible_sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c"
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-003",
+      "subject": "Revision summary identity",
+      "passed": true,
+      "evidence": {
+        "revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+        "parent_generation_run_id": "002a27d3-a414-4a25-b21e-d3c924b2a391",
+        "status": "revised_generated_awaiting_strict_validation"
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-004",
+      "subject": "Draft size and end marker",
+      "passed": true,
+      "evidence": {
+        "characters": 98355,
+        "minimum_characters": 75000,
+        "end_marker_present": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-005",
+      "subject": "Exact ordered Beat headings",
+      "passed": true,
+      "evidence": {
+        "beat_count": 44,
+        "first_beat_id": "P10G-BEAT-001",
+        "last_beat_id": "P10G-BEAT-044",
+        "ordered_ids_match": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-006",
+      "subject": "Complete non-empty Beat fields",
+      "passed": true,
+      "evidence": {
+        "required_body_fields_per_beat": 16,
+        "field_failures": {}
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-007",
+      "subject": "Numbered top-level sections",
+      "passed": true,
+      "evidence": {
+        "expected": 24,
+        "found": 24
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-008",
+      "subject": "Canon Decision references YD-CANON-0001..0011",
+      "passed": true,
+      "evidence": {
+        "expected_count": 11,
+        "missing": []
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-009",
+      "subject": "Human-approved amendment classification",
+      "passed": true,
+      "evidence": {
+        "classification_occurrences": 44,
+        "amendment_reference_counts": {
+          "YD-CANON-0007": 8,
+          "YD-CANON-0008": 8,
+          "YD-CANON-0009": 6,
+          "YD-CANON-0010": 8,
+          "YD-CANON-0011": 11
+        }
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-010",
+      "subject": "Corrected longevity chronology",
+      "passed": true,
+      "evidence": {
+        "markers": {
+          "2385": true,
+          "2425": true,
+          "2666": true,
+          "281": true,
+          "visual_age_40": true,
+          "NSCL": true
+        },
+        "2385_2425_2666_in_prologue": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-011",
+      "subject": "Beat 003 reframed as The Long Build",
+      "passed": true,
+      "evidence": {
+        "actual_title": "The Long Build"
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-012",
+      "subject": "Knowledge-state separation",
+      "passed": true,
+      "evidence": {
+        "secret": true,
+        "public_knowledge": true,
+        "audience_hints": true,
+        "private_motivation": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-013",
+      "subject": "Corrected Act 2B to Act 3 structure",
+      "passed": false,
+      "evidence": {
+        "act2b_failures": {
+          "P10G-BEAT-031": "Lowest-Point Transition",
+          "P10G-BEAT-032": "Lowest-Point Transition"
+        },
+        "beat031_lowest_point_present": true,
+        "beat034_act_position": "Act 3"
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-014",
+      "subject": "Physically credible countdown representation",
+      "passed": true,
+      "evidence": {
+        "countdown_present": true,
+        "forbidden_phrases": [],
+        "numeric_two_minutes_present": false
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-015",
+      "subject": "Seismic-hammer recovery continuity",
+      "passed": true,
+      "evidence": {
+        "seismic_hammer_present": true,
+        "recovery_action_present": true,
+        "dragging_action_present": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-016",
+      "subject": "Bounded subjective First-Person direction",
+      "passed": true,
+      "evidence": {
+        "subjective_direction_present": true,
+        "objective_return_present": true,
+        "Demian_knowledge_anchor_present": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-017",
+      "subject": "Corruption-cause ambiguity",
+      "passed": true,
+      "evidence": {
+        "ambiguity_present": true,
+        "forbidden_certainty_phrases": []
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-018",
+      "subject": "Approved Y.D. dual-state terminology",
+      "passed": true,
+      "evidence": {
+        "approved_term_present": true,
+        "forbidden_term_present": false
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-019",
+      "subject": "Open philosophical Epilogue",
+      "passed": true,
+      "evidence": {
+        "factions": {
+          "Green Force": true,
+          "Rich Elite": true,
+          "Poor Communities": true,
+          "High-Tech-Future Force": true
+        },
+        "open_ending_present": true,
+        "epilogue_marker_present": true
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-020",
+      "subject": "Non-empty source references for every Beat",
+      "passed": true,
+      "evidence": {
+        "empty_source_beats": [],
+        "source_filename_matches": 48,
+        "page_locator_matches": 0,
+        "line_locator_matches": 2
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-021",
+      "subject": "Database and canon-release controls",
+      "passed": true,
+      "evidence": {
+        "database_access_performed": false,
+        "database_mutation_performed": false,
+        "automatic_canon_release_performed": false
+      }
+    },
+    {
+      "check_id": "P10G-R2-VAL-022",
+      "subject": "Human authority and amendment chain",
+      "passed": true,
+      "evidence": {
+        "human_authority": "Demian",
+        "amendments": [
+          "YD-CANON-0007",
+          "YD-CANON-0008",
+          "YD-CANON-0009",
+          "YD-CANON-0010",
+          "YD-CANON-0011"
+        ]
+      }
+    }
+  ],
+  "failed_checks": [
+    "P10G-R2-VAL-013"
+  ],
+  "controls": {
+    "revised_draft_modified": false,
+    "original_draft_modified": false,
+    "story_bible_modified": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "automatic_canon_release_performed": false,
+    "human_review_required": true
+  }
+}

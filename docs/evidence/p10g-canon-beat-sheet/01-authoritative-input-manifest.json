@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "initialized_awaiting_generation_contract",
+  "created_at": "2026-08-26T01:38:28Z",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "human_authority": {
+    "name": "Demian",
+    "role": "human_canon_authority"
+  },
+  "authoritative_story_bible": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/17-approved-canon-story-bible.md",
+    "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+    "status": "reviewed_approved_and_frozen",
+    "precedence": 1
+  },
+  "canon_constraints": {
+    "decision_ids": [
+      "YD-CANON-0001",
+      "YD-CANON-0002",
+      "YD-CANON-0003",
+      "YD-CANON-0004",
+      "YD-CANON-0005",
+      "YD-CANON-0006"
+    ],
+    "decision_count": 6,
+    "all_approved": true,
+    "approved_by": "Demian",
+    "precedence": 2
+  },
+  "source_policy": {
+    "approved_story_bible_is_primary_story_authority": true,
+    "approved_canon_decisions_are_hard_constraints": true,
+    "p10c_sources_are_traceability_evidence": true,
+    "new_story_facts_must_be_flagged_for_human_review": true,
+    "ambiguities_must_not_be_silently_resolved": true,
+    "yd_corruption_cause_must_remain_ambiguous": true,
+    "historical_four_second_timings_are_not_binding": true,
+    "feature_length_structure_required": true
+  },
+  "workflow_controls": {
+    "read_only_inputs": true,
+    "additional_model_call_performed": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "automatic_canon_release_allowed": false,
+    "structural_validation_required": true,
+    "human_review_required": true
+  },
+  "authoritative_inputs": [
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/17-approved-canon-story-bible.md",
+      "filename": "17-approved-canon-story-bible.md",
+      "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+      "size_bytes": 19057,
+      "authority": "P10F reviewed and approved Story Bible",
+      "purpose": "Primary narrative authority for the Canon Beat Sheet"
+    },
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/16-human-review-decisions.json",
+      "filename": "16-human-review-decisions.json",
+      "sha256": "e017b18dc68268bdb5019ec8aad42af851589da0b853b6d665cfcb872447c0e9",
+      "size_bytes": 4319,
+      "authority": "Demian",
+      "purpose": "Evidence of ten approved P10F human-review decisions"
+    },
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/18-final-approval-verification.json",
+      "filename": "18-final-approval-verification.json",
+      "sha256": "05a294afc63bb570e8231cfd2f44475c1ba18b28f49138333b07ad65671d1f8b",
+      "size_bytes": 2915,
+      "authority": "P10F final verification",
+      "purpose": "Cryptographic and semantic approval evidence"
+    },
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/19-completion-record.md",
+      "filename": "19-completion-record.md",
+      "sha256": "4fb37e182206682356c590a13a7d106314121e1411e1dfca2f30886039ba5f25",
+      "size_bytes": 1368,
+      "authority": "P10F completion record",
+      "purpose": "P10F workflow completion evidence"
+    },
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/03-read-only-canon-snapshot.jsonl",
+      "filename": "03-read-only-canon-snapshot.jsonl",
+      "sha256": "adbc855da86757fb72fea1df4f578f4de66db61e822b56c2a4e98a75230f84b1",
+      "size_bytes": 23594,
+      "authority": "ClickHouse read-only canon snapshot",
+      "purpose": "Hard constraints YD-CANON-0001 through YD-CANON-0006"
+    },
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/06-read-only-canon-snapshot-verification.json",
+      "filename": "06-read-only-canon-snapshot-verification.json",
+      "sha256": "ba29441614d73b023af74c0886b3bc6755cfaec42446cfba08d1d8ded0e245d5",
+      "size_bytes": 1703,
+      "authority": "P10F snapshot verification",
+      "purpose": "Verification of the six approved canon decisions"
+    },
+    {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+      "filename": "08-source-audit-report.md",
+      "sha256": "2f0b7d1fd94d8d1452284b28e2ff9da1d171cea48222b3d464d862ddad341a6f",
+      "size_bytes": 14977,
+      "authority": "P10C accepted source audit",
+      "purpose": "Primary-source traceability and verified locators"
+    }
+  ],
+  "required_beat_sheet_scope": {
+    "format": "feature_length_film",
+    "minimum_act_structure": [
+      "Act 1",
+      "Act 2A",
+      "Midpoint",
+      "Act 2B",
+      "Act 3",
+      "Epilogue"
+    ],
+    "required_canon_elements": [
+      "Demian is 40 years old",
+      "Feature-length runtime without fifteen-minute compression",
+      "Y.D. authored or deployed the modified doll and seismic hammer",
+      "Demian does not know Y.D.'s authorship during the Act 1 event",
+      "Amusement Park of Illusions is a major survival escape-room sequence",
+      "Amusement Park bridges Act 2B into the Mirror Room",
+      "Y.D.'s corruption cause remains causally ambiguous",
+      "Dialogue intent, dark humor, satire, and voice progression are preserved",
+      "Historical four-second frame timings are discarded as binding constraints"
+    ]
+  },
+  "planned_outputs": [
+    "02-canon-beat-sheet-generation-contract.json",
+    "03-canon-beat-sheet-generation-request.md",
+    "04-canon-beat-sheet-generation-input.md",
+    "05-canon-beat-sheet-generation-runner.py",
+    "06-canon-beat-sheet-draft.md",
+    "07-canon-beat-sheet-generation-summary.json",
+    "08-canon-beat-sheet-validation.json",
+    "09-canon-beat-sheet-human-review.md"
+  ],
+  "next_controlled_action": {
+    "step": "P10G Step 2",
+    "action": "create_canon_beat_sheet_generation_contract",
+    "database_mutation_required": false,
+    "human_review_required_after_generation": true
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "human_review_completed_revision_required",
+  "created_at": "2026-08-26T05:12:59.745432+00:00",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "reviewer": "Demian",
+  "reviewed_artifact": {
+    "filename": "06-canon-beat-sheet-draft.md",
+    "sha256": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+    "generation_run_id": "002a27d3-a414-4a25-b21e-d3c924b2a391"
+  },
+  "structural_validation": {
+    "filename": "08-canon-beat-sheet-validation.json",
+    "status": "passed_structural_awaiting_human_review",
+    "failures": 0
+  },
+  "summary": {
+    "review_items": 13,
+    "approved": 3,
+    "needs_revision": 10,
+    "rejected": 0,
+    "deferred": 0,
+    "final_disposition": "needs_revision"
+  },
+  "decisions": [
+    {
+      "review_id": "P10G-REVIEW-001",
+      "subject": "Authority and precedence",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "The approved P10F Story Bible remains primary authority.",
+        "Chronology and corruption-ambiguity wording require revision.",
+        "Approved amendments YD-CANON-0007..0011 must be integrated through a controlled revision."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-002",
+      "subject": "Feature-film structure",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "Use Amusement Park as late Act 2B / Pre-Climax Gauntlet.",
+        "Use Mirror Labyrinth as the transition into the lowest point.",
+        "Use Mirror Room as the explicit Act 3 entry.",
+        "Keep a separate philosophical Epilogue after Act 3."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-003",
+      "subject": "Beat completeness and progression",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "The 44-beat foundation is accepted.",
+        "Normalize every beat as a real Markdown heading.",
+        "Correct chronology, act labels, countdown timing, and hammer continuity."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-004",
+      "subject": "Demian character continuity",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "Demian was born in 2385.",
+        "He received longevity treatment in 2425 at chronological age 40.",
+        "In 2666 he is chronologically 281 but visually approximately 40.",
+        "His age, identities, treatment, and multi-era history remain secret."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-005",
+      "subject": "Y.D. character and voice progression",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "The Your Dear, Your Devil, fracture, and neutral stages are accepted.",
+        "Y.D.'s internal motives must not be presented as objective fact.",
+        "Use the term 'fractured dual-state AI entity'."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-006",
+      "subject": "Doll and seismic-hammer event",
+      "reviewer": "Demian",
+      "disposition": "approve",
+      "notes": [
+        "Y.D. remains the actual deployer or originator.",
+        "Demian remains unaware of this during the Act 1 event."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-007",
+      "subject": "Amusement Park of Illusions",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "The major survival escape-room concept is approved.",
+        "The proposed traps are approved for controlled integration.",
+        "The countdown must be increased and made physically credible.",
+        "Demian must explicitly recover and drag the seismic hammer."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-008",
+      "subject": "Mirror Room and final confrontation",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "The confrontation and thematic climax are accepted.",
+        "Interpretations of Y.D.'s motives must remain subjective.",
+        "The immediate threat may resolve without resolving the ethical questions."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-009",
+      "subject": "Corruption ambiguity",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "Demian may accept responsibility for his contribution.",
+        "He must not confirm himself as the objective cause of the corruption.",
+        "Multiple plausible corruption causes must remain viable."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-010",
+      "subject": "Source traceability",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "Existing filenames and Canon Decision references are useful.",
+        "Revision must improve verified page or line locator granularity.",
+        "New post-P10F material must reference the amendment package."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-011",
+      "subject": "Non-canon proposals",
+      "reviewer": "Demian",
+      "disposition": "approve",
+      "notes": [
+        "Amusement Park trap concepts are approved.",
+        "Countdown and neurotoxin pressure are approved as concepts.",
+        "Exact timing must be revised during scene development.",
+        "Absolute physical isolation remains until the lockdown ends.",
+        "No physical outside rescue occurs during the central conflict."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-012",
+      "subject": "Subjective first-person visual language",
+      "reviewer": "Demian",
+      "disposition": "approve",
+      "notes": [
+        "Use controlled Demian-anchored subjective first-person perspective.",
+        "Priority beats include 030, 031, 032, 034, and 035.",
+        "Subjective imagery must remain bounded by Demian's knowledge.",
+        "Return deliberately to objective perspective in the Mirror Room."
+      ]
+    },
+    {
+      "review_id": "P10G-REVIEW-013",
+      "subject": "Final Beat Sheet disposition",
+      "reviewer": "Demian",
+      "disposition": "needs_revision",
+      "notes": [
+        "The current frozen draft is not approved as final canon.",
+        "A controlled revision is required.",
+        "The revised artifact requires strict validation and new human review."
+      ]
+    }
+  ],
+  "controls": {
+    "draft_modified": false,
+    "story_bible_modified": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "automatic_canon_release_performed": false,
+    "human_review_completed": true,
+    "revised_draft_required": true
+  }
+}

@@ -1,0 +1,6 @@
+48e1c77c9230abc167a82b48b37c53ca71bbf7c7a46dccc33f3c7cd029c4d3f4  README.md
+39a8876dceed2ad90ffe43f969cecef754c872ab490b49d1e57e5071e4b6a7d3  01-authoritative-input-manifest.json
+7327600ded54ede1995ab58f18f2d2c5ea4e8ead92397e0fa0f0ff1418c60c64  01a-canon-beat-sheet-generation-request-builder.py
+622914efc7bc79fe8d1e486df94be84446c224727b0b576237254830dee16077  02-canon-beat-sheet-generation-contract.json
+482e39ce4cd1b6db37e127026daae778074011ac35cefa79a3da0e0fa984d8cd  03-canon-beat-sheet-generation-request.md
+0bdac9dfac2fbd4fd1fed2f336cb1ba9298b1c68aac2b69094b92bb29e304bdd  04-canon-beat-sheet-generation-input.md

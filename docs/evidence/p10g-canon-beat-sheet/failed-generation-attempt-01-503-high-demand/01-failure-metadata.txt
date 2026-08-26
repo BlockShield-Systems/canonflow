@@ -1,0 +1,23 @@
+schema_version=1
+workflow=P10G Canon Beat Sheet
+attempt=1
+status=failed_provider_503_high_demand
+archived_at_utc=2026-08-26T02:10:12Z
+model=gemini-3.1-pro-preview
+transport=Chat.send_message
+http_status=503
+provider_status=UNAVAILABLE
+process_status=1
+draft_created=false
+summary_created=false
+database_access=false
+database_mutation=false
+automatic_canon_release=false
+
+[artifact-sha256]
+43681ec6ca41fe202dd5ebf8e48ea33fa50d6d92e522bda84309a5f69a65876e  05-runner-at-failure.py
+622914efc7bc79fe8d1e486df94be84446c224727b0b576237254830dee16077  02-contract-at-failure.json
+b325f5281736fb4ec20a480d3958f8cde8e16a351b4ecd691620bfe7448c3387  SHA256SUMS.generation-request.at-failure
+c671201b8361f4d6080a6db649e1d5d360085184c6848c5e093b6e755b46d0de  SHA256SUMS.runner.at-failure
+4fe1401244cc43da942f34e0f5437983ed3941f630bcd177bc2a185e7b3ddf8b  10-failed-generation.log
+8ea89aa932154aeb54bcf6affb078249526697818200b307a0e1b08e82f6deb4  README.md

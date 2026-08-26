@@ -1,0 +1,15 @@
+Starting controlled multipart package 1 of 4...
+Beat range: P10G-BEAT-001..P10G-BEAT-011
+Minimum part characters: 29719
+Model: gemini-3.1-pro-preview
+AFC route: Chat.send_message
+Streaming: disabled
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+Part Run ID: 8d13e033-7ba9-4828-9afa-a1a3aeddf780
+Part characters: 40071
+Part Beat headings: 11
+Part SHA-256: 4645dd32736f9f7b3f029490d3ddff53930695f2d26d945663a96a6500691742
+P10G MULTIPART PACKAGE 1: OK
+P10G multipart second revision process: COMPLETED

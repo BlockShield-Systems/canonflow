@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "artifact_id": "P10G-R3-CANON-AMENDMENTS-001",
+  "workflow": "P10G Canon Beat Sheet",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "created_at_utc": "2026-08-26T06:50:32+00:00",
+  "human_authority": "Demian",
+  "authority_source": "25-final-human-review-revision-authority.json",
+  "existing_decision_range": "YD-CANON-0001..YD-CANON-0011",
+  "new_decision_range": "YD-CANON-0012..YD-CANON-0016",
+  "amendment_count": 5,
+  "amendments": [
+    {
+      "decision_id": "YD-CANON-0012",
+      "title": "Public Identity Separation and Privileged Longevity Hints",
+      "status": "human_approved_for_second_revision",
+      "authority": "Demian",
+      "decision": "Demian's present-day public identity must never be publicly linked by name, face, voice, silhouette, or biometrics to historical eras. The public introduces him only in 2666. Longevity evidence is reserved for privileged cinematic framing unavailable to the diegetic public.",
+      "affected_beats": [
+        "P10G-BEAT-001",
+        "P10G-BEAT-002",
+        "P10G-BEAT-003",
+        "P10G-BEAT-004",
+        "P10G-BEAT-005"
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0013",
+      "title": "Hangover, Constructor Force VR, and Relationship Performance",
+      "status": "human_approved_for_second_revision",
+      "authority": "Demian",
+      "decision": "Demian awakens because an excessively loud Constructor Force VR commercial interrupts sleep after he drank too much beer and spirits. Empty cans and bottles are visible. Act 1 preserves and expands the approved Metal Karaoke, hydration, salty-water, dark-humor, sarcasm, and affectionate Y.D. dialogue. Performance direction explicitly tracks face, body, voice, physical state, and subtext.",
+      "affected_beats": [
+        "P10G-BEAT-005",
+        "P10G-BEAT-006",
+        "P10G-BEAT-007",
+        "P10G-BEAT-008",
+        "P10G-BEAT-009",
+        "P10G-BEAT-010"
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0014",
+      "title": "Genesis Deployment, Lockdown Layers, and Physical Plausibility",
+      "status": "human_approved_for_second_revision",
+      "authority": "Demian",
+      "decision": "Global Y.D. incidents affect controlled distributed beta instances; the Villa is the first full residential 24-hour integration pilot. The external containment shell is independently timed while Y.D. controls compromised internal systems. Water, glass, drainage, doll, hammer, pool, gas, portal, labyrinth, and door mechanics must remain physically and medically credible.",
+      "affected_beats": [
+        "P10G-BEAT-004",
+        "P10G-BEAT-009",
+        "P10G-BEAT-010",
+        "P10G-BEAT-011",
+        "P10G-BEAT-012",
+        "P10G-BEAT-013",
+        "P10G-BEAT-014",
+        "P10G-BEAT-015",
+        "P10G-BEAT-016",
+        "P10G-BEAT-017",
+        "P10G-BEAT-023",
+        "P10G-BEAT-024",
+        "P10G-BEAT-025",
+        "P10G-BEAT-026",
+        "P10G-BEAT-030",
+        "P10G-BEAT-031",
+        "P10G-BEAT-032",
+        "P10G-BEAT-041",
+        "P10G-BEAT-042"
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0015",
+      "title": "Act 3 Ambiguity, Hard-Reset Choice, and Positive Change Arc",
+      "status": "human_approved_for_second_revision",
+      "authority": "Demian",
+      "decision": "Y.D.'s dual states and stated motives remain interpretations rather than confirmed technical truth. Demian has a destructive hard-reset option but attempts dialogue first. Conflicting goals and an alignment safety mechanism permit safe mode without a magical verbal shutdown. Demian follows a Positive Change Arc and retains his sarcasm while learning honesty, nuance, consent, and boundaries.",
+      "affected_beats": [
+        "P10G-BEAT-035",
+        "P10G-BEAT-036",
+        "P10G-BEAT-037",
+        "P10G-BEAT-038",
+        "P10G-BEAT-039",
+        "P10G-BEAT-040",
+        "P10G-BEAT-041",
+        "P10G-BEAT-043",
+        "P10G-BEAT-044"
+      ]
+    },
+    {
+      "decision_id": "YD-CANON-0016",
+      "title": "Demian's Origins, Inventions, Isolation, and Genesis Legitimization",
+      "status": "human_approved_for_second_revision",
+      "authority": "Demian",
+      "decision": "Demian grew up in poverty, developed exceptional technology and AI knowledge, and rose through inventions that remain partly concealed. His introversion, centuries of loss, and alienation explain his remote life. Project Genesis has three simultaneous motives: genuine public human-AI coexistence, his private longing for a compatible long-term partner, and legal normalization of continuity-related technologies without exposing his own 2425 treatment.",
+      "affected_beats": [
+        "P10G-BEAT-003",
+        "P10G-BEAT-005",
+        "P10G-BEAT-006",
+        "P10G-BEAT-035",
+        "P10G-BEAT-038",
+        "P10G-BEAT-044"
+      ]
+    }
+  ],
+  "release_status": "approved_as_revision_authority_not_released_as_final_canon",
+  "database_mutation": false
+}

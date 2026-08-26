@@ -1,0 +1,18 @@
+Revision Run ID: ad024e98-f8b0-495b-be64-0fe9d408f1f0
+Parent Run ID: 002a27d3-a414-4a25-b21e-d3c924b2a391
+Model: gemini-3.1-pro-preview
+Revised Draft characters: 98355
+Revised Draft SHA-256: 5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0
+Beat headings: 44
+First Beat ID: P10G-BEAT-001
+Last Beat ID: P10G-BEAT-044
+Numbered sections: 24
+Canon decision references: 11
+AFC route: Chat.send_message
+Direct Models.generate_content: disabled
+Streaming: disabled
+External tools: disabled
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+P10G CONTROLLED BEAT SHEET REVISION: OK

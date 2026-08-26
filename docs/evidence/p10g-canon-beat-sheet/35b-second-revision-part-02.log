@@ -1,0 +1,67 @@
+P10G PART-02 CONTROLLED SUBDIVIDED GENERATION LOG
+Project ID: e8627781-5bf3-4c4d-905f-8dda49ab53d6
+Final Beat range: P10G-BEAT-012..P10G-BEAT-022
+Provider requests: 2
+AFC route: Chat.send_message_stream
+Streaming: enabled
+Maximum output tokens per request: 65536
+Request timeout per request: 3600000 ms
+
+===== SUBPART 2A =====
+
+Starting controlled Part-02 Subpart 2a...
+Beat range: P10G-BEAT-012..P10G-BEAT-017
+Minimum subpart characters: 11369
+Model: gemini-3.1-pro-preview
+AFC route: Chat.send_message_stream
+Streaming: enabled
+Maximum output tokens: 65536
+Request timeout: 3600000 ms
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+Subpart Run ID: 095bf333-1e75-4a80-ad12-c0e85aac7200
+Subpart characters: 23631
+Subpart Beat headings: 6
+Subpart SHA-256: 33e78865c004065b8bda2e8bfe6c41a59c9a088641175d320c5a97e816204f84
+P10G PART-02 SUBPART 2a: OK
+P10G Part-02 subdivision process: COMPLETED
+
+===== SUBPART 2B =====
+
+Starting controlled Part-02 Subpart 2b...
+Beat range: P10G-BEAT-018..P10G-BEAT-022
+Minimum subpart characters: 9350
+Model: gemini-3.1-pro-preview
+AFC route: Chat.send_message_stream
+Streaming: enabled
+Maximum output tokens: 65536
+Request timeout: 3600000 ms
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+Subpart Run ID: 2ca32787-f08f-4e3f-b994-f1a367470c7c
+Subpart characters: 19575
+Subpart Beat headings: 5
+Subpart SHA-256: 71be797480336ef7b1433b49e3f16d116b44554352b0c4bb608b4538144f8162
+P10G PART-02 SUBPART 2b: OK
+P10G Part-02 subdivision process: COMPLETED
+
+===== LOCAL MERGE =====
+
+Part-02 Merge Run ID: e47503d6-56f5-4bc8-895e-9dfc3db2bad3
+Part-02 characters: 43208
+Part-02 Beat headings: 11
+Part-02 SHA-256: 979c2ea53c178f5be62088c05f13555ab7ad27606f469f1eaa4d6a9f67c979d3
+Provider requests represented: 2
+Database mutation: False
+Automatic canon release: False
+P10G PART-02 SUBPART MERGE: OK
+P10G Part-02 subdivision process: COMPLETED
+
+===== CONTROLS =====
+
+Database mutation: False
+Automatic canon release: False
+Human review required: True
+P10G PART-02 CANONICAL LOG: COMPLETE

@@ -1,0 +1,16 @@
+Run ID: 002a27d3-a414-4a25-b21e-d3c924b2a391
+Model: gemini-3.1-pro-preview
+Draft characters: 83307
+Required sections: 24
+Canon decision references: 6
+Unique beat IDs: 44
+First beat ID: P10G-BEAT-001
+Last beat ID: P10G-BEAT-044
+Draft: /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/06-canon-beat-sheet-draft.md
+Summary: /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/07-canon-beat-sheet-generation-summary.json
+Transport: Chat.send_message
+Direct Models.generate_content: disabled
+Streaming: disabled
+External tools: disabled
+Database mutation: disabled
+P10G CANON BEAT SHEET GENERATION: OK

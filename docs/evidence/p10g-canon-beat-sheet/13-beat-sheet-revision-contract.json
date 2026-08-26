@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "ready_for_controlled_revision_request",
+  "created_at": "2026-08-26T05:12:59.745432+00:00",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "revision_authority": {
+    "reviewer": "Demian",
+    "review_decisions_filename": "11-human-review-decisions.json",
+    "canon_amendments_filename": "12-canon-amendment-proposals.json"
+  },
+  "input_artifact": {
+    "filename": "06-canon-beat-sheet-draft.md",
+    "sha256": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+    "generation_run_id": "002a27d3-a414-4a25-b21e-d3c924b2a391",
+    "immutable": true
+  },
+  "required_revision_actions": [
+    "Preserve the 44-beat foundation unless a change is explicitly required.",
+    "Correct the 2385–2666 chronology and Demian's multi-era identity.",
+    "Reframe Beat 003 as The Long Build.",
+    "Separate public, private, author, character, and audience knowledge.",
+    "Place Amusement Park in late Act 2B.",
+    "Use Mirror Labyrinth as the lowest-point transition.",
+    "Use Mirror Room as the explicit Act 3 entry.",
+    "Increase the countdown and remove the sub-two-minute impossibility.",
+    "Add Demian recovering and dragging the seismic hammer.",
+    "Integrate controlled subjective first-person visual language.",
+    "Preserve corruption-cause ambiguity in Beats 035 and 038.",
+    "Add the open philosophical Epilogue.",
+    "Normalize beats as Markdown level-two headings with ID and title.",
+    "Replace 'schizophrenic AI entity' with 'fractured dual-state AI entity'.",
+    "Improve verified source locator granularity.",
+    "Update fact classifications after approved amendments.",
+    "Do not introduce Creator Credits, Tech Credits, or CanonFlow claim inside the narrative canon; those belong to the presentation contract."
+  ],
+  "output_requirements": {
+    "minimum_beat_entries": 44,
+    "required_canon_decisions": [
+      "YD-CANON-0001",
+      "YD-CANON-0002",
+      "YD-CANON-0003",
+      "YD-CANON-0004",
+      "YD-CANON-0005",
+      "YD-CANON-0006",
+      "YD-CANON-0007",
+      "YD-CANON-0008",
+      "YD-CANON-0009",
+      "YD-CANON-0010",
+      "YD-CANON-0011"
+    ],
+    "strict_validation_required": true,
+    "human_review_required": true,
+    "overwrite_original_draft": false,
+    "database_access_allowed": false,
+    "database_mutation_allowed": false,
+    "automatic_canon_release_allowed": false
+  }
+}

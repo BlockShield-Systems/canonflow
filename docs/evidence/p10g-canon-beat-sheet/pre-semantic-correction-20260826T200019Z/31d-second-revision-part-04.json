@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "multipart": true,
+  "part_number": 4,
+  "part_count": 4,
+  "part_run_id": "1a070048-f4a9-4358-a7a0-50dcbaaa1851",
+  "parent_revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+  "parent_revised_draft_sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+  "model": "gemini-3.1-pro-preview",
+  "started_at_utc": "2026-08-26T18:55:48.166532+00:00",
+  "completed_at_utc": "2026-08-26T18:58:28.014066+00:00",
+  "transport": {
+    "route": "Chat.send_message_stream",
+    "streaming": true,
+    "external_tools": false,
+    "temperature": 0.15,
+    "maximum_output_tokens": 65536,
+    "timeout_ms": 3600000
+  },
+  "output": {
+    "filename": "30d-second-revision-part-04-beats-034-044.md",
+    "part_number": 4,
+    "characters": 50479,
+    "sha256": "a184a6c91275a393ef4481bcbd4431a51388f3ff7343748fa990e69d5529252e",
+    "first_beat_id": "P10G-BEAT-034",
+    "last_beat_id": "P10G-BEAT-044",
+    "beat_heading_count": 11,
+    "numbered_section_count": 11,
+    "numbered_section_ids": [
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "numbered_section_headings": [
+      "# 14. Act 3 – Emotional Crisis",
+      "# 15. Act 3 – Mirror Room and Final Confrontation",
+      "# 16. Climax and Resolution",
+      "# 17. Epilogue",
+      "# 18. Demian Character Arc",
+      "# 19. Y.D. Character and Voice Progression",
+      "# 20. Corruption Mystery and Ambiguity Control",
+      "# 21. Dialogue, Dark Humor, Satire, and Performance",
+      "# 22. Source Traceability",
+      "# 23. Canon Decision Compliance Matrix",
+      "# 24. Open Questions and Future Development"
+    ],
+    "beat_field_count": 16,
+    "malformed_beat_blocks": [],
+    "immediate_part_validation_passed": true,
+    "persisted_sha256": "7c0d96e17f8085d299df782d89610efd5ee9c971fa6283f187b9ad24462055f4"
+  },
+  "controls": {
+    "database_access": false,
+    "database_mutation": false,
+    "automatic_canon_release": false,
+    "human_review_required": true,
+    "strict_validation_required": true,
+    "frozen_inputs_modified": false
+  },
+  "status": "multipart_segment_generated_and_locally_validated"
+}

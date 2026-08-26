@@ -1,0 +1,17 @@
+Starting controlled Part-02 Subpart 2b...
+Beat range: P10G-BEAT-018..P10G-BEAT-022
+Minimum subpart characters: 9350
+Model: gemini-3.1-pro-preview
+AFC route: Chat.send_message_stream
+Streaming: enabled
+Maximum output tokens: 65536
+Request timeout: 3600000 ms
+Database mutation: disabled
+Automatic canon release: disabled
+Human review required: True
+Subpart Run ID: 2ca32787-f08f-4e3f-b994-f1a367470c7c
+Subpart characters: 19575
+Subpart Beat headings: 5
+Subpart SHA-256: 71be797480336ef7b1433b49e3f16d116b44554352b0c4bb608b4538144f8162
+P10G PART-02 SUBPART 2b: OK
+P10G Part-02 subdivision process: COMPLETED

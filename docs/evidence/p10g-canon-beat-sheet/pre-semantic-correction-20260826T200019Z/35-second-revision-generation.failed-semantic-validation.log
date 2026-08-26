@@ -1,0 +1,21 @@
+P10G multipart second revision process: FAILED
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29d-canon-beat-sheet-multipart-assembly-runner.py", line 795, in <module>
+    main()
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29d-canon-beat-sheet-multipart-assembly-runner.py", line 788, in main
+    assemble(root)
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29d-canon-beat-sheet-multipart-assembly-runner.py", line 633, in assemble
+    metrics = base.validate_candidate(assembled)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/29a-canon-beat-sheet-second-revision-runner.py", line 524, in validate_candidate
+    raise RuntimeError(
+RuntimeError: Provider response failed immediate second-revision validation:
+- Missing required content: more than six centuries
+- Missing required content: VirtualCrew
+- Forbidden content remains: objective love motive
+- Forbidden content remains: abandonment of sarcasm
+- Forbidden content remains: successful final canon integration
+- Beat-specific requirement failed: Beat 002 explicit 2666 public introduction
+- Beat-specific requirement failed: Beat 008 small water request
+- Beat-specific requirement failed: Beat 012 epistemic boundary
+- Beat-specific requirement failed: Beat 042 external timer expiration

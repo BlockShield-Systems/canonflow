@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "passed_structural_awaiting_human_review",
+  "validated_at": "2026-08-26T04:00:00Z",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "generation_run_id": "002a27d3-a414-4a25-b21e-d3c924b2a391",
+  "validated_artifact": {
+    "path": "06-canon-beat-sheet-draft.md",
+    "sha256": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+    "characters": 83307
+  },
+  "summary": {
+    "check_count": 22,
+    "failure_count": 0,
+    "required_sections_found": 24,
+    "required_sections_expected": 24,
+    "beat_count": 44,
+    "first_beat_id": "P10G-BEAT-001",
+    "last_beat_id": "P10G-BEAT-044",
+    "canon_decision_count": 6,
+    "source_filename_matches": 49,
+    "page_locator_matches": 0,
+    "line_locator_matches": 3,
+    "non_canon_proposal_count": 9,
+    "first_person_direction_present": false
+  },
+  "checks": [
+    {
+      "check_id": "workflow_identity",
+      "passed": true,
+      "details": "P10G Canon Beat Sheet"
+    },
+    {
+      "check_id": "generation_run_id",
+      "passed": true,
+      "details": "002a27d3-a414-4a25-b21e-d3c924b2a391"
+    },
+    {
+      "check_id": "draft_sha256",
+      "passed": true,
+      "details": {
+        "actual": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+        "expected": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8"
+      }
+    },
+    {
+      "check_id": "summary_draft_sha256",
+      "passed": true,
+      "details": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8"
+    },
+    {
+      "check_id": "generation_status",
+      "passed": true,
+      "details": "generated_awaiting_strict_validation"
+    },
+    {
+      "check_id": "generation_log_success_marker",
+      "passed": true,
+      "details": "success marker present"
+    },
+    {
+      "check_id": "afc_chat_transport",
+      "passed": true,
+      "details": {
+        "client": "genai.Client",
+        "chat_creation": "client.chats.create",
+        "message_method": "Chat.send_message",
+        "automatic_function_calling_route": "chat",
+        "direct_models_generate_content": false,
+        "streaming": false,
+        "external_tools": false
+      }
+    },
+    {
+      "check_id": "minimum_characters",
+      "passed": true,
+      "details": 83307
+    },
+    {
+      "check_id": "required_end_marker",
+      "passed": true,
+      "details": "P10G CANON BEAT SHEET DRAFT END"
+    },
+    {
+      "check_id": "required_sections",
+      "passed": true,
+      "details": {
+        "found": 24,
+        "required": 24,
+        "missing": []
+      }
+    },
+    {
+      "check_id": "beat_id_count",
+      "passed": true,
+      "details": 44
+    },
+    {
+      "check_id": "beat_id_sequence",
+      "passed": true,
+      "details": {
+        "first": "P10G-BEAT-001",
+        "last": "P10G-BEAT-044",
+        "count": 44
+      }
+    },
+    {
+      "check_id": "global_beat_field_counts",
+      "passed": true,
+      "details": {
+        "Act / structural position": 44,
+        "Sequence": 44,
+        "Narrative purpose": 44,
+        "Location": 44,
+        "Participating characters": 44,
+        "Action": 44,
+        "Conflict or pressure": 44,
+        "Emotional movement": 44,
+        "Reversal, reveal, or turn": 44,
+        "Demian knowledge state": 44,
+        "Y.D. state and voice stage": 44,
+        "Canon decision references": 44,
+        "Source references or verified locators": 44,
+        "Fact classification": 44,
+        "Continuity consequences": 44,
+        "Production or staging considerations": 44
+      }
+    },
+    {
+      "check_id": "per_beat_field_completeness",
+      "passed": true,
+      "details": {
+        "beat_blocks": 44,
+        "failures": []
+      }
+    },
+    {
+      "check_id": "fact_classifications",
+      "passed": true,
+      "details": {
+        "counts": {
+          "canon-explicit": 34,
+          "source-supported": 0,
+          "canon-derived": 4,
+          "non-canon-proposal": 9
+        },
+        "beats_without_allowed_classification": []
+      }
+    },
+    {
+      "check_id": "canon_decision_references",
+      "passed": true,
+      "details": {
+        "YD-CANON-0001": 8,
+        "YD-CANON-0002": 15,
+        "YD-CANON-0003": 4,
+        "YD-CANON-0004": 14,
+        "YD-CANON-0005": 9,
+        "YD-CANON-0006": 17
+      }
+    },
+    {
+      "check_id": "source_filenames",
+      "passed": true,
+      "details": 49
+    },
+    {
+      "check_id": "verified_source_locators",
+      "passed": true,
+      "details": {
+        "page_locators": 0,
+        "line_locators": 3
+      }
+    },
+    {
+      "check_id": "mandatory_canon_semantics",
+      "passed": true,
+      "details": {
+        "feature_length": true,
+        "demian_age_40": true,
+        "doll_or_puppet": true,
+        "seismic_hammer": true,
+        "demian_limited_knowledge": true,
+        "amusement_park": true,
+        "mirror_room": true,
+        "mirror_labyrinth": true,
+        "corruption_ambiguity": true,
+        "dark_humor": true,
+        "satire": true,
+        "historical_timing_not_binding": true
+      }
+    },
+    {
+      "check_id": "first_person_direction_baseline",
+      "passed": true,
+      "details": {
+        "present_in_generated_draft": false,
+        "required_by_original_contract": false,
+        "new_post_generation_proposal": true,
+        "validation_effect": "informational_only"
+      }
+    },
+    {
+      "check_id": "non_canon_proposals_flagged",
+      "passed": true,
+      "details": {
+        "count": 9,
+        "human_review_required": true
+      }
+    },
+    {
+      "check_id": "generation_controls",
+      "passed": true,
+      "details": {
+        "database_access_performed": false,
+        "database_mutation_performed": false,
+        "automatic_canon_release_performed": false,
+        "human_review_required": true
+      }
+    }
+  ],
+  "failures": [],
+  "human_authority": {
+    "reviewer": "Demian",
+    "draft_approved_as_canon": false,
+    "human_review_required": true
+  },
+  "controls": {
+    "additional_model_call_performed": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "automatic_canon_release_performed": false,
+    "draft_modified": false
+  }
+}

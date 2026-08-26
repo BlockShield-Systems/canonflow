@@ -1,0 +1,3 @@
+
+# Preserve byte-exact generated P10G evidence; SHA-256 manifests bind existing EOL whitespace.
+docs/evidence/p10g-canon-beat-sheet/** whitespace=-blank-at-eol

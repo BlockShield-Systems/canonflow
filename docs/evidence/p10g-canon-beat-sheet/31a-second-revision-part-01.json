@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "multipart": true,
+  "part_number": 1,
+  "part_count": 4,
+  "part_run_id": "8d13e033-7ba9-4828-9afa-a1a3aeddf780",
+  "parent_revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+  "parent_revised_draft_sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+  "model": "gemini-3.1-pro-preview",
+  "started_at_utc": "2026-08-26T12:55:14.514089+00:00",
+  "completed_at_utc": "2026-08-26T12:57:40.852423+00:00",
+  "transport": {
+    "route": "Chat.send_message",
+    "streaming": false,
+    "external_tools": false,
+    "temperature": 0.15,
+    "maximum_output_tokens": 32768,
+    "timeout_ms": 1800000
+  },
+  "output": {
+    "filename": "30a-second-revision-part-01-beats-001-011.md",
+    "part_number": 1,
+    "characters": 40486,
+    "sha256": "1673f622b64a584c3ea0fd6d25e5ee0308bf5403f3d7e4f57a0d4c2067b3cfb9",
+    "first_beat_id": "P10G-BEAT-001",
+    "last_beat_id": "P10G-BEAT-011",
+    "beat_heading_count": 11,
+    "numbered_section_count": 7,
+    "numbered_section_ids": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "numbered_section_headings": [
+      "# 1. Authority, Scope, and Precedence",
+      "# 2. Feature-Film Structural Overview",
+      "# 3. Character and Relationship Arc Baseline",
+      "# 4. Prologue",
+      "# 5. Act 1 – Setup",
+      "# 6. Inciting Incident",
+      "# 7. Act 1 – Doll and Seismic Hammer Sequence"
+    ],
+    "beat_field_count": 16,
+    "malformed_beat_blocks": [],
+    "immediate_part_validation_passed": true,
+    "persisted_sha256": "7c26db82f90da575088bacaa37d17218a797db9cf19f33e72fe88d8634d43932"
+  },
+  "controls": {
+    "database_access": false,
+    "database_mutation": false,
+    "automatic_canon_release": false,
+    "human_review_required": true,
+    "strict_validation_required": true,
+    "frozen_inputs_modified": false
+  },
+  "status": "multipart_segment_locally_corrected_and_strictly_validated",
+  "post_generation_deterministic_corrections": [
+    {
+      "part_number": 1,
+      "beat_id": "P10G-BEAT-002",
+      "rule": "explicit 2666 public introduction"
+    },
+    {
+      "part_number": 1,
+      "beat_id": "P10G-BEAT-005",
+      "rule": "VirtualCrew commercial element"
+    },
+    {
+      "part_number": 1,
+      "beat_id": "P10G-BEAT-008",
+      "rule": "small water request"
+    },
+    {
+      "part_number": 1,
+      "beat_id": null,
+      "rule": "objective-love-motive false positive"
+    }
+  ]
+}

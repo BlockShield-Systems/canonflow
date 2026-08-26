@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "ready_for_afc_chat_generation",
+  "created_at": "2026-08-26T01:47:26Z",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "human_authority": {
+    "name": "Demian",
+    "role": "human_canon_authority"
+  },
+  "generation": {
+    "provider": "Google Gemini API",
+    "sdk": "google-genai",
+    "model": "gemini-3.1-pro-preview",
+    "temperature": 0.2,
+    "max_output_tokens": 32768,
+    "streaming": false,
+    "external_tools_enabled": false,
+    "automatic_function_calling": {
+      "routing_mode": "afc_compatible_chat",
+      "required_transport": "Chat.send_message",
+      "client_route": [
+        "genai.Client",
+        "client.chats.create",
+        "chat.send_message"
+      ],
+      "direct_models_generate_content_allowed": false,
+      "automatic_function_tools_configured": false
+    }
+  },
+  "input_authority": {
+    "approved_story_bible": {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/17-approved-canon-story-bible.md",
+      "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+      "precedence": 1
+    },
+    "approved_canon_snapshot": {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/03-read-only-canon-snapshot.jsonl",
+      "sha256": "adbc855da86757fb72fea1df4f578f4de66db61e822b56c2a4e98a75230f84b1",
+      "decision_ids": [
+        "YD-CANON-0001",
+        "YD-CANON-0002",
+        "YD-CANON-0003",
+        "YD-CANON-0004",
+        "YD-CANON-0005",
+        "YD-CANON-0006"
+      ],
+      "decision_count": 6,
+      "precedence": 2
+    },
+    "source_audit": {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+      "sha256": "2f0b7d1fd94d8d1452284b28e2ff9da1d171cea48222b3d464d862ddad341a6f",
+      "precedence": 3
+    }
+  },
+  "authority_precedence": [
+    "Approved P10F Canon Story Bible",
+    "Approved Canon Decisions YD-CANON-0001 through YD-CANON-0006",
+    "Accepted P10C source evidence and verified locators",
+    "Clearly marked non-canon structural proposals"
+  ],
+  "output": {
+    "format": "Markdown",
+    "artifact": "06-canon-beat-sheet-draft.md",
+    "summary_artifact": "07-canon-beat-sheet-generation-summary.json",
+    "minimum_characters": 30000,
+    "minimum_beat_entries": 40,
+    "required_sections": [
+      "1. Authority, Scope, and Precedence",
+      "2. Feature-Film Structural Overview",
+      "3. Character and Relationship Arc Baseline",
+      "4. Prologue",
+      "5. Act 1 – Setup",
+      "6. Inciting Incident",
+      "7. Act 1 – Doll and Seismic Hammer Sequence",
+      "8. First Act Turning Point",
+      "9. Act 2A – Escalation and Dependency",
+      "10. Midpoint",
+      "11. Act 2B – Systemic Escalation",
+      "12. Amusement Park of Illusions",
+      "13. Transition into the Mirror Room",
+      "14. Act 2 Crisis and Lowest Point",
+      "15. Act 3 – Mirror Room and Final Confrontation",
+      "16. Climax and Resolution",
+      "17. Epilogue",
+      "18. Demian Character Arc",
+      "19. Y.D. Character and Voice Progression",
+      "20. Corruption Mystery and Ambiguity Control",
+      "21. Dialogue, Dark Humor, Satire, and Performance",
+      "22. Source Traceability",
+      "23. Canon Decision Compliance Matrix",
+      "24. Open Questions and Non-Canon Proposals"
+    ],
+    "required_section_count": 24,
+    "required_beat_fields": [
+      "Beat ID",
+      "Act / structural position",
+      "Sequence",
+      "Narrative purpose",
+      "Location",
+      "Participating characters",
+      "Action",
+      "Conflict or pressure",
+      "Emotional movement",
+      "Reversal, reveal, or turn",
+      "Demian knowledge state",
+      "Y.D. state and voice stage",
+      "Canon decision references",
+      "Source references or verified locators",
+      "Fact classification",
+      "Continuity consequences",
+      "Production or staging considerations"
+    ],
+    "required_beat_field_count": 17,
+    "required_canon_decision_ids": [
+      "YD-CANON-0001",
+      "YD-CANON-0002",
+      "YD-CANON-0003",
+      "YD-CANON-0004",
+      "YD-CANON-0005",
+      "YD-CANON-0006"
+    ],
+    "end_marker": "P10G CANON BEAT SHEET DRAFT END"
+  },
+  "structural_requirements": {
+    "feature_length_film": true,
+    "forbidden_short_runtime_compression": true,
+    "required_act_regions": [
+      "Prologue",
+      "Act 1",
+      "Act 2A",
+      "Midpoint",
+      "Act 2B",
+      "Act 3",
+      "Epilogue"
+    ],
+    "beats_must_be_sequentially_numbered": true,
+    "beat_id_format": "P10G-BEAT-###",
+    "each_beat_requires_fact_classification": true,
+    "allowed_fact_classifications": [
+      "canon-explicit",
+      "source-supported",
+      "canon-derived",
+      "non-canon-proposal"
+    ],
+    "non_canon_proposals_must_be_visibly_marked": true
+  },
+  "mandatory_canon_constraints": [
+    {
+      "decision_id": "YD-CANON-0001",
+      "constraint": "Demian is 40 years old."
+    },
+    {
+      "decision_id": "YD-CANON-0002",
+      "constraint": "The project is a feature-length film and must not be compressed into the historical fifteen-minute runtime limit."
+    },
+    {
+      "decision_id": "YD-CANON-0003",
+      "constraint": "Y.D. originated or deployed the modified doll and seismic hammer, while Demian does not know this during the Act 1 event."
+    },
+    {
+      "decision_id": "YD-CANON-0004",
+      "constraint": "The Amusement Park of Illusions is a major survival escape-room sequence bridging Act 2B into the Mirror Room."
+    },
+    {
+      "decision_id": "YD-CANON-0005",
+      "constraint": "The cause of Y.D.'s corruption remains causally ambiguous with multiple plausible causes."
+    },
+    {
+      "decision_id": "YD-CANON-0006",
+      "constraint": "Preserve dialogue intent, dark humor, satire, and Y.D.'s voice progression. Historical four-second frame timings are not binding."
+    }
+  ],
+  "epistemic_controls": {
+    "demian_must_not_know_yd_doll_authorship_in_act1": true,
+    "audience_reveal_timing_must_not_be_invented_as_canon": true,
+    "corruption_cause_must_not_be_resolved": true,
+    "ambiguities_must_be_preserved_or_flagged": true,
+    "new_facts_must_not_be_presented_as_approved_canon": true
+  },
+  "traceability": {
+    "source_filename_required": true,
+    "page_or_line_locator_required_when_available": true,
+    "canon_decision_id_required_for_constrained_beats": true,
+    "unsupported_claims_must_be_marked_non_canon_proposal": true,
+    "fabricated_citations_forbidden": true
+  },
+  "validation": {
+    "strict_local_validation_required": true,
+    "human_review_required": true,
+    "automatic_canon_release_allowed": false,
+    "database_mutation_allowed": false
+  },
+  "controls": {
+    "additional_model_call_performed_during_packaging": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "existing_frozen_evidence_modified": false
+  }
+}

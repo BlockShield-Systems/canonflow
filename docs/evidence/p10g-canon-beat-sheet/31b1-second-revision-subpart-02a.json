@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision_part_02_subpart",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "multipart": true,
+  "parent_part_number": 2,
+  "parent_part_count": 4,
+  "subdivision": true,
+  "subpart_id": "2a",
+  "subpart_run_id": "095bf333-1e75-4a80-ad12-c0e85aac7200",
+  "parent_revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+  "parent_revised_draft_sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+  "model": "gemini-3.1-pro-preview",
+  "started_at_utc": "2026-08-26T18:05:54.654230+00:00",
+  "completed_at_utc": "2026-08-26T18:10:50.454173+00:00",
+  "transport": {
+    "route": "Chat.send_message_stream",
+    "streaming": true,
+    "external_tools": false,
+    "temperature": 0.15,
+    "maximum_output_tokens": 65536,
+    "timeout_ms": 3600000
+  },
+  "output": {
+    "filename": "30b1-second-revision-subpart-02a-beats-012-017.md",
+    "part_number": 2,
+    "characters": 23631,
+    "sha256": "2e1246be573ba654105f8343b2dfdb653f9df784071a14a64f95e175ac792738",
+    "first_beat_id": "P10G-BEAT-012",
+    "last_beat_id": "P10G-BEAT-017",
+    "beat_heading_count": 6,
+    "numbered_section_count": 2,
+    "numbered_section_ids": [
+      "8",
+      "9"
+    ],
+    "numbered_section_headings": [
+      "# 8. First Act Turning Point",
+      "# 9. Act 2A – Escalation and Dependency"
+    ],
+    "beat_field_count": 16,
+    "malformed_beat_blocks": [],
+    "immediate_part_validation_passed": true,
+    "logical_first_beat_id": "P10G-BEAT-012",
+    "logical_last_beat_id": "P10G-BEAT-017",
+    "logical_beat_ids": [
+      "P10G-BEAT-012",
+      "P10G-BEAT-013",
+      "P10G-BEAT-014",
+      "P10G-BEAT-015",
+      "P10G-BEAT-016",
+      "P10G-BEAT-017"
+    ],
+    "persisted_sha256": "33e78865c004065b8bda2e8bfe6c41a59c9a088641175d320c5a97e816204f84"
+  },
+  "controls": {
+    "database_access": false,
+    "database_mutation": false,
+    "automatic_canon_release": false,
+    "human_review_required": true,
+    "strict_validation_required": true,
+    "frozen_inputs_modified": false
+  },
+  "status": "part_02_subpart_generated_and_locally_validated"
+}

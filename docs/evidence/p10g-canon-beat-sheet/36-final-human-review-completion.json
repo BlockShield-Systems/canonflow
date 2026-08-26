@@ -1,0 +1,64 @@
+{
+  "artifact_id": "P10G-R3-HUMAN-REVIEW-COMPLETION-001",
+  "change_request_artifact": {
+    "path": "35-second-revision-change-request.md",
+    "sha256": "611dcd41c241ba8db8856e48e9051ebafebfd3a802114e77f6e16576f93b54c2"
+  },
+  "decision_artifact": {
+    "path": "34-final-human-review-decisions.json",
+    "sha256": "f9960cdd3db579eb0fe5a4cd0478ea65d3a223090b0a865f3d6efcc55f9a875d"
+  },
+  "draft": {
+    "modified": false,
+    "path": "30-canon-beat-sheet-second-revised-draft.md",
+    "sha256": "1b99ba8d6a3c5dddf68883ad95ffec926e858c79162b054515495caa19bbd6a3"
+  },
+  "operation": "final_human_review_completion",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "recorded_at": "2026-08-26T23:14:04.060227Z",
+  "reference_images": [
+    {
+      "authority": "Demian",
+      "bytes": 1786170,
+      "constraints": [
+        "Preserve Demian's approved real-world likeness.",
+        "Separate ordinary external appearance from augmented NSCL capacity."
+      ],
+      "origin": "Gemini Pro generated character reference",
+      "path": "reference-images/demian-character-reference.jpg",
+      "reference_id": "demian",
+      "sha256": "5ba8287cafa2fce14b03f4b505649bfc42a4a7aa916962a8dc2fbd16f0bc8c7f",
+      "usage": "Visual reference input for the next controlled revision; not itself textual canon."
+    },
+    {
+      "authority": "Demian",
+      "bytes": 2163875,
+      "constraints": [
+        "Use as Y.D. holographic or potential physical-form reference.",
+        "The visible UNIT ELISE label is not canon and must be removed or corrected before production use.",
+        "This reference does not by itself authorize a physical Y.D. embodiment inside the current plot."
+      ],
+      "origin": "Gemini Pro generated character reference",
+      "path": "reference-images/yd-character-reference.jpg",
+      "reference_id": "yd",
+      "sha256": "589a886dd5f7fcf86055e6c6aedbafe67ec238bcf3b9f8f06936a63dd7f62ef1",
+      "usage": "Visual reference input for the next controlled revision; not itself textual canon."
+    }
+  ],
+  "result": {
+    "approved_as_final_canon": false,
+    "automatic_canon_release": false,
+    "database_mutation": false,
+    "final_disposition": "changes_requested",
+    "human_review_completed": true,
+    "next_action": "build_new_controlled_revision",
+    "provider_calls": false
+  },
+  "review_matrix": {
+    "modified": false,
+    "path": "33-second-revision-human-review.md",
+    "sha256": "5521e9ca96202019c0d794301797eb5912c2ae5e504549f9be889a76091cea22"
+  },
+  "revision_run_id": "a8f16e58-7316-4415-b1a8-83131f96f7c7",
+  "schema_version": 1
+}

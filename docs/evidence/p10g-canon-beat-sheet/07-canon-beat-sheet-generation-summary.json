@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "status": "generated_awaiting_strict_validation",
+  "run_id": "002a27d3-a414-4a25-b21e-d3c924b2a391",
+  "started_at": "2026-08-26T03:41:18Z",
+  "completed_at": "2026-08-26T03:44:57Z",
+  "model": "gemini-3.1-pro-preview",
+  "sdk": {
+    "package": "google-genai",
+    "version": "2.19.0"
+  },
+  "transport": {
+    "client": "genai.Client",
+    "chat_creation": "client.chats.create",
+    "message_method": "Chat.send_message",
+    "automatic_function_calling_route": "chat",
+    "direct_models_generate_content": false,
+    "streaming": false,
+    "external_tools": false
+  },
+  "generation_config": {
+    "temperature": 0.2,
+    "max_output_tokens": 32768
+  },
+  "input": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/04-canon-beat-sheet-generation-input.md",
+    "sha256": "0bdac9dfac2fbd4fd1fed2f336cb1ba9298b1c68aac2b69094b92bb29e304bdd",
+    "characters": 71039,
+    "contract_path": "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/02-canon-beat-sheet-generation-contract.json",
+    "contract_sha256": "622914efc7bc79fe8d1e486df94be84446c224727b0b576237254830dee16077",
+    "approved_story_bible_sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c"
+  },
+  "output": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/06-canon-beat-sheet-draft.md",
+    "sha256": "f31eb0a475100755e82676dde16d5075a044eea35f426d0e56eab71fcba7e1d8",
+    "characters": 83307,
+    "required_sections_found": 24,
+    "canon_decision_references_found": 6,
+    "unique_beat_ids_found": 44,
+    "first_beat_id": "P10G-BEAT-001",
+    "last_beat_id": "P10G-BEAT-044",
+    "end_marker_found": true
+  },
+  "response": {
+    "finish_reason": "STOP",
+    "prompt_token_count": 19830,
+    "candidates_token_count": 20567,
+    "total_token_count": 43990
+  },
+  "controls": {
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "automatic_canon_release_performed": false,
+    "human_review_required": true
+  }
+}

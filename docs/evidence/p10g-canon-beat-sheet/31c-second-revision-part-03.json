@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "multipart": true,
+  "part_number": 3,
+  "part_count": 4,
+  "part_run_id": "67d7c780-21f0-4a6a-8b7b-a2fb5088bc73",
+  "parent_revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+  "parent_revised_draft_sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+  "model": "gemini-3.1-pro-preview",
+  "started_at_utc": "2026-08-26T18:49:42.465870+00:00",
+  "completed_at_utc": "2026-08-26T18:51:52.736995+00:00",
+  "transport": {
+    "route": "Chat.send_message_stream",
+    "streaming": true,
+    "external_tools": false,
+    "temperature": 0.15,
+    "maximum_output_tokens": 65536,
+    "timeout_ms": 3600000
+  },
+  "output": {
+    "filename": "30c-second-revision-part-03-beats-023-033.md",
+    "part_number": 3,
+    "characters": 42283,
+    "sha256": "08670a2037e9ce072e13826e819aac8ae5979df04228e7ef34fcdcb81595c1d1",
+    "first_beat_id": "P10G-BEAT-023",
+    "last_beat_id": "P10G-BEAT-033",
+    "beat_heading_count": 11,
+    "numbered_section_count": 3,
+    "numbered_section_ids": [
+      "11",
+      "12",
+      "13"
+    ],
+    "numbered_section_headings": [
+      "# 11. Act 2B – Systemic Escalation",
+      "# 12. Amusement Park of Illusions (Late Act 2B Pre-Climax Gauntlet)",
+      "# 13. Transition into the Mirror Room"
+    ],
+    "beat_field_count": 16,
+    "malformed_beat_blocks": [],
+    "immediate_part_validation_passed": true,
+    "persisted_sha256": "4d80ed6b3a5c141cdb220a627d20452d95a1447c7b06fa0e8cfaa54b5ccbcb05"
+  },
+  "controls": {
+    "database_access": false,
+    "database_mutation": false,
+    "automatic_canon_release": false,
+    "human_review_required": true,
+    "strict_validation_required": true,
+    "frozen_inputs_modified": false
+  },
+  "status": "multipart_segment_generated_and_locally_validated"
+}

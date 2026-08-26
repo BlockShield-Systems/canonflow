@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "workflow": "P10G Canon Beat Sheet",
+  "operation": "controlled_second_beat_sheet_revision_part_02_subpart",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "multipart": true,
+  "parent_part_number": 2,
+  "parent_part_count": 4,
+  "subdivision": true,
+  "subpart_id": "2b",
+  "subpart_run_id": "2ca32787-f08f-4e3f-b994-f1a367470c7c",
+  "parent_revision_run_id": "ad024e98-f8b0-495b-be64-0fe9d408f1f0",
+  "parent_revised_draft_sha256": "5e5db9a12e4f87dfa457be414fcc3b14f6ac565ff5e71a3b40ca4c8a3e89c6d0",
+  "model": "gemini-3.1-pro-preview",
+  "started_at_utc": "2026-08-26T18:40:43.953615+00:00",
+  "completed_at_utc": "2026-08-26T18:42:23.501872+00:00",
+  "transport": {
+    "route": "Chat.send_message_stream",
+    "streaming": true,
+    "external_tools": false,
+    "temperature": 0.15,
+    "maximum_output_tokens": 65536,
+    "timeout_ms": 3600000
+  },
+  "output": {
+    "filename": "30b2-second-revision-subpart-02b-beats-018-022.md",
+    "part_number": 3,
+    "characters": 19575,
+    "sha256": "ae1062518fcb032ea735f1db338c621dab11bb5db23b9b7cd2507d8fefd12f5d",
+    "first_beat_id": "P10G-BEAT-018",
+    "last_beat_id": "P10G-BEAT-022",
+    "beat_heading_count": 5,
+    "numbered_section_count": 1,
+    "numbered_section_ids": [
+      "10"
+    ],
+    "numbered_section_headings": [
+      "# 10. Midpoint"
+    ],
+    "beat_field_count": 16,
+    "malformed_beat_blocks": [],
+    "immediate_part_validation_passed": true,
+    "logical_first_beat_id": "P10G-BEAT-018",
+    "logical_last_beat_id": "P10G-BEAT-022",
+    "logical_beat_ids": [
+      "P10G-BEAT-018",
+      "P10G-BEAT-019",
+      "P10G-BEAT-020",
+      "P10G-BEAT-021",
+      "P10G-BEAT-022"
+    ],
+    "persisted_sha256": "71be797480336ef7b1433b49e3f16d116b44554352b0c4bb608b4538144f8162"
+  },
+  "controls": {
+    "database_access": false,
+    "database_mutation": false,
+    "automatic_canon_release": false,
+    "human_review_required": true,
+    "strict_validation_required": true,
+    "frozen_inputs_modified": false
+  },
+  "status": "part_02_subpart_generated_and_locally_validated"
+}
