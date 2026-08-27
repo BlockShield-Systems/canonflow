@@ -1,0 +1,100 @@
+{
+  "artifact_type": "p10g_r4_change_application",
+  "binding_changes": [
+    {
+      "id": "P10G-R3-CHANGE-001",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-002",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-003",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-004",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-005",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-006",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-007",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-008",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CHANGE-009",
+      "status": "applied"
+    }
+  ],
+  "generated_at_utc": "2026-08-27T00:00:53.410463Z",
+  "mandatory_corrections": [
+    {
+      "id": "P10G-R3-CORRECTION-001",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CORRECTION-002",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CORRECTION-003",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CORRECTION-004",
+      "status": "applied"
+    },
+    {
+      "id": "P10G-R3-CORRECTION-005",
+      "status": "applied"
+    }
+  ],
+  "output_draft": "38-canon-beat-sheet-third-revised-draft.md",
+  "output_draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+  "parent_draft": "30-canon-beat-sheet-second-revised-draft.md",
+  "parent_draft_sha256": "1b99ba8d6a3c5dddf68883ad95ffec926e858c79162b054515495caa19bbd6a3",
+  "parent_revision_run_id": "a8f16e58-7316-4415-b1a8-83131f96f7c7",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "reference_images": [
+    {
+      "character_id": "demian",
+      "controlled_path": "reference-images/r4/demian-character-reference.jpg",
+      "public_export": false,
+      "sha256": "5ba8287cafa2fce14b03f4b505649bfc42a4a7aa916962a8dc2fbd16f0bc8c7f"
+    },
+    {
+      "character_id": "yd",
+      "controlled_path": "reference-images/r4/yd-character-reference.jpg",
+      "public_export": false,
+      "sha256": "589a886dd5f7fcf86055e6c6aedbafe67ec238bcf3b9f8f06936a63dd7f62ef1"
+    }
+  ],
+  "result": {
+    "all_change_directives_applied": true,
+    "all_mandatory_corrections_applied": true,
+    "approved_as_final_canon": false,
+    "automatic_canon_release": false,
+    "clickhouse_mutation_executed": false,
+    "final_disposition": "pending_human_review",
+    "frozen_r3_artifacts_modified": false,
+    "human_review_completed": false,
+    "provider_calls_executed": false,
+    "strict_local_validation_passed": true
+  },
+  "revision": "R4",
+  "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0",
+  "schema_version": "1.0"
+}
