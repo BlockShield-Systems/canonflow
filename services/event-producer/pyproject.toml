@@ -1,6 +1,6 @@
 [project]
 name = "canonflow-event-producer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Authenticated deterministic ClickHouse Event Ledger producer for CanonFlow"
 requires-python = ">=3.12,<3.13"
 dependencies = [

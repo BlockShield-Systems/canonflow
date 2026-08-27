@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import json
 import logging
@@ -13,6 +14,7 @@ from enum import StrEnum
 from typing import Annotated, Any, Protocol
 
 import clickhouse_connect
+from clickhouse_connect.driver.exceptions import OperationalError
 import uvicorn
 from fastapi import FastAPI, HTTPException, Request, status
 from pydantic import (
@@ -194,6 +196,25 @@ class Settings:
     clickhouse_send_receive_timeout: int
     contract_id: uuid.UUID
     project_id: uuid.UUID
+    clickhouse_startup_max_attempts: int = 5
+    clickhouse_startup_initial_delay_seconds: float = 5.0
+    clickhouse_startup_max_delay_seconds: float = 30.0
+
+    def __post_init__(self) -> None:
+        if self.clickhouse_startup_max_attempts < 1:
+            raise ValueError(
+                "CLICKHOUSE_STARTUP_MAX_ATTEMPTS must be at least 1"
+            )
+
+        if self.clickhouse_startup_initial_delay_seconds < 0:
+            raise ValueError(
+                "CLICKHOUSE_STARTUP_INITIAL_DELAY_SECONDS must be non-negative"
+            )
+
+        if self.clickhouse_startup_max_delay_seconds < 0:
+            raise ValueError(
+                "CLICKHOUSE_STARTUP_MAX_DELAY_SECONDS must be non-negative"
+            )
 
     @classmethod
     def from_environment(cls) -> Settings:
@@ -227,6 +248,21 @@ class Settings:
             ),
             clickhouse_send_receive_timeout=int(
                 os.getenv("CLICKHOUSE_SEND_RECEIVE_TIMEOUT", "30")
+            ),
+            clickhouse_startup_max_attempts=int(
+                os.getenv("CLICKHOUSE_STARTUP_MAX_ATTEMPTS", "5")
+            ),
+            clickhouse_startup_initial_delay_seconds=float(
+                os.getenv(
+                    "CLICKHOUSE_STARTUP_INITIAL_DELAY_SECONDS",
+                    "5",
+                )
+            ),
+            clickhouse_startup_max_delay_seconds=float(
+                os.getenv(
+                    "CLICKHOUSE_STARTUP_MAX_DELAY_SECONDS",
+                    "30",
+                )
             ),
             contract_id=uuid.UUID(
                 required_environment("CANONFLOW_EVENT_CONTRACT_ID")
@@ -521,10 +557,64 @@ def environment_bool(name: str, default: bool) -> bool:
     raise RuntimeError(f"Invalid boolean value for {name}: {value!r}")
 
 
+async def create_clickhouse_repository_with_retry(
+    settings: Settings,
+) -> ClickHouseEventRepository:
+    delay = settings.clickhouse_startup_initial_delay_seconds
+
+    for attempt in range(
+        1,
+        settings.clickhouse_startup_max_attempts + 1,
+    ):
+        try:
+            repository = await asyncio.to_thread(
+                ClickHouseEventRepository,
+                settings,
+            )
+        except OperationalError as error:
+            if attempt >= settings.clickhouse_startup_max_attempts:
+                LOGGER.error(
+                    "ClickHouse startup connection exhausted "
+                    "attempt=%d max_attempts=%d error=%s",
+                    attempt,
+                    settings.clickhouse_startup_max_attempts,
+                    error,
+                )
+                raise
+
+            retry_delay = min(
+                delay,
+                settings.clickhouse_startup_max_delay_seconds,
+            )
+            LOGGER.warning(
+                "ClickHouse startup connection failed "
+                "attempt=%d max_attempts=%d retry_delay_seconds=%.3f "
+                "error=%s",
+                attempt,
+                settings.clickhouse_startup_max_attempts,
+                retry_delay,
+                error,
+            )
+            await asyncio.sleep(retry_delay)
+            delay = min(
+                max(delay * 2, retry_delay),
+                settings.clickhouse_startup_max_delay_seconds,
+            )
+        else:
+            if attempt > 1:
+                LOGGER.info(
+                    "ClickHouse startup connection recovered attempt=%d",
+                    attempt,
+                )
+            return repository
+
+    raise RuntimeError("Unreachable ClickHouse startup retry state")
+
+
 @asynccontextmanager
 async def lifespan(application: FastAPI):
     settings = Settings.from_environment()
-    repository = ClickHouseEventRepository(settings)
+    repository = await create_clickhouse_repository_with_retry(settings)
     producer = EventProducer(
         settings=settings,
         repository=repository,
@@ -539,7 +629,7 @@ async def lifespan(application: FastAPI):
 
 app = FastAPI(
     title="CanonFlow Event Producer",
-    version="0.1.0",
+    version="0.1.1",
     docs_url=None,
     redoc_url=None,
     lifespan=lifespan,
@@ -547,6 +637,7 @@ app = FastAPI(
 
 
 @app.get("/healthz")
+@app.get("/livez")
 def health() -> dict[str, str]:
     return {"status": "ok"}
 
