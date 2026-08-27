@@ -1,0 +1,64 @@
+{
+  "artifact_sha256": {
+    "application": "b5abe5e07ab47b5567dd8940093ab6cba93b0c0eb868fbc4dc9985f2bf55b4fd",
+    "dockerfile": "4d4d29dc6043f8d3f01b40e811737abacc72aaae72566ad170a775f36fcf98a0",
+    "lockfile": "95e69076c363726cf1c531156e7c1769a4b8043a39963036cd8726a91e132784",
+    "pyproject": "560a764d12b76c0189b8d606477d118a54895e6620cc46de1ae1f125b16dabeb",
+    "runner": "60499bf6ad06b6627e825e7541b9039b430443cbfe74c51dd3936ed2ccd126a8",
+    "schema": "26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364",
+    "seed": "28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616"
+  },
+  "contract_binding": {
+    "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0"
+  },
+  "evidence_type": "canonflow_event_producer_local_integration_test",
+  "evidence_version": 1,
+  "execution_environment": {
+    "clickhouse_image": "clickhouse/clickhouse-server:26.2.1@sha256:f57ed23ab5c4ee0e9a05c2e811bb3580ead222cea30421b3e66234c32e272bce",
+    "clickhouse_ingest_engine": "MergeTree",
+    "clickhouse_server_version": "26.2.1.1139",
+    "cloud_connection_opened": false,
+    "containers_removed": true,
+    "mode": "ephemeral_local_docker",
+    "network_removed": true,
+    "producer_container_user": 10001,
+    "producer_image": "canonflow-event-producer:p10g-local",
+    "remote_mutation_executed": false
+  },
+  "results": {
+    "changed_payload_status": 202,
+    "current_logical_events": 1,
+    "current_payload": {
+      "state": "retry",
+      "unit": "percent",
+      "value": 400
+    },
+    "event_definition_count": 57,
+    "exact_retry_physical_rows": 1,
+    "exact_retry_status": 202,
+    "health_status": 200,
+    "initial_ingest_status": 202,
+    "invalid_frame_binding_status": 422,
+    "physical_ingest_attempts": 2,
+    "physical_materialized_events": 2,
+    "readiness_status": 200,
+    "stable_event_id": "d4c86f7f-bde0-5c48-91a1-ecf20f3ea566",
+    "stable_insert_deduplication_token": "3b1d8732626e0ff4806900881127943bf72e949444dd5713be43611ef5ecf6be",
+    "truth_scope_mismatch_status": 409,
+    "unknown_definition_status": 422
+  },
+  "security": {
+    "clickhouse_insert_scope": [
+      "canonflow.event_ingest_attempts"
+    ],
+    "clickhouse_select_scope": [
+      "canonflow.event_definitions",
+      "canonflow.event_ingest_attempts:materialized-view-source-columns"
+    ],
+    "dedicated_clickhouse_user": true,
+    "mcp_write_access_required": false,
+    "plaintext_password_persisted": false
+  }
+}

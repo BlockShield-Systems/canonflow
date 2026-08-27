@@ -1,0 +1,8 @@
+26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/47-clickhouse-event-ledger-schema-v1.sql
+28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/48-clickhouse-event-definition-seed-v1.sql
+b5abe5e07ab47b5567dd8940093ab6cba93b0c0eb868fbc4dc9985f2bf55b4fd  /home/darky/projects/canonflow/services/event-producer/src/canonflow_event_producer/app.py
+560a764d12b76c0189b8d606477d118a54895e6620cc46de1ae1f125b16dabeb  /home/darky/projects/canonflow/services/event-producer/pyproject.toml
+95e69076c363726cf1c531156e7c1769a4b8043a39963036cd8726a91e132784  /home/darky/projects/canonflow/services/event-producer/uv.lock
+4d4d29dc6043f8d3f01b40e811737abacc72aaae72566ad170a775f36fcf98a0  /home/darky/projects/canonflow/services/event-producer/Dockerfile
+60499bf6ad06b6627e825e7541b9039b430443cbfe74c51dd3936ed2ccd126a8  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/55a-event-producer-local-integration-test.sh
+50558de947fa55b4d6888060877e015149e11325ff49b3cea811fe97990f8fca  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/55-event-producer-local-integration-test.json

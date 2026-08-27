@@ -1,0 +1,18 @@
+[project]
+name = "canonflow-event-producer"
+version = "0.1.0"
+description = "Authenticated deterministic ClickHouse Event Ledger producer for CanonFlow"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "clickhouse-connect==1.7.2",
+    "fastapi==0.136.1",
+    "pydantic==2.13.4",
+    "uvicorn==0.52.4",
+]
+
+[project.scripts]
+canonflow-event-producer = "canonflow_event_producer.app:run"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
