@@ -1,0 +1,62 @@
+{
+  "approval": {
+    "approved": true,
+    "approved_by": "Demian",
+    "execution_scope": "single_exact_retry",
+    "maximum_http_requests": 1,
+    "proposal_sha256": "6211ed6096a55d6b54311921d102e8d650d6850e8e474a44f5fca9cd5888704e"
+  },
+  "artifacts": {
+    "59-controlled-event-proposal.json": "6211ed6096a55d6b54311921d102e8d650d6850e8e474a44f5fca9cd5888704e",
+    "59a-controlled-event-approval.json": "dca101f46868f64ec27aa4a23bd4952784af5ea75308d9009fcd1be497804bef",
+    "59b-controlled-event-executor.py": "9dc38cc9b0c6c5a9f6884208af8ccadff467d7004142694b4cd4b5549f49c845",
+    "59c-controlled-event-execution.json": "b19bea4fc1e66003fff2032166c3ae2e3b8922bc7cd22665dfb11a656c435fef"
+  },
+  "cloud_run": {
+    "authenticated_readiness_status": 200,
+    "execution_http_status": 202,
+    "private": true,
+    "public_members": [],
+    "revision": "canonflow-event-producer-00003-hf5",
+    "service": "canonflow-event-producer"
+  },
+  "event": {
+    "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+    "deduplication_key": "cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b",
+    "event_id": "3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177",
+    "event_name": "nscl.force_amplification.set",
+    "ingest_attempt_id_from_response": "c83482aa-3b9a-49dc-b903-a0efd662d622",
+    "insert_deduplication_token": "fae6a7ab8d532a5613dd0ead06a5ea7ad66728c5f7e592b302f88b27c8291aad",
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "revision_run_id": "bfc9b4ae-c196-4ef8-bc84-8e78f395570b"
+  },
+  "evidence_type": "canonflow_controlled_event_write_validation",
+  "generated_at_utc": "2026-08-27T14:32:52.792556+00:00",
+  "identity": {
+    "cloud_run_role": "roles/run.invoker",
+    "executor_service_account": "canonflow-event-writer@canonflow-agentic-cinema.iam.gserviceaccount.com",
+    "identity_token_persisted": false,
+    "operator": "contact@ai-techart.com",
+    "operator_role": "roles/iam.serviceAccountTokenCreator",
+    "service_account_key_created": false
+  },
+  "ledger_validation": {
+    "contract_violations": 0,
+    "current_logical_events": 1,
+    "exact_retry_idempotent": true,
+    "physical_ingest_attempts": 1,
+    "physical_materialized_events": 1
+  },
+  "schema_version": "1.0",
+  "security": {
+    "agent_has_direct_clickhouse_write_access": false,
+    "http_requests_executed": 1,
+    "human_approval_required": true,
+    "mcp_drop_access": false,
+    "mcp_write_access": false,
+    "proposal_hash_binding_validated": true,
+    "unrestricted_event_name_input": false
+  },
+  "source_commit": "bedbc091b279de85667e24a812bb6bf7b8d8230c",
+  "status": "validated"
+}

@@ -1,0 +1,16 @@
+{
+  "approval_source": "Direct explicit user confirmation",
+  "approval_statement": "Ich genehmige den Exact Retry für Proposal SHA-256 6211ed6096a55d6b54311921d102e8d650d6850e8e474a44f5fca9cd5888704e.",
+  "approval_type": "canonflow_controlled_event_execution",
+  "approved": true,
+  "approved_at_utc": "2026-08-27T14:28:25.406795+00:00",
+  "approved_by": "Demian",
+  "deduplication_key": "cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b",
+  "event_id": "3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177",
+  "execution_scope": "single_exact_retry",
+  "expected_insert_deduplication_token": "fae6a7ab8d532a5613dd0ead06a5ea7ad66728c5f7e592b302f88b27c8291aad",
+  "maximum_http_requests": 1,
+  "proposal_sha256": "6211ed6096a55d6b54311921d102e8d650d6850e8e474a44f5fca9cd5888704e",
+  "schema_version": "1.0",
+  "status": "approved"
+}

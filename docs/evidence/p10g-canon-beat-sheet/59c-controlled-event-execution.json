@@ -1,0 +1,20 @@
+{
+  "approved_by": "Demian",
+  "deduplication_key": "cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b",
+  "event_id": "3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177",
+  "evidence_type": "canonflow_controlled_event_exact_retry_execution",
+  "executed_at_utc": "2026-08-27T14:29:03.998843+00:00",
+  "executor_service_account": "canonflow-event-writer@canonflow-agentic-cinema.iam.gserviceaccount.com",
+  "expected_logical_effect": "exact_retry_no_new_logical_event",
+  "http_requests_executed": 1,
+  "http_status": 202,
+  "identity_token_persisted": false,
+  "ingest_attempt_id": "c83482aa-3b9a-49dc-b903-a0efd662d622",
+  "insert_deduplication_token": "fae6a7ab8d532a5613dd0ead06a5ea7ad66728c5f7e592b302f88b27c8291aad",
+  "maximum_http_requests": 1,
+  "producer_status": "accepted_or_deduplicated",
+  "proposal_sha256": "6211ed6096a55d6b54311921d102e8d650d6850e8e474a44f5fca9cd5888704e",
+  "schema_version": "1.0",
+  "service_url": "https://canonflow-event-producer-ektxaloq2a-ez.a.run.app",
+  "status": "success"
+}
