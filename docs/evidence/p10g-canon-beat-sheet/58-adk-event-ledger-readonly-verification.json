@@ -1,0 +1,73 @@
+{
+  "agent": {
+    "adk_version": "2.7.1",
+    "event_count": 3,
+    "interactions_api": true,
+    "model": "model='gemini-3.1-pro-preview' base_url=None speech_config=None use_interactions_api=True retry_options=None",
+    "name": "canonflow_agent",
+    "package_version": "0.1.1",
+    "session_id": "7d29d7bc-6144-4393-906e-81340d7c5030"
+  },
+  "evidence_type": "canonflow_adk_event_ledger_readonly_verification",
+  "generated_at_utc": "2026-08-27T14:04:52.648239+00:00",
+  "mcp_runtime": {
+    "drop_access": false,
+    "endpoint": "http://127.0.0.1:8000/mcp",
+    "tool_call_count": 1,
+    "tool_name": "run_query",
+    "tool_response_count": 1,
+    "transport": "streamable-http",
+    "write_access": false
+  },
+  "schema_version": "1.0",
+  "source_artifacts": {
+    "agent_sha256": "56554dfb70d5dfaa2a31b1eb072ccb27b15eefd44fe79bcaa504b9a966a3a64f",
+    "persistent_runner_sha256": "0f6552f4f3588a2ac168fc751b54db323d99a11272a0f824dcb11ea91375b796",
+    "policy_sha256": "9e547c947c4c3769295d37e910930a593dc3ea170765b054d5036c83dac1a05a",
+    "temporary_result_sha256": "4bc007522f472aa55f0fbda1d020d853279aff065c838a38ba20b5219e68b2f7"
+  },
+  "status": "validated",
+  "target": {
+    "deduplication_key": "cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b",
+    "event_id": "3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177",
+    "event_name": "nscl.force_amplification.set",
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "truth_scope": "system_truth"
+  },
+  "trace": {
+    "final_response": "Here are the results from the Event Ledger verification:\n\n* **event_id**: 3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177\n* **deduplication_key**: cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b\n* **event_name**: nscl.force_amplification.set\n* **event_version**: 1\n* **truth_scope**: system_truth\n* **source_service**: canonflow-cloud-run-validation\n* **source_instance**: manual-smoke-test\n* **payload_json**: `{\"state\":\"remote-validation\",\"unit\":\"percent\",\"value\":400}`",
+    "tool_call": {
+      "args": {
+        "query": "SELECT\n    toString(e.event_id) AS event_id_text,\n    e.deduplication_key,\n    e.event_name,\n    e.event_version,\n    e.truth_scope,\n    e.source_service,\n    e.source_instance,\n    e.payload_json\nFROM canonflow.v_events_current AS e\nWHERE e.project_id = toUUID(\n    'e8627781-5bf3-4c4d-905f-8dda49ab53d6'\n)\n  AND e.event_id = toUUID('3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177')\n  AND e.deduplication_key = 'cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b'\nLIMIT 1"
+      },
+      "id": "call_2063751",
+      "name": "run_query"
+    },
+    "tool_response": {
+      "id": "call_2063751",
+      "name": "run_query",
+      "response": {
+        "content": [
+          {
+            "text": "{\"columns\": [\"event_id_text\", \"deduplication_key\", \"event_name\", \"event_version\", \"truth_scope\", \"source_service\", \"source_instance\", \"payload_json\"], \"rows\": [[\"3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177\", \"cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b\", \"nscl.force_amplification.set\", 1, \"system_truth\", \"canonflow-cloud-run-validation\", \"manual-smoke-test\", \"{\\\"state\\\":\\\"remote-validation\\\",\\\"unit\\\":\\\"percent\\\",\\\"value\\\":400}\"]]}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "result": "{\"columns\": [\"event_id_text\", \"deduplication_key\", \"event_name\", \"event_version\", \"truth_scope\", \"source_service\", \"source_instance\", \"payload_json\"], \"rows\": [[\"3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177\", \"cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b\", \"nscl.force_amplification.set\", 1, \"system_truth\", \"canonflow-cloud-run-validation\", \"manual-smoke-test\", \"{\\\"state\\\":\\\"remote-validation\\\",\\\"unit\\\":\\\"percent\\\",\\\"value\\\":400}\"]]}"
+        }
+      }
+    }
+  },
+  "validation": {
+    "deduplication_scope_present": true,
+    "event_scope_present": true,
+    "final_response_grounded": true,
+    "model_errors": [],
+    "project_scope_present": true,
+    "query_is_select": true,
+    "remote_event_found": true,
+    "state_changing_sql_present": false
+  }
+}

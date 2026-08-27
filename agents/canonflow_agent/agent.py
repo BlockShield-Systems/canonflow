@@ -23,8 +23,30 @@ def required_env(name: str) -> str:
     return value
 
 
+def positive_float_env(name: str, default: float) -> float:
+    raw_value = os.getenv(name, str(default))
+
+    try:
+        value = float(raw_value)
+    except ValueError as exc:
+        raise RuntimeError(
+            f"{name} must be numeric"
+        ) from exc
+
+    if value <= 0:
+        raise RuntimeError(
+            f"{name} must be greater than zero"
+        )
+
+    return value
+
+
 MCP_URL = required_env("CANONFLOW_MCP_URL")
 MCP_AUTH_TOKEN = required_env("CLICKHOUSE_MCP_AUTH_TOKEN")
+MCP_TIMEOUT_SECONDS = positive_float_env(
+    "CANONFLOW_MCP_TIMEOUT_SECONDS",
+    120.0,
+)
 MODEL = os.getenv("CANONFLOW_MODEL", "gemini-3.1-pro-preview")
 PROJECT_SLUG = os.getenv(
     "CANONFLOW_PROJECT_SLUG",
@@ -41,7 +63,7 @@ clickhouse_toolset = McpToolset(
             "Content-Type": "application/json",
             "Accept": "application/json, text/event-stream",
         },
-        timeout=30.0,
+        timeout=MCP_TIMEOUT_SECONDS,
     ),
     tool_filter=[
         "list_databases",

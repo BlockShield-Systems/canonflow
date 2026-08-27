@@ -6,6 +6,7 @@ from canonflow_agent.policy import enforce_read_only_clickhouse
 
 
 PROJECT_ID = "e8627781-5bf3-4c4d-905f-8dda49ab53d6"
+CONTRACT_ID = "e17828fb-49b1-5df0-9c45-385a68f5f9d1"
 
 
 @dataclass
@@ -166,6 +167,73 @@ def test_ignores_blocked_word_inside_literal() -> None:
     assert result is None
 
 
+
+def test_allows_project_scoped_event_query() -> None:
+    result = evaluate(
+        f"""
+        SELECT
+            event_id,
+            event_name,
+            payload_json
+        FROM canonflow.v_events_current
+        WHERE project_id = toUUID('{PROJECT_ID}')
+        LIMIT 10
+        """
+    )
+
+    assert result is None
+
+
+def test_blocks_unscoped_event_query() -> None:
+    result = evaluate(
+        """
+        SELECT
+            event_id,
+            event_name,
+            payload_json
+        FROM canonflow.v_events_current
+        LIMIT 10
+        """
+    )
+
+    assert result is not None
+    assert result["status"] == "blocked"
+    assert "Project-scoped" in result["reason"]
+
+
+def test_allows_contract_scoped_definition_query() -> None:
+    result = evaluate(
+        f"""
+        SELECT
+            event_name,
+            event_version,
+            truth_scope
+        FROM canonflow.event_definitions
+        WHERE contract_id = toUUID('{CONTRACT_ID}')
+        ORDER BY event_name, event_version
+        """
+    )
+
+    assert result is None
+
+
+def test_blocks_unscoped_contract_violation_query() -> None:
+    result = evaluate(
+        """
+        SELECT
+            event_id,
+            event_name,
+            contract_status
+        FROM canonflow.v_event_contract_violations
+        LIMIT 10
+        """
+    )
+
+    assert result is not None
+    assert result["status"] == "blocked"
+    assert "Contract-scoped" in result["reason"]
+
+
 def main() -> None:
     tests = [
         test_allows_scoped_select,
@@ -178,6 +246,10 @@ def main() -> None:
         test_blocks_unscoped_project_query,
         test_blocks_multiple_statements,
         test_ignores_blocked_word_inside_literal,
+        test_allows_project_scoped_event_query,
+        test_blocks_unscoped_event_query,
+        test_allows_contract_scoped_definition_query,
+        test_blocks_unscoped_contract_violation_query,
     ]
 
     for test in tests:

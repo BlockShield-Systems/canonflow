@@ -9,6 +9,7 @@ from sqlglot.errors import ParseError
 
 PROJECT_ID = "e8627781-5bf3-4c4d-905f-8dda49ab53d6"
 PROJECT_SLUG = "yd-when-paradise-glitches"
+CONTRACT_ID = "e17828fb-49b1-5df0-9c45-385a68f5f9d1"
 
 READ_ONLY_PREFIXES = {
     "SELECT",
@@ -64,6 +65,18 @@ PROJECT_TABLES = {
     "media_assets",
     "agent_runs",
     "tool_events",
+    "event_ingest_attempts",
+    "events",
+    "mv_event_ingest_attempts_to_events",
+    "v_events_current",
+    "v_system_truth",
+    "v_character_knowledge",
+    "v_timeline_binding_validation",
+}
+
+CONTRACT_TABLES = {
+    "event_definitions",
+    "v_event_contract_violations",
 }
 
 
@@ -317,6 +330,24 @@ def enforce_read_only_clickhouse(
             return _blocked(
                 "Project-scoped queries must contain the approved project_id "
                 f"or slug. Tables: {sorted(touched_project_tables)}."
+            )
+
+    touched_contract_tables = {
+        table
+        for table in CONTRACT_TABLES
+        if re.search(
+            rf"\b{re.escape(table.upper())}\b",
+            normalized_upper,
+        )
+    }
+
+    if touched_contract_tables:
+        has_contract_id = CONTRACT_ID.lower() in query.lower()
+
+        if not has_contract_id:
+            return _blocked(
+                "Contract-scoped queries must contain the approved "
+                f"contract_id. Tables: {sorted(touched_contract_tables)}."
             )
 
     return None
