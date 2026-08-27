@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "clickhouse_event_ledger_schema_validation",
+  "database": "canonflow",
+  "generated_at_utc": "2026-08-27T01:55:25.868683Z",
+  "contract_binding": {
+    "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+    "contract_path": "45-p10g-telemetry-event-contract-v1.json",
+    "contract_sha256": "ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83",
+    "contract_candidate_tag": "p10g-telemetry-event-contract-v1-candidate",
+    "contract_candidate_commit": "31e302eaf3d03a8281a29c6dffa20e9ce3c68c0e",
+    "event_count": 57
+  },
+  "clickhouse_compatibility": {
+    "target_version_family": "26.2.x",
+    "remote_server_version_observed": "26.2.1.558",
+    "syntax_execution_completed": false,
+    "remote_deployment_completed": false
+  },
+  "schema_objects": {
+    "database": "canonflow",
+    "tables": [
+      "event_definitions",
+      "event_ingest_attempts",
+      "events"
+    ],
+    "materialized_views": [
+      "mv_event_ingest_attempts_to_events"
+    ],
+    "views": [
+      "v_events_current",
+      "v_system_truth",
+      "v_character_knowledge",
+      "v_timeline_binding_validation",
+      "v_event_contract_violations"
+    ]
+  },
+  "checks": [
+    {
+      "check_id": "CH-SCHEMA-001",
+      "name": "contract_candidate_commit_bound",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-002",
+      "name": "contract_hash_bound",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-003",
+      "name": "event_definition_count",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-004",
+      "name": "raw_ingest_ledger_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-005",
+      "name": "deduplicated_projection_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-006",
+      "name": "materialized_view_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-007",
+      "name": "nanosecond_timestamps_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-008",
+      "name": "nullable_frame_binding_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-009",
+      "name": "rational_framerate_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-010",
+      "name": "system_truth_view_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-011",
+      "name": "character_knowledge_view_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-012",
+      "name": "timeline_validation_view_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-013",
+      "name": "contract_violation_view_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-014",
+      "name": "seed_contains_57_rows",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-015",
+      "name": "rollback_present",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-016",
+      "name": "mcp_not_used_for_ingestion",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-017",
+      "name": "no_remote_execution",
+      "passed": true
+    },
+    {
+      "check_id": "CH-SCHEMA-018",
+      "name": "final_canon_not_modified",
+      "passed": true
+    }
+  ],
+  "result": {
+    "checks_total": 18,
+    "checks_passed": 18,
+    "checks_failed": 0,
+    "event_definition_rows": 57,
+    "schema_generation_passed": true,
+    "syntax_execution_pending": true,
+    "deployment_pending": true
+  },
+  "execution": {
+    "provider_calls_executed": false,
+    "clickhouse_connection_opened": false,
+    "clickhouse_mutation_executed": false,
+    "remote_schema_modified": false,
+    "final_canon_modified": false
+  }
+}

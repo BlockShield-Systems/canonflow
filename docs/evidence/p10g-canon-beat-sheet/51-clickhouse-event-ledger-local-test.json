@@ -1,0 +1,48 @@
+{
+  "artifact_sha256": {
+    "rollback": "99e61e400b7eb5e2efb0a2dccba1310fa9f7656da5b62270ccbdb1b789157042",
+    "runner": "1572632254e01cba75dc3aa795ba5c1c958a18f9159baa480d9153adf4d4acb0",
+    "schema": "26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364",
+    "schema_validation": "285b584b14a3f772136e4c0987e0a6b9f1f0c6fd97e64b10f33c2a2416b40d15",
+    "seed": "28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616"
+  },
+  "contract_binding": {
+    "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0"
+  },
+  "database": "canonflow",
+  "evidence_type": "clickhouse_event_ledger_local_test",
+  "evidence_version": 1,
+  "execution_environment": {
+    "container_removed": true,
+    "database_removed": true,
+    "image": "clickhouse/clickhouse-server:26.2.19.43",
+    "mode": "ephemeral_local_docker",
+    "network_mode": "none",
+    "server_version": "26.2.19.43"
+  },
+  "execution_policy": {
+    "clickhouse_cloud_connection_opened": false,
+    "final_canon_modified": false,
+    "functional_execution_completed": true,
+    "provider_calls_executed": false,
+    "remote_mutation_executed": false,
+    "rollback_completed": true,
+    "syntax_execution_completed": true
+  },
+  "results": {
+    "character_knowledge_count": 1,
+    "contract_violation_count": 1,
+    "current_event_count": 5,
+    "duplicate_logical_key_count": 1,
+    "event_definition_count": 57,
+    "frame_bound_invalid_count": 1,
+    "frame_bound_valid_count": 1,
+    "raw_ingest_attempt_count": 6,
+    "retry_payload": "{\"state\":\"retry\",\"value\":400,\"unit\":\"percent\"}",
+    "semantic_only_count": 3,
+    "system_truth_count": 4,
+    "unknown_event_status": "unknown_event"
+  }
+}

@@ -1,0 +1,6 @@
+26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364  47-clickhouse-event-ledger-schema-v1.sql
+28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616  48-clickhouse-event-definition-seed-v1.sql
+99e61e400b7eb5e2efb0a2dccba1310fa9f7656da5b62270ccbdb1b789157042  49-clickhouse-event-ledger-rollback-v1.sql
+285b584b14a3f772136e4c0987e0a6b9f1f0c6fd97e64b10f33c2a2416b40d15  50-clickhouse-event-ledger-schema-validation.json
+1572632254e01cba75dc3aa795ba5c1c958a18f9159baa480d9153adf4d4acb0  51a-clickhouse-event-ledger-local-test.sh
+2d04c4da0a1901980ddfd2c259b168ee49ac545839c87a3a430c58339d28ca31  51-clickhouse-event-ledger-local-test.json

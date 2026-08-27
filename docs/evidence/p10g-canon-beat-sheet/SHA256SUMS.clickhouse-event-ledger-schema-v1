@@ -1,0 +1,7 @@
+ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83  45-p10g-telemetry-event-contract-v1.json
+99d540b378da941ea9abdf0a06eefa827e9b9286f3bdcbd7900b6c4858e3a28a  46-p10g-telemetry-event-contract-validation.json
+dabe5df64cfa9f3d6762f418290e58691d43bbbd39504680f15635c5cda09495  47a-clickhouse-event-ledger-schema-builder.py
+26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364  47-clickhouse-event-ledger-schema-v1.sql
+28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616  48-clickhouse-event-definition-seed-v1.sql
+99e61e400b7eb5e2efb0a2dccba1310fa9f7656da5b62270ccbdb1b789157042  49-clickhouse-event-ledger-rollback-v1.sql
+285b584b14a3f772136e4c0987e0a6b9f1f0c6fd97e64b10f33c2a2416b40d15  50-clickhouse-event-ledger-schema-validation.json
