@@ -1,0 +1,85 @@
+{
+  "clickhouse": {
+    "database": "canonflow",
+    "event_definition_physical_rows": 57,
+    "event_definition_unique_keys": 57,
+    "ledger_objects": {
+      "materialized_views": 1,
+      "physical_tables": 3,
+      "read_views": 5,
+      "total": 9
+    },
+    "password_secret": "canonflow-clickhouse-event-producer-password",
+    "password_secret_version": "1",
+    "plaintext_password_persisted": false,
+    "producer_user": "canonflow_event_producer",
+    "provider": "GCP",
+    "region": "europe-west4"
+  },
+  "cloud_run": {
+    "authenticated_liveness_status": 200,
+    "authenticated_readiness_status": 200,
+    "direct_vpc_network": "canonflow-runtime",
+    "direct_vpc_subnet": "canonflow-runtime-europe-west4",
+    "private_iam": true,
+    "project": "canonflow-agentic-cinema",
+    "region": "europe-west4",
+    "revision": "canonflow-event-producer-00003-hf5",
+    "runtime_service_account": "canonflow-event-producer@canonflow-agentic-cinema.iam.gserviceaccount.com",
+    "service": "canonflow-event-producer",
+    "static_egress_allowlisted": true,
+    "traffic_percent": 100,
+    "unauthenticated_readiness_status": 403,
+    "vpc_egress": "all-traffic"
+  },
+  "evidence_type": "canonflow_event_producer_cloud_deployment_validation",
+  "generated_at_utc": "2026-08-27T11:16:32.155918+00:00",
+  "mcp_verification": {
+    "active_runtime_drop_access": false,
+    "active_runtime_write_access": false,
+    "contract_violations": 0,
+    "ledger_counts": [
+      1,
+      1,
+      1
+    ],
+    "mutation_executed": false,
+    "remote_event_found": true,
+    "status": "success",
+    "transport": "streamable-http"
+  },
+  "release": {
+    "artifact_registry_manifest_digest": "sha256:1dca0c7df78269923e3bafcdd6cf8179423110f52ca3b0ff4f9562b38d1c2a09",
+    "configured_image": "europe-west4-docker.pkg.dev/canonflow-agentic-cinema/canonflow-services/canonflow-event-producer@sha256:1dca0c7df78269923e3bafcdd6cf8179423110f52ca3b0ff4f9562b38d1c2a09",
+    "git_commit": "27a3766d2df9d02f7936f9adde3a308bb19137b3",
+    "git_tag": "p10g-event-producer-v0.1.1-cold-start-validated",
+    "runtime_resolved_image": "europe-west4-docker.pkg.dev/canonflow-agentic-cinema/canonflow-services/canonflow-event-producer@sha256:15118b9ef646e9d42dea20af168b20263bea419859fb2e3fe216f5205b536002",
+    "version": "0.1.1"
+  },
+  "remote_smoke_test": {
+    "contract_violations": 0,
+    "current_logical_events": 1,
+    "deduplication_key": "cloud-run-smoke:bfc9b4ae-c196-4ef8-bc84-8e78f395570b",
+    "distinct_ingest_attempt_ids": true,
+    "event_id": "3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177",
+    "event_name": "nscl.force_amplification.set",
+    "exact_retry_http_status": 202,
+    "initial_http_status": 202,
+    "payload": {
+      "state": "remote-validation",
+      "unit": "percent",
+      "value": 400
+    },
+    "physical_ingest_attempts": 1,
+    "physical_materialized_events": 1,
+    "revision_run_id": "bfc9b4ae-c196-4ef8-bc84-8e78f395570b",
+    "stable_event_id": true,
+    "stable_insert_deduplication_token": true
+  },
+  "security": {
+    "cloud_run_authentication_required": true,
+    "mcp_mutation_executed": false,
+    "public_cloud_run_iam_members": [],
+    "secret_value_in_evidence": false
+  }
+}

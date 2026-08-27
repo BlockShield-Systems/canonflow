@@ -1,0 +1,10 @@
+ACTIVE MCP RUNTIME POLICY
+CLICKHOUSE_ALLOW_WRITE_ACCESS=false
+CLICKHOUSE_ALLOW_DROP=false
+
+PASS: MCP tools: ['list_databases', 'list_tables', 'run_query']
+PASS: Event Ledger objects: 9
+PASS: Remote event: 3b2a7e9f-f8bf-5f7c-8717-1a0a231e4177
+PASS: Ledger counts: 1 / 1 / 1
+PASS: Contract violations: 0
+READ-ONLY MCP EVENT LEDGER VERIFICATION: SUCCESS

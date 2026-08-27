@@ -1,0 +1,9 @@
+a1472cdaaba360b9038027e6e49613b7691ee883a0e2da11d18d0f28a119cc4f  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/57-event-producer-cloud-deployment-validation.json
+b85c38dc9646dd28d2e0c44b887f69aee4b9f9be1cd402bcc787192288bf09d0  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/57a-event-producer-readonly-mcp-verification.log
+44101115884609bdde1053da3651ccc2475107389cee6f82419c414c714de29d  /home/darky/projects/canonflow/services/event-producer/src/canonflow_event_producer/app.py
+f00740635beb0a37f23bfc7c39f71d64862729003ebaf6bfd9857daa6be2a6b8  /home/darky/projects/canonflow/services/event-producer/pyproject.toml
+23a06c4ba68842b1da57a3493f5fef1a8b9e5c4db06ae947ff8cd2b9c5799040  /home/darky/projects/canonflow/services/event-producer/uv.lock
+26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/47-clickhouse-event-ledger-schema-v1.sql
+28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/48-clickhouse-event-definition-seed-v1.sql
+a61d5477b1b1a7a5d5743577cd20cd08db48b62573f5b0fe5e0de91dbe8cc35b  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/56-event-producer-cold-start-integration-test.json
+b15c927b31777e92454f655a27ece589bf88bbf3871d7ed83a803bb7f1b23c37  /home/darky/projects/canonflow/docs/evidence/p10g-canon-beat-sheet/56a-event-producer-cold-start-integration-test.sh
