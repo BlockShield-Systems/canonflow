@@ -1,0 +1,68 @@
+{
+  "approval_boundary": {
+    "contract_binding": true,
+    "event_name_binding": true,
+    "human_approval_required": true,
+    "maximum_http_requests": 1,
+    "project_binding": true,
+    "proposal_sha256_binding": true,
+    "service_account_binding": true,
+    "service_url_binding": true
+  },
+  "artifacts": {
+    "agents/canonflow_agent/tests/test_controlled_event_executor.py": "c4ef2bcef13c89a75d3b5146cd40f430218539c1eca605ff201e5b41fe4ad99a",
+    "agents/pyproject.toml": "50f19eb4d8b1e86c45d50795f73b4d5cc6a6f98e8a3ffaa840f8884969561ee2",
+    "agents/scripts/execute_approved_event.py": "cd21e7050451d99c4816ebd14ec442e4bc607edd22d22ad26af3da74ebc633ac",
+    "agents/uv.lock": "e96ceb81a40859414bf67701499c0bda0f975bd85f8bc543cede5bc84a13d953"
+  },
+  "evidence_type": "canonflow_controlled_event_executor_integration",
+  "generated_at_utc": "2026-08-27T23:42:59.940963+00:00",
+  "integration": {
+    "exact_retry_only": true,
+    "executor": "agents/scripts/execute_approved_event.py",
+    "general_purpose_event_client": false,
+    "operator_only": true,
+    "registered_as_adk_tool": false,
+    "tests": "agents/canonflow_agent/tests/test_controlled_event_executor.py"
+  },
+  "package": {
+    "name": "canonflow-agents",
+    "version": "0.1.2"
+  },
+  "replay_protection": {
+    "atomic_exclusive_create": true,
+    "claim_bound_to_proposal_sha256": true,
+    "claim_flag": "O_EXCL",
+    "global_distributed_at_most_once": false,
+    "local_at_most_once": true,
+    "persistent_execution_claim_required": true
+  },
+  "schema_version": "1.0",
+  "security": {
+    "agent_has_direct_clickhouse_write_access": false,
+    "identity_token_generated_during_validation": false,
+    "identity_token_persisted": false,
+    "mcp_drop_access": false,
+    "mcp_write_access": false,
+    "network_called_during_validation": false,
+    "service_account_key_required": false
+  },
+  "source_commit": "2d47af2a4605aaf9ebcffb2bccf72e9310d8c694",
+  "source_evidence": {
+    "artifact": "docs/evidence/p10g-canon-beat-sheet/59d-controlled-event-validation.json",
+    "controlled_write_commit": "2d47af2a4605aaf9ebcffb2bccf72e9310d8c694",
+    "controlled_write_tag": "p10g-controlled-event-write-v1-validated",
+    "sha256": "a846f2905103994140b3c7efa7e7a0a0a36f96844b8864244ae34ed5d30d6e9e"
+  },
+  "status": "validated",
+  "validation": {
+    "executor_test_count": 9,
+    "executor_tests_passed": true,
+    "expected_error_output_captured": true,
+    "policy_test_count": 14,
+    "policy_tests_passed": true,
+    "python_compile_passed": true,
+    "test_log_clean": true,
+    "whitespace_check_passed": true
+  }
+}
