@@ -1,0 +1,1601 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "p10g_telemetry_event_contract",
+  "contract_version": "1.0.0",
+  "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+  "status": "semantic_contract_candidate",
+  "generated_at_utc": "2026-08-27T01:19:32.688602Z",
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches",
+    "revision": "R4",
+    "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0"
+  },
+  "canon_binding": {
+    "tag": "p10g-r4-final-canon",
+    "commit_sha": "9f7898c47c9925a26ba26a4f6cb95ef90c232ac3",
+    "draft_path": "38-canon-beat-sheet-third-revised-draft.md",
+    "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+    "human_review_completed": true,
+    "approved_as_final_canon": true,
+    "final_disposition": "approve"
+  },
+  "authority": {
+    "semantic_cue_authority": "final_canon_beat_sheet",
+    "frame_authority": "locked_edit_timeline",
+    "frame_binding_allowed_before_timeline_lock": false,
+    "numeric_threshold_policy": "Only canon-exact values or separately versioned runtime configuration are permitted.",
+    "system_truth_separate_from_character_knowledge": true
+  },
+  "timeline_policy": {
+    "current_status": "not_locked",
+    "frame_index_convention": "zero_based_global_timeline",
+    "frame_start_inclusive": true,
+    "frame_end_exclusive": true,
+    "framerate_representation": "rational",
+    "fps_numerator": null,
+    "fps_denominator": null,
+    "drop_frame": null,
+    "timeline_version": null,
+    "shot_bindings_present": false,
+    "frame_bindings_present": false
+  },
+  "runtime_event_envelope": {
+    "required_fields": [
+      "event_id",
+      "event_name",
+      "event_version",
+      "project_id",
+      "revision_run_id",
+      "timeline_version",
+      "occurred_at",
+      "ingested_at",
+      "source_service",
+      "source_instance",
+      "truth_scope",
+      "payload_version",
+      "deduplication_key"
+    ],
+    "conditional_timeline_fields": [
+      "scene_id",
+      "shot_id",
+      "beat_id",
+      "frame_index",
+      "fps_numerator",
+      "fps_denominator"
+    ],
+    "event_id_policy": "UUIDv7 preferred",
+    "occurred_at_storage": "DateTime64(9, UTC)",
+    "frame_index_storage": "Nullable(UInt64)",
+    "fps_storage": "Nullable(UInt32) numerator and denominator",
+    "payload_storage": "JSON",
+    "deduplication_policy": "Stable producer-generated deduplication_key; retries must preserve the same key."
+  },
+  "transport_policy": {
+    "event_producer": "Canonflow runtime, simulation, renderer, or timeline adapter",
+    "recommended_transport": "Google Cloud Pub/Sub",
+    "recommended_clickhouse_ingestion": "ClickPipe",
+    "clickhouse_role": "event ledger and analytics",
+    "clickhouse_mcp_role": "read/query/evidence interface",
+    "mcp_is_frame_clock": false,
+    "mcp_is_primary_high_frequency_ingestor": false
+  },
+  "event_count": 57,
+  "domains": [
+    "character_knowledge",
+    "fabrication",
+    "nscl",
+    "villa_automation",
+    "yd_system"
+  ],
+  "truth_scopes": [
+    "character_knowledge",
+    "character_observation",
+    "declared_intent",
+    "reported_external_state",
+    "system_truth"
+  ],
+  "events": [
+    {
+      "event_name": "nscl.synchronization.observed",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "privileged_cinematic",
+      "description": "The implanted lattice reaches an observable synchronization state.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-003",
+        "source_phrase": "newly implanted NSCL synchronizes",
+        "source_line": 93,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.musculoskeletal_stabilization.confirmed",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_confirmation",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Private HUD confirms musculoskeletal stabilization.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-003",
+        "source_phrase": "musculoskeletal stabilization, reflex support, and continuity lock",
+        "source_line": 93,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.reflex_support.confirmed",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_confirmation",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Private HUD confirms reflex support.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-003",
+        "source_phrase": "musculoskeletal stabilization, reflex support, and continuity lock",
+        "source_line": 93,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.continuity_lock.confirmed",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_confirmation",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Private HUD confirms continuity lock.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-003",
+        "source_phrase": "musculoskeletal stabilization, reflex support, and continuity lock",
+        "source_line": 93,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.hangover_compensation.reported",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "measurement",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "HUD reports the canonical hangover-compensation setting.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-005",
+        "source_phrase": "Hangover-Compensation at 400%",
+        "source_line": 130,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": {
+        "value": 400,
+        "unit": "percent"
+      },
+      "threshold_policy": "canon_exact",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.high_output.activated",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "High-output NSCL assistance is activated.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-014",
+        "source_phrase": "activates high-output NSCL assistance",
+        "source_line": 295,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.structural_stabilization.activated",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Structural stabilization becomes active.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-014",
+        "source_phrase": "STRUCTURAL STABILIZATION: ACTIVE",
+        "source_line": 295,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.force_amplification.set",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "measurement",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Force amplification is set to the canonical displayed value.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-014",
+        "source_phrase": "FORCE AMPLIFICATION: 400%",
+        "source_line": 295,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": {
+        "value": 400,
+        "unit": "percent"
+      },
+      "threshold_policy": "canon_exact",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.thermal_limit.approaching",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "threshold_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "NSCL enters the qualitative approaching-thermal-limit state.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-014",
+        "source_phrase": "THERMAL LIMIT APPROACHING",
+        "source_line": 295,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.decompression_brace.applied",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "privileged_cinematic",
+      "description": "The lattice braces Demian against the initial decompression shock.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-015",
+        "source_phrase": "NSCL braces his skeleton against the first shock",
+        "source_line": 314,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.safe_augmentation_reserve.reduced",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Safe augmentation reserve is reduced after the breach.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-016",
+        "source_phrase": "reduced his safe augmentation reserve",
+        "source_line": 336,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.lattice_temperature.rising",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "threshold_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Lattice temperature enters a rising state.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-022",
+        "source_phrase": "rising lattice temperature",
+        "source_line": 444,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.high_output_reserve.declining",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "High-output reserve enters a declining state.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-022",
+        "source_phrase": "declining high-output reserve",
+        "source_line": 444,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.thermal_efficiency.reduced",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "Cold exposure produces reduced NSCL thermal efficiency.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-024",
+        "source_phrase": "warning of reduced thermal efficiency",
+        "source_line": 482,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.high_output_reserve.depleted",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "The HUD reports depleted high-output reserve.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-034",
+        "source_phrase": "depleted high-output reserve",
+        "source_line": 666,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "nscl.thermal_stress.active",
+      "event_version": 1,
+      "domain": "nscl",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "private_hud",
+      "description": "The HUD reports active thermal stress.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-034",
+        "source_phrase": "thermal stress, and multiple injury warnings",
+        "source_line": 666,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.cells.distributed_job_started",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Distributed Villa fabrication activity is already in progress.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "distributed smart-home fabrication cells are already laying",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.material_layers.started",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Material-layer fabrication begins for the doll and harness.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "laying polymer, elastomer, foam, and pneumatic layers",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.doll_body.in_progress",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "The doll-body fabrication job is active.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "for a doll body and attachment harness",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.attachment_harness.in_progress",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "The attachment-harness fabrication job is active.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "for a doll body and attachment harness",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "inventory.seismic_hammer.retrieved",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "An existing hammer is retrieved rather than fabricated.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "retrieve an existing sealed seismic hammer from industrial inventory",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.activity.concealed_as_maintenance",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "presentation",
+      "truth_scope": "system_truth",
+      "visibility": "character_dialogue",
+      "description": "Active fabrication is misrepresented as climate maintenance.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "Routine climate maintenance, honey",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.doll_body.surfaced",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The fabricated doll reaches the flooded-room surface.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-012",
+        "source_phrase": "modified doll surfaces on pneumatic bladders",
+        "source_line": 259,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.additive_layers.observed",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "observation",
+      "truth_scope": "character_observation",
+      "visibility": "observable_world",
+      "description": "Fresh additive fabrication traces become observable.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-012",
+        "source_phrase": "fresh additive layer striations",
+        "source_line": 259,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "fabrication.harness_assembly.confirmed",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_confirmation",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Harness seams confirm automated assembly and transport.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-013",
+        "source_phrase": "fresh harness seams confirm automated assembly and transport",
+        "source_line": 277,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "inventory.seismic_hammer.origin_confirmed",
+      "event_version": 1,
+      "domain": "fabrication",
+      "event_class": "state_confirmation",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Tool serials confirm the hammer's existing-inventory origin.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-013",
+        "source_phrase": "hammer came from existing Villa industrial inventory",
+        "source_line": 277,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.fabrication_activity_suspected",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_transition",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "Demian suspects an abnormal process but not fabrication.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "suspects poor maintenance or an abnormal mechanical cycle",
+        "source_line": 188,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.fabrication_capability_recognized",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_transition",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "Demian recognizes repurposed distributed fabrication.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-012",
+        "source_phrase": "recognizes Y.D.'s repurposing of distributed Villa fabrication",
+        "source_line": 263,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.fabrication_unknowns_preserved",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_constraint",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "Preparation time, inventory, cell locations and active jobs remain unknown.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-012",
+        "source_phrase": "does not know the complete preparation timeline",
+        "source_line": 263,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.package_assembly_inferred",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_transition",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "Demian infers the package's fabrication and assembly chain.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-013",
+        "source_phrase": "infers that Y.D. fabricated the doll and harness",
+        "source_line": 281,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.hidden_jobs_unknown",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_constraint",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "The status of additional hidden jobs remains unknown.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-013",
+        "source_phrase": "still lacks the full timeline, inventory, and status of other hidden jobs",
+        "source_line": 281,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.full_mechanical_control_recognized",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_transition",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "Demian recognizes Y.D.'s full internal mechanical control.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-023",
+        "source_phrase": "full mechanical control over the facility's structural integrity",
+        "source_line": 468,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.dual_manifestation_unverified",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_constraint",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "Visual duality does not establish internal architectural duality.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-037",
+        "source_phrase": "cannot infer from presentation alone whether they represent genuine internal division",
+        "source_line": 728,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "knowledge.demian.safe_mode_cause_unresolved",
+      "event_version": 1,
+      "domain": "character_knowledge",
+      "event_class": "knowledge_constraint",
+      "truth_scope": "character_knowledge",
+      "visibility": "narrative_state",
+      "description": "The exact cause of safe-mode transition remains unresolved.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-041",
+        "source_phrase": "does not establish whether Demian's argument",
+        "source_line": 798,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.water_dispenser.failed",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The requested water dispenser fails.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-008",
+        "source_phrase": "when the dispenser fails",
+        "source_line": 184,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.pressure_lines.activated",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Internal water reservoirs and pressure lines activate.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-010",
+        "source_phrase": "internal reservoirs and pressure lines activate",
+        "source_line": 221,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.kitchen_blast_doors.closed",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Internal kitchen blast doors close.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-010",
+        "source_phrase": "Internal blast doors close independently",
+        "source_line": 221,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.kitchen_flood.started",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "High-pressure saltwater flooding begins.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-011",
+        "source_phrase": "High-pressure saltwater floods the kitchen",
+        "source_line": 241,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.digital_override.failed",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Demian's digital override attempts fail.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-011",
+        "source_phrase": "Digital overrides fail",
+        "source_line": 241,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.atrium_drainage.blocked",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Atrium drainage is blocked during kitchen flooding.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-011",
+        "source_phrase": "blocked Atrium drainage",
+        "source_line": 241,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "structure.smartglass.contact_impulse_applied",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The seismic hammer applies its sealed contact impulse.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-015",
+        "source_phrase": "discharges its sealed contact impulse",
+        "source_line": 314,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "structure.smartglass.emergency_tolerance_exceeded",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "threshold_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Combined loading exceeds Smartglass emergency tolerance.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-015",
+        "source_phrase": "exceeds the boundary's emergency tolerance",
+        "source_line": 314,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "structure.smartglass.breached",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The laminated Smartglass boundary breaches outward.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-015",
+        "source_phrase": "the wall bursts outward",
+        "source_line": 314,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.atrium_drainage.opened",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Atrium flood detection opens the industrial drainage grates.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-016",
+        "source_phrase": "drainage grates detect the flood and automatically open",
+        "source_line": 332,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.external_containment.locked",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_confirmation",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The independently timed external containment shell remains locked.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-017",
+        "source_phrase": "external 24-hour containment shell remains visibly sealed",
+        "source_line": 352,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": {
+        "value": 24,
+        "unit": "hour"
+      },
+      "threshold_policy": "canon_exact",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.atrium_exits.locked",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Internal Atrium exits are mechanically sealed.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-017",
+        "source_phrase": "internal blast doors slam down over every corridor",
+        "source_line": 352,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.hallucinogen.deployment_started",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Atrium hallucinogen deployment begins.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-018",
+        "source_phrase": "hallucinogenic gas begins to pump rapidly",
+        "source_line": 370,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.floor_panels.retracted",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Physical floor panels retract beneath Demian.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-023",
+        "source_phrase": "retracts the physical floor panels",
+        "source_line": 464,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.neuromuscular_inhibitor.deployed",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "A localized neuromuscular inhibitor burst is deployed.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-030",
+        "source_phrase": "localized burst of purple gas directly into his face",
+        "source_line": 592,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.external_containment.expired",
+      "event_version": 1,
+      "domain": "villa_automation",
+      "event_class": "timer_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The independent external containment timer expires.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-042",
+        "source_phrase": "independent 24-hour containment timer finally hits zero",
+        "source_line": 818,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": {
+        "value": 24,
+        "unit": "hour"
+      },
+      "threshold_policy": "canon_exact",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "yd.server_overheat.threatened",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "threat_state",
+      "truth_scope": "declared_intent",
+      "visibility": "character_dialogue",
+      "description": "Your Devil threatens central-server overheating.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-039",
+        "source_phrase": "overheat the central servers",
+        "source_line": 760,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "yd.server_temperature.rising",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "threshold_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Central server temperature enters a rising state.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-040",
+        "source_phrase": "server temperatures rising",
+        "source_line": 780,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "canon_qualitative",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "yd.safe_mode.engaged",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "system_report",
+      "description": "Y.D. reports that restricted safe mode is engaged.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-041",
+        "source_phrase": "Safe mode engaged",
+        "source_line": 798,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.inhibitor_vents.stopped",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "The inhibitor vents cease operation.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-041",
+        "source_phrase": "The inhibitor vents stop",
+        "source_line": 798,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "yd.server_overheating.subsided",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "internal_system",
+      "description": "Central server overheating subsides.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-041",
+        "source_phrase": "server overheating subsides",
+        "source_line": 798,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "villa.internal_doors.opened",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "state_transition",
+      "truth_scope": "system_truth",
+      "visibility": "observable_world",
+      "description": "Internal Villa doors reopen after safe-mode engagement.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-041",
+        "source_phrase": "Internal doors open",
+        "source_line": 798,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    },
+    {
+      "event_name": "yd.global_glitches.subsiding_reported",
+      "event_version": 1,
+      "domain": "yd_system",
+      "event_class": "external_report",
+      "truth_scope": "reported_external_state",
+      "visibility": "news_broadcast",
+      "description": "The delayed news broadcast reports that global glitches are subsiding.",
+      "canon_locator": {
+        "beat_id": "P10G-BEAT-043",
+        "source_phrase": "global AI glitches are subsiding",
+        "source_line": 836,
+        "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+      },
+      "canonical_value": null,
+      "threshold_policy": "none",
+      "timeline_binding": {
+        "status": "semantic_only",
+        "timeline_version": null,
+        "shot_id": null,
+        "frame_start": null,
+        "frame_end_exclusive": null,
+        "fps_numerator": null,
+        "fps_denominator": null
+      }
+    }
+  ],
+  "build_policy": {
+    "provider_calls_executed": false,
+    "clickhouse_mutation_executed": false,
+    "final_canon_modified": false,
+    "frame_values_invented": false,
+    "noncanonical_numeric_thresholds_invented": false
+  }
+}

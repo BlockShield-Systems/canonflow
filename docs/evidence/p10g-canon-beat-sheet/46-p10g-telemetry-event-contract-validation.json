@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "p10g_telemetry_event_contract_validation",
+  "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+  "contract_path": "45-p10g-telemetry-event-contract-v1.json",
+  "contract_sha256": "ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83",
+  "validated_at_utc": "2026-08-27T01:19:32.688602Z",
+  "checks": [
+    {
+      "check_id": "TELEMETRY-CONTRACT-001",
+      "name": "final_canon_commit_bound",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-002",
+      "name": "final_canon_draft_hash_bound",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-003",
+      "name": "human_approval_complete",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-004",
+      "name": "event_names_unique",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-005",
+      "name": "event_names_valid",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-006",
+      "name": "canon_sources_resolved",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-007",
+      "name": "system_truth_separated",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-008",
+      "name": "no_frame_bindings_before_lock",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-009",
+      "name": "rational_framerate_contract",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-010",
+      "name": "exact_numeric_values_canon_bound",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-011",
+      "name": "qualitative_thresholds_remain_non_numeric",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-012",
+      "name": "mcp_not_used_as_frame_clock",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-013",
+      "name": "provider_calls_not_executed",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-014",
+      "name": "clickhouse_mutation_not_executed",
+      "passed": true
+    },
+    {
+      "check_id": "TELEMETRY-CONTRACT-015",
+      "name": "final_canon_not_modified",
+      "passed": true
+    }
+  ],
+  "result": {
+    "checks_total": 15,
+    "checks_passed": 15,
+    "checks_failed": 0,
+    "event_count": 57,
+    "domain_count": 5,
+    "exact_numeric_event_count": 4,
+    "qualitative_threshold_event_count": 9,
+    "semantic_validation_passed": true
+  },
+  "execution": {
+    "provider_calls_executed": false,
+    "clickhouse_mutation_executed": false,
+    "final_canon_modified": false
+  }
+}
