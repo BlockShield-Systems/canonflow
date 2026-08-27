@@ -1,0 +1,123 @@
+{
+  "artifact_type": "clickhouse_event_ledger_cloud_runtime_validation",
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-08-27T04:34:45.450617Z",
+  "contract_binding": {
+    "contract_id": "e17828fb-49b1-5df0-9c45-385a68f5f9d1",
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0",
+    "contract_commit": "31e302eaf3d03a8281a29c6dffa20e9ce3c68c0e",
+    "contract_sha256": "ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83"
+  },
+  "deployment_target": {
+    "provider": "ClickHouse Cloud",
+    "service": "canonflow-agentic-cinema",
+    "database": "canonflow",
+    "server_version": "26.2.1.558",
+    "existing_database_preserved": true,
+    "existing_non_ledger_objects_modified": false
+  },
+  "schema_validation": {
+    "schema_object_count": 9,
+    "schema_objects": [
+      {
+        "name": "event_definitions",
+        "engine": "SharedReplacingMergeTree"
+      },
+      {
+        "name": "event_ingest_attempts",
+        "engine": "SharedMergeTree"
+      },
+      {
+        "name": "events",
+        "engine": "SharedReplacingMergeTree"
+      },
+      {
+        "name": "mv_event_ingest_attempts_to_events",
+        "engine": "MaterializedView"
+      },
+      {
+        "name": "v_character_knowledge",
+        "engine": "View"
+      },
+      {
+        "name": "v_event_contract_violations",
+        "engine": "View"
+      },
+      {
+        "name": "v_events_current",
+        "engine": "View"
+      },
+      {
+        "name": "v_system_truth",
+        "engine": "View"
+      },
+      {
+        "name": "v_timeline_binding_validation",
+        "engine": "View"
+      }
+    ],
+    "index_granularity": 8192,
+    "raw_ingest_ttl_days": 730,
+    "event_definition_constraint_count": 4,
+    "raw_ingest_constraint_count": 6
+  },
+  "seed_validation": {
+    "expected_event_definitions": 57,
+    "physical_event_definitions": 57,
+    "logical_event_definitions_final": 57,
+    "unique_definition_keys": 57,
+    "intermediate_physical_rows_observed": 171,
+    "intermediate_versions_per_logical_key": 3,
+    "corrective_action": "OPTIMIZE TABLE canonflow.event_definitions FINAL",
+    "post_correction_physical_rows": 57
+  },
+  "ledger_state": {
+    "event_ingest_attempts": 0,
+    "events": 0,
+    "current_events": 0,
+    "contract_violations": 0,
+    "test_events_inserted": false
+  },
+  "runtime_validation": {
+    "agent": "canonflow_agent",
+    "model": "gemini-3.1-pro-preview",
+    "model_backend": "not_asserted_by_this_artifact",
+    "mcp_server": "mcp-clickhouse",
+    "mcp_server_version": "0.4.1",
+    "mcp_protocol_version": "1.29.1",
+    "clickhouse_connect_version": "1.7.2",
+    "mcp_endpoint": "http://127.0.0.1:8000/mcp",
+    "invocation_id": "e-83b34e67-489c-4c24-b6bc-459f20d7615e",
+    "total_latency_seconds": 20.41,
+    "tool": "run_query",
+    "tool_call_latencies_ms": [
+      176.1,
+      100.15
+    ],
+    "live_clickhouse_queries_executed": true,
+    "values_estimated": false
+  },
+  "execution_policy": {
+    "remote_schema_created": true,
+    "remote_seed_insert_executed": true,
+    "remote_optimize_executed": true,
+    "remote_rollback_executed": false,
+    "remote_test_event_insert_executed": false,
+    "final_canon_modified": false
+  },
+  "artifact_sha256": {
+    "47-clickhouse-event-ledger-schema-v1.sql": "26338d414e5e39635e1ab74178688224889d37011da5134508787fcab2558364",
+    "48-clickhouse-event-definition-seed-v1.sql": "28ea570a19246d643fe5a2ad1af02df9caf4e2431e5532f2293b5bebb3490616",
+    "50-clickhouse-event-ledger-schema-validation.json": "285b584b14a3f772136e4c0987e0a6b9f1f0c6fd97e64b10f33c2a2416b40d15",
+    "51-clickhouse-event-ledger-local-test.json": "2d04c4da0a1901980ddfd2c259b168ee49ac545839c87a3a430c58339d28ca31",
+    "52-read-only-adk-mcp-runtime-evidence-traces.png": "eb909c9340c067cb423bad02cb21bb54b0127a9791b12f9f6fd3e151f692044e",
+    "53-read-only-adk-mcp-runtime-evidence-events.png": "2ecbcc5dd2910108f9f6c965b56ceeed1921aae32e8b0874283a43cb571620a3"
+  },
+  "result": {
+    "schema_deployment_passed": true,
+    "seed_validation_passed": true,
+    "runtime_mcp_validation_passed": true,
+    "cloud_runtime_validation_passed": true
+  }
+}
