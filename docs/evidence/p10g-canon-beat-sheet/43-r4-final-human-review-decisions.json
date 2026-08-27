@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "p10g_r4_final_human_review_decisions",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "revision": "R4",
+  "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0",
+  "candidate_tag": "p10g-r4-review-candidate",
+  "candidate_commit_sha": "1d5457dbe1bd79eb22a32d8e5121a98594749c2f",
+  "draft_file": "38-canon-beat-sheet-third-revised-draft.md",
+  "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+  "review_matrix_file": "42-r4-human-review.md",
+  "review_matrix_sha256": "d530b674691bc07aeb9bc1fc4caf49da5603487aa1d60b1378ea830a3c0e7ec8",
+  "reviewer": "Demian",
+  "recorded_at_utc": "2026-08-27T01:04:13.282376Z",
+  "human_approval_statement": "The complete R4 review candidate was read and approved. The narrative implementation is considered coherent, professionally structured, emotionally effective, and suitable as final canon. All 25 R4 human-review items are approved without additional changes.",
+  "allowed_dispositions": [
+    "approve",
+    "changes_requested",
+    "reject"
+  ],
+  "review_items": [
+    {
+      "review_id": "P10G-R4-REVIEW-001",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-002",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-003",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-004",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-005",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-006",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-007",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-008",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-009",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-010",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-011",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-012",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-013",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-014",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-015",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-016",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-017",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-018",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-019",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-020",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-021",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-022",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-023",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-024",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    },
+    {
+      "review_id": "P10G-R4-REVIEW-025",
+      "disposition": "approve",
+      "reviewer": "Demian",
+      "basis": "Approved during complete human review of the R4 candidate."
+    }
+  ],
+  "summary": {
+    "review_items": 25,
+    "approved": 25,
+    "changes_requested": 0,
+    "rejected": 0,
+    "human_review_completed": true,
+    "approved_as_final_canon": true,
+    "final_disposition": "approve"
+  },
+  "automation_policy": {
+    "provider_calls_executed": false,
+    "clickhouse_mutation_executed": false,
+    "automatic_canon_release": false,
+    "human_decision_required": true,
+    "human_decision_present": true
+  }
+}

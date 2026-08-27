@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "artifact_type": "p10g_r4_final_human_review_completion",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "revision": "R4",
+  "revision_run_id": "68c47a53-2725-47ae-a910-489bd8b894e0",
+  "candidate_tag": "p10g-r4-review-candidate",
+  "candidate_commit_sha": "1d5457dbe1bd79eb22a32d8e5121a98594749c2f",
+  "completed_at_utc": "2026-08-27T01:04:13.282376Z",
+  "reviewer": "Demian",
+  "status": "completed",
+  "human_review_completed": true,
+  "approved_as_final_canon": true,
+  "final_disposition": "approve",
+  "counts": {
+    "review_items": 25,
+    "approved": 25,
+    "changes_requested": 0,
+    "rejected": 0
+  },
+  "bindings": {
+    "draft": {
+      "path": "38-canon-beat-sheet-third-revised-draft.md",
+      "sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e"
+    },
+    "semantic_validation": {
+      "path": "41-r4-semantic-validation.json",
+      "sha256": "4df554f4ecfac983e2498f48bff889b7f04d2ddbee142a4fe0213151d497bfed"
+    },
+    "human_review_matrix": {
+      "path": "42-r4-human-review.md",
+      "sha256": "d530b674691bc07aeb9bc1fc4caf49da5603487aa1d60b1378ea830a3c0e7ec8"
+    },
+    "human_review_decisions": {
+      "path": "43-r4-final-human-review-decisions.json",
+      "sha256": "4e3598b0760186ca665b8d15462f3bfa553d0d1376c867f61d30ac8d6999f919"
+    }
+  },
+  "release_policy": {
+    "final_canon_release_authorized": true,
+    "authorization_source": "explicit_human_review",
+    "provider_calls_executed": false,
+    "clickhouse_mutation_executed": false,
+    "frozen_r3_artifacts_modified": false,
+    "r4_candidate_artifacts_modified": false
+  }
+}
