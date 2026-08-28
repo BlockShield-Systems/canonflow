@@ -1,0 +1,159 @@
+{
+  "artifact_id": "826f9f95-274e-5c39-8e85-1553bc3f9c18",
+  "artifact_type": "canonflow_showcase_selection_human_clarification",
+  "baseline": {
+    "evidence_62_commit": "7532a1f888808e61f83cad2ad0a1cdc8848378c5",
+    "evidence_62_manifest_path": "docs/evidence/p10g-canon-beat-sheet/SHA256SUMS.narrative-context-scene-shot-validation",
+    "evidence_62_manifest_sha256": "5724073d5002e17c895dbbb6de2313e586d1e6648f2586cdfd975ecd54d770bf",
+    "evidence_62_path": "docs/evidence/p10g-canon-beat-sheet/62-narrative-context-scene-shot-validation.json",
+    "evidence_62_sha256": "c592b53debf89285d9055e82049be711b118288b8d988c3712a37b2563537b84",
+    "evidence_62_tag": "p10g-narrative-context-scene-shot-v1-validated",
+    "scene_shot_compiler_path": "agents/canonflow_agent/scene_shot_compiler.py",
+    "scene_shot_compiler_sha256": "a0d4ce83a4c55b4880b61bbf58dc994d8fa0ccf39039dfdb3710b0d4f9eca657",
+    "scene_shot_plan_id": "76da142d-8e28-56eb-83ca-a2faf5997a53",
+    "scene_shot_plan_sha256": "351f83c85aed4a6c5c483444ab2fe81f026556312bbc9b4b1b75431fc19f875c"
+  },
+  "feature_film_contract": {
+    "canon_beat_count": 44,
+    "complete_story_generation_capability_required": true,
+    "complete_story_generation_currently_authorized": false,
+    "current_execution_constraint": "Media-generation credit and private funding limits.",
+    "format": "feature_length_film",
+    "future_full_generation_intent": true,
+    "required_segments": [
+      "prologue",
+      "act_1",
+      "act_2a",
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "runtime_is_approximate": true,
+    "target_runtime_minutes": 90,
+    "target_runtime_seconds": 5400
+  },
+  "generated_at_utc": "2026-08-28T03:36:58.574852+00:00",
+  "hackathon_demo_contract": {
+    "deliverable_role": "separate_submission_demo_video",
+    "is_feature_film_runtime": false,
+    "is_showcase_runtime": false,
+    "maximum_runtime_minutes": 3,
+    "maximum_runtime_seconds": 180,
+    "must_demonstrate_full_feature_pipeline_capability": true,
+    "must_explain_agentic_workflow": true
+  },
+  "human_approval": {
+    "all_blocking_clarification_requests_resolved": true,
+    "approval_scope": "showcase_selection_parameters",
+    "approval_source": "explicit_human_confirmation",
+    "approval_status": "approved",
+    "approved_by_role": "human_project_owner",
+    "decisions": [
+      {
+        "approval_status": "approved",
+        "approved_value": "balanced_narrative_showcase",
+        "blocking_issue_resolved": true,
+        "clarification_request_id": "P10G-QUESTION-001",
+        "field": "selection_strategy"
+      },
+      {
+        "approval_status": "approved",
+        "approved_value": 600,
+        "blocking_issue_resolved": true,
+        "clarification_request_id": "P10G-QUESTION-002",
+        "field": "target_runtime_seconds"
+      },
+      {
+        "approval_status": "approved",
+        "approved_value": "approve_selected_google_workflow_only",
+        "blocking_issue_resolved": true,
+        "clarification_request_id": "P10G-QUESTION-003",
+        "field": "external_model_submission"
+      }
+    ]
+  },
+  "next_controlled_action": "Correct the showcase production profile to cover all six story segments, then compile deterministic scene selection, presentation timing, and shot segmentation without invoking media generation.",
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches"
+  },
+  "provider_contract": {
+    "character_reference_access": "approved_google_workflow_only",
+    "character_reference_provider": "google_gemini",
+    "external_model_submission": "approve_selected_google_workflow_only",
+    "unrestricted_reference_distribution_allowed": false
+  },
+  "schema_version": "1.0",
+  "scope_correction": {
+    "correct_interpretation": "The showcase uses selected scenes and shots from Prologue, Act 1, Act 2A, Act 2B, Act 3, and Epilogue.",
+    "incorrect_interpretation_rejected": "Showcase limited to Act 2B, Act 3, and Epilogue.",
+    "production_profile_change_required": true,
+    "production_profile_issue": "The existing showcase profile that includes only act_2b, act_3, and epilogue must be replaced before selection.",
+    "reason": "The 600-second target applies only to the curated showcase, not to the complete feature film.",
+    "status": "applied"
+  },
+  "security": {
+    "credentials_persisted": false,
+    "external_executor_invoked": false,
+    "future_media_generation_requires_separate_human_approval": true,
+    "media_generation_authorized": false,
+    "media_generation_performed": false,
+    "network_access_performed": false
+  },
+  "showcase_contract": {
+    "act_2b_act_3_epilogue_only": false,
+    "all_44_beats_must_be_fully_rendered": false,
+    "chronological_story_coherence_required": true,
+    "coverage_policy": "Curated representative scenes and shots from every major story segment.",
+    "feature_film_capability_demonstration_required": true,
+    "format": "curated_agentic_cinema_showcase",
+    "narrative_runtime_allocation": "To be calculated during deterministic scene and shot selection after presentation-unit timing is assigned.",
+    "presentation_integration": {
+      "claims_may_be_integrated_as_cinematic_overlays": true,
+      "credits_at_end": true,
+      "intro_before_or_integrated_with_prologue": true,
+      "technology_stack_may_be_integrated_as_cinematic_overlays": true
+    },
+    "presentation_units": [
+      "cinematic_intro",
+      "project_claims",
+      "agentic_workflow_claims",
+      "technology_stack",
+      "cinematic_text_overlays",
+      "classical_end_credits"
+    ],
+    "required_narrative_coverage": [
+      "prologue",
+      "act_1",
+      "act_2a",
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "runtime_includes_presentation_units": true,
+    "selection_strategy": "balanced_narrative_showcase",
+    "target_runtime_minutes": 10,
+    "target_runtime_seconds": 600
+  },
+  "status": "validated",
+  "validation": {
+    "all_six_story_segments_required_in_showcase": true,
+    "approved_decision_count": 3,
+    "evidence_media_generation_authorized": false,
+    "external_model_policy_bound": true,
+    "feature_film_and_showcase_runtime_separated": true,
+    "full_feature_target_runtime_seconds": 5400,
+    "presentation_units_included_in_showcase_runtime": true,
+    "production_profile_correction_required": true,
+    "selection_strategy_bound": true,
+    "showcase_and_submission_demo_runtime_separated": true,
+    "showcase_requires_all_44_beats_fully_rendered": false,
+    "showcase_target_runtime_seconds": 600,
+    "showcase_uses_curated_excerpts": true,
+    "source_clarification_request_count": 3,
+    "source_plan_generation_authorized": false,
+    "submission_demo_maximum_runtime_seconds": 180,
+    "target_runtime_bound": true,
+    "unresolved_blocking_request_count": 0
+  }
+}

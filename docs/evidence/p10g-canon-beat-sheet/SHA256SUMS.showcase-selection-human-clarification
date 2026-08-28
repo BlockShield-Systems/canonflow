@@ -1,0 +1,4 @@
+c592b53debf89285d9055e82049be711b118288b8d988c3712a37b2563537b84  docs/evidence/p10g-canon-beat-sheet/62-narrative-context-scene-shot-validation.json
+5724073d5002e17c895dbbb6de2313e586d1e6648f2586cdfd975ecd54d770bf  docs/evidence/p10g-canon-beat-sheet/SHA256SUMS.narrative-context-scene-shot-validation
+a0d4ce83a4c55b4880b61bbf58dc994d8fa0ccf39039dfdb3710b0d4f9eca657  agents/canonflow_agent/scene_shot_compiler.py
+e6cf34df9d77f9424da7b9c332638594c097049e4599b74f419410d2683bb0f7  docs/evidence/p10g-canon-beat-sheet/63-showcase-selection-human-clarification.json
