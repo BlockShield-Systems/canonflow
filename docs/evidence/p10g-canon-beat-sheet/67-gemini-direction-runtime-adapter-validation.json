@@ -1,0 +1,158 @@
+{
+  "artifact_id": "8bf954be-73df-5f39-9a58-c09ee30b546d",
+  "artifact_type": "canonflow_gemini_direction_runtime_adapter_validation",
+  "dependency_binding": {
+    "environment_sync": "uv_sync_frozen_offline",
+    "google_genai_version": "2.19.0",
+    "jsonschema_version": "4.26.0",
+    "lockfile_modified": false,
+    "pyproject_path": "agents/pyproject.toml",
+    "pyproject_sha256": "50f19eb4d8b1e86c45d50795f73b4d5cc6a6f98e8a3ffaa840f8884969561ee2",
+    "python_version": "3.12.3",
+    "uv_lock_path": "agents/uv.lock",
+    "uv_lock_sha256": "e96ceb81a40859414bf67701499c0bda0f975bd85f8bc543cede5bc84a13d953"
+  },
+  "execution_controls": {
+    "client_initialized": false,
+    "credentials_environment_inspected": false,
+    "credentials_persisted": false,
+    "credentials_read": false,
+    "http_requests": false,
+    "media_generation_authorized": false,
+    "media_generation_performed": false,
+    "network_access": false,
+    "provider_calls": false,
+    "reference_images_transmitted": false
+  },
+  "implementation_files": [
+    {
+      "path": "agents/canonflow_agent/gemini_direction_runtime_adapter.py",
+      "sha256": "3387d6af86ac48c088938ee6dfdc71132a95df3c731b8c97b4a9120a614847cd"
+    },
+    {
+      "path": "agents/canonflow_agent/tests/test_gemini_direction_runtime_adapter.py",
+      "sha256": "c3657a9d052e4df4166d3355241e091b924451932e95455bbb644aafcd85f7e2"
+    }
+  ],
+  "official_documentation": {
+    "interactions": "https://ai.google.dev/gemini-api/docs/gemini-3",
+    "interactions_quickstart": "https://ai.google.dev/gemini-api/docs/interactions/quickstart.md.txt",
+    "model": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview",
+    "python_sdk": "https://googleapis.github.io/python-genai/",
+    "structured_output": "https://ai.google.dev/gemini-api/docs/structured-output"
+  },
+  "parent_evidence": {
+    "artifact_id": "78aea060-adf2-5a62-9ca0-fa319c17cca5",
+    "artifact_path": "docs/evidence/p10g-canon-beat-sheet/66-gemini-direction-request-contract-validation.json",
+    "artifact_sha256": "683abf1b4922b4090638d84cdde72016062df7d1df9b8f802995ebdf60378f58",
+    "evidence_number": 66,
+    "manifest_sha256": "9ea5e4ba4f3ba9f2c7d55b915ef34c235a50f2e7bfa3a8c8c7f9e1c1031c1cbe"
+  },
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "regression_validation": {
+    "direction_package_builder_tests": 13,
+    "existing_regression_tests_passed": 68,
+    "gemini_direction_request_builder_tests": 14,
+    "gemini_direction_runtime_adapter_tests": 13,
+    "production_run_tests": 12,
+    "scene_shot_compiler_tests": 17,
+    "showcase_selector_tests": 12,
+    "total_regression_tests_passed": 81
+  },
+  "release_validation": {
+    "atomic_non_overwrite": true,
+    "checksum_validation": true,
+    "continuity_handoff_exact_forwarding_valid": true,
+    "deterministic_request_translation": true,
+    "invalid_json_rejected": true,
+    "local_mock_execution_validated": true,
+    "missing_interaction_id_rejected": true,
+    "ordered_runtime_chain_valid": true,
+    "schema_invalid_output_rejected": true,
+    "sdk_request_model_validation": true,
+    "sdk_serialization_validation": true,
+    "unauthorized_non_mock_execution_rejected": true
+  },
+  "repository_binding": {
+    "baseline_commit": "f761ae05f0c4129804bdbf672bd0f0de19d150f7",
+    "baseline_tag": "p10g-gemini-direction-request-contract-v1-validated"
+  },
+  "request_contract": {
+    "descriptor_file_count": 8,
+    "forbidden_secret_field_count": 0,
+    "global_contract_first_request_only": true,
+    "independent_parallel_processing_allowed": false,
+    "interactions_schema_revision": "2026-05-20",
+    "model_id": "gemini-3.1-pro-preview",
+    "narrative_runtime_seconds": 510,
+    "previous_interaction_id_required_after_first": true,
+    "prior_continuity_handoff_required_after_first": true,
+    "processing_is_sequential": true,
+    "request_chain_manifest_id": "4ea32302-9fdf-5f41-8644-00d59c7acf42",
+    "request_descriptor_count": 6,
+    "response_format": {
+      "mime_type": "application/json",
+      "schema_embedded": true,
+      "type": "text"
+    },
+    "response_schema_template_id": "89f5aa30-6a03-50aa-b4b8-d1f0392ddb5c",
+    "segment_order": [
+      "prologue",
+      "act_1",
+      "act_2a",
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "shot_direction_input_count": 62,
+    "temperature": {
+      "included": false,
+      "policy": "use_model_default_1.0"
+    },
+    "thinking_level": "high",
+    "tools_enabled": false,
+    "validated_false_control_count": 195
+  },
+  "response_validation": {
+    "continuity_handoff_required": true,
+    "interaction_id_required": true,
+    "json_schema_validation": true,
+    "output_object_required": true,
+    "output_text_json_required": true,
+    "output_text_required": true,
+    "request_descriptor_identity_validation": true,
+    "schema_validator": "jsonschema",
+    "schema_validator_version": "4.26.0",
+    "segment_identity_validation": true
+  },
+  "runtime_adapter_contract": {
+    "adapter_mode": "injected_transport",
+    "automatic_retry": false,
+    "background": false,
+    "continuity_handoff_forwarding": "exact_previous_validated_response_handoff",
+    "input_serialization": "canonical_utf8_json",
+    "previous_interaction_id_required_after_first": true,
+    "prior_continuity_handoff_required_after_first": true,
+    "request_descriptor_count": 6,
+    "response_mime_type_forwarded": false,
+    "sdk_method": "client.interactions.create",
+    "sdk_request_model": "CreateModelInteraction",
+    "segment_order": [
+      "prologue",
+      "act_1",
+      "act_2a",
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "segment_processing": "ordered_not_parallel",
+    "stop_on_first_failure": true,
+    "store": true,
+    "stream": false,
+    "temperature_forwarded": false,
+    "thinking_level_descriptor_value": "high",
+    "thinking_level_runtime_mapping": "generation_config.thinking_level",
+    "tools_enabled": false
+  },
+  "schema_version": "1.0"
+}
