@@ -1,0 +1,10 @@
+169f7f65b220832dab3e8a94ec665b5d2eb01f7b2b942347c9722df35894c23c  agents/canonflow_agent/production_run.py
+9a88a179f71dcf4064098a38e2e99b984954c3083b8649b6678adbd80f3bab7e  agents/scripts/create_production_run.py
+8c413ee6fb32870f07db0c3f9e7fd028eb301c4bec00ad454b45b2f7c2aef55f  agents/canonflow_agent/tests/test_production_run.py
+465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e  docs/evidence/p10g-canon-beat-sheet/38-canon-beat-sheet-third-revised-draft.md
+4df554f4ecfac983e2498f48bff889b7f04d2ddbee142a4fe0213151d497bfed  docs/evidence/p10g-canon-beat-sheet/41-r4-semantic-validation.json
+d530b674691bc07aeb9bc1fc4caf49da5603487aa1d60b1378ea830a3c0e7ec8  docs/evidence/p10g-canon-beat-sheet/42-r4-human-review.md
+4e3598b0760186ca665b8d15462f3bfa553d0d1376c867f61d30ac8d6999f919  docs/evidence/p10g-canon-beat-sheet/43-r4-final-human-review-decisions.json
+1d0cfa5337294a52ecd28c94fc80cded9d764a0e6f288ec0865b747d1f323386  docs/evidence/p10g-canon-beat-sheet/44-r4-final-human-review-completion.json
+ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83  docs/evidence/p10g-canon-beat-sheet/45-p10g-telemetry-event-contract-v1.json
+a4f720c140df67731d99f55baa2e1f92ab3523d51ddd413609c592a8681c0fa8  docs/evidence/p10g-canon-beat-sheet/61-production-run-contract-validation.json

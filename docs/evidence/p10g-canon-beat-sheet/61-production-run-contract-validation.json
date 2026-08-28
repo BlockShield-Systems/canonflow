@@ -1,0 +1,194 @@
+{
+  "artifact_id": "evidence-61-production-run-contract-and-segment-selector",
+  "artifact_type": "canonflow_production_run_contract_validation",
+  "artifacts": {
+    "agents/canonflow_agent/production_run.py": "169f7f65b220832dab3e8a94ec665b5d2eb01f7b2b942347c9722df35894c23c",
+    "agents/canonflow_agent/tests/test_production_run.py": "8c413ee6fb32870f07db0c3f9e7fd028eb301c4bec00ad454b45b2f7c2aef55f",
+    "agents/scripts/create_production_run.py": "9a88a179f71dcf4064098a38e2e99b984954c3083b8649b6678adbd80f3bab7e",
+    "docs/evidence/p10g-canon-beat-sheet/38-canon-beat-sheet-third-revised-draft.md": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+    "docs/evidence/p10g-canon-beat-sheet/41-r4-semantic-validation.json": "4df554f4ecfac983e2498f48bff889b7f04d2ddbee142a4fe0213151d497bfed",
+    "docs/evidence/p10g-canon-beat-sheet/42-r4-human-review.md": "d530b674691bc07aeb9bc1fc4caf49da5603487aa1d60b1378ea830a3c0e7ec8",
+    "docs/evidence/p10g-canon-beat-sheet/43-r4-final-human-review-decisions.json": "4e3598b0760186ca665b8d15462f3bfa553d0d1376c867f61d30ac8d6999f919",
+    "docs/evidence/p10g-canon-beat-sheet/44-r4-final-human-review-completion.json": "1d0cfa5337294a52ecd28c94fc80cded9d764a0e6f288ec0865b747d1f323386",
+    "docs/evidence/p10g-canon-beat-sheet/45-p10g-telemetry-event-contract-v1.json": "ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83"
+  },
+  "baseline": {
+    "controlled_executor_tag": "p10g-controlled-event-executor-v0.1.2-local-validated",
+    "controlled_executor_tag_commit": "2a11c6b9f2b53192be7d0f935362308eb88c92e3",
+    "final_canon_commit": "9f7898c47c9925a26ba26a4f6cb95ef90c232ac3",
+    "final_canon_tag": "p10g-r4-final-canon",
+    "head_commit": "2a11c6b9f2b53192be7d0f935362308eb88c92e3"
+  },
+  "canon_binding": {
+    "draft_path": "docs/evidence/p10g-canon-beat-sheet/38-canon-beat-sheet-third-revised-draft.md",
+    "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+    "final_canon": {
+      "commit_sha": "9f7898c47c9925a26ba26a4f6cb95ef90c232ac3",
+      "tag": "p10g-r4-final-canon"
+    },
+    "human_review": {
+      "approved_as_final_canon": true,
+      "approved_items": 25,
+      "completion_path": "docs/evidence/p10g-canon-beat-sheet/44-r4-final-human-review-completion.json",
+      "completion_sha256": "1d0cfa5337294a52ecd28c94fc80cded9d764a0e6f288ec0865b747d1f323386",
+      "decisions_path": "docs/evidence/p10g-canon-beat-sheet/43-r4-final-human-review-decisions.json",
+      "decisions_sha256": "4e3598b0760186ca665b8d15462f3bfa553d0d1376c867f61d30ac8d6999f919",
+      "final_disposition": "approve",
+      "human_review_completed": true,
+      "matrix_path": "docs/evidence/p10g-canon-beat-sheet/42-r4-human-review.md",
+      "matrix_sha256": "d530b674691bc07aeb9bc1fc4caf49da5603487aa1d60b1378ea830a3c0e7ec8"
+    },
+    "revision": "R4",
+    "semantic_validation": {
+      "independent_semantic_validation_passed": true,
+      "path": "docs/evidence/p10g-canon-beat-sheet/41-r4-semantic-validation.json",
+      "sha256": "4df554f4ecfac983e2498f48bff889b7f04d2ddbee142a4fe0213151d497bfed",
+      "strict_local_validation_passed": true
+    },
+    "telemetry_contract": {
+      "path": "docs/evidence/p10g-canon-beat-sheet/45-p10g-telemetry-event-contract-v1.json",
+      "sha256": "ca6a014ec50042a7dffb0f000185f73190d7329f33b2eb6b6087e5bbd42a3e83"
+    }
+  },
+  "generated_at_utc": "2026-08-28T00:34:04.402275+00:00",
+  "next_controlled_action": {
+    "canon_mutation_allowed": false,
+    "evidence": 62,
+    "network_required": false,
+    "operation": "compile approved showcase source scope to scene and shot specifications"
+  },
+  "production_contract": {
+    "available_profiles": [
+      "full_feature",
+      "showcase"
+    ],
+    "contract_id": "1b3d7880-f878-5fef-9ea6-5ab09af8cce5",
+    "contract_version": "1.0",
+    "full_feature_selection_supported": true,
+    "individual_segment_selection_supported": true,
+    "multiple_segment_selection_supported": true,
+    "production_run_id": "f7974851-4851-51cd-aabf-1270fa7503c0",
+    "segment_catalog": [
+      {
+        "beat_count": 4,
+        "first_beat_id": "P10G-BEAT-001",
+        "last_beat_id": "P10G-BEAT-004",
+        "segment_id": "prologue",
+        "title": "Prologue"
+      },
+      {
+        "beat_count": 12,
+        "first_beat_id": "P10G-BEAT-005",
+        "last_beat_id": "P10G-BEAT-016",
+        "segment_id": "act_1",
+        "title": "Act 1"
+      },
+      {
+        "beat_count": 6,
+        "first_beat_id": "P10G-BEAT-017",
+        "last_beat_id": "P10G-BEAT-022",
+        "segment_id": "act_2a",
+        "title": "Act 2A"
+      },
+      {
+        "beat_count": 12,
+        "first_beat_id": "P10G-BEAT-023",
+        "last_beat_id": "P10G-BEAT-034",
+        "segment_id": "act_2b",
+        "title": "Act 2B"
+      },
+      {
+        "beat_count": 7,
+        "first_beat_id": "P10G-BEAT-035",
+        "last_beat_id": "P10G-BEAT-041",
+        "segment_id": "act_3",
+        "title": "Act 3"
+      },
+      {
+        "beat_count": 3,
+        "first_beat_id": "P10G-BEAT-042",
+        "last_beat_id": "P10G-BEAT-044",
+        "segment_id": "epilogue",
+        "title": "Epilogue"
+      }
+    ],
+    "selection_id": "81a47793-3f63-5ca0-addf-939ebec7fdca",
+    "showcase_selection_supported": true
+  },
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches"
+  },
+  "schema_version": "1.0",
+  "security": {
+    "credentials_persisted": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "executor_invoked": false,
+    "external_execution_requires_new_human_approval": true,
+    "gemini_request_performed": false,
+    "http_request_performed": false,
+    "identity_token_requested": false,
+    "network_access_performed": false,
+    "production_execution_performed": false
+  },
+  "showcase_source_scope": {
+    "beat_ids": [
+      "P10G-BEAT-023",
+      "P10G-BEAT-024",
+      "P10G-BEAT-025",
+      "P10G-BEAT-026",
+      "P10G-BEAT-027",
+      "P10G-BEAT-028",
+      "P10G-BEAT-029",
+      "P10G-BEAT-030",
+      "P10G-BEAT-031",
+      "P10G-BEAT-032",
+      "P10G-BEAT-033",
+      "P10G-BEAT-034",
+      "P10G-BEAT-035",
+      "P10G-BEAT-036",
+      "P10G-BEAT-037",
+      "P10G-BEAT-038",
+      "P10G-BEAT-039",
+      "P10G-BEAT-040",
+      "P10G-BEAT-041",
+      "P10G-BEAT-042",
+      "P10G-BEAT-043",
+      "P10G-BEAT-044"
+    ],
+    "excerpt_policy": "Evidence 61 authorizes the canonical source region only. Evidence 62 will select scene and shot material without altering approved canon.",
+    "first_beat_id": "P10G-BEAT-023",
+    "last_beat_id": "P10G-BEAT-044",
+    "presentation_units": [
+      "intro",
+      "claim",
+      "credits"
+    ],
+    "segments": [
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "selected_beat_count": 22,
+    "shot_level_excerpting_deferred": true
+  },
+  "status": "validated",
+  "validation": {
+    "approved_as_final_canon": true,
+    "atomic_non_overwrite_validated": true,
+    "beat_count": 44,
+    "deterministic_identifiers_validated": true,
+    "final_canon_tag_validated": true,
+    "human_review_completed": true,
+    "human_review_items_approved": 25,
+    "production_run_test_count": 12,
+    "production_run_tests_passed": true,
+    "r4_draft_sha256_validated": true,
+    "segment_count": 6,
+    "segment_coverage_complete": true,
+    "semantic_validation_passed": true,
+    "showcase_beat_count": 22,
+    "test_log_clean": true
+  }
+}
