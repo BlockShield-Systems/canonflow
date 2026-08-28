@@ -103,6 +103,22 @@ def main() -> int:
     test_count += 1
 
     require(
+        beats[-1]["source_locator"]["end_line"] == 865,
+        "Beat 44 must end before the post-beat canon sections.",
+    )
+    require(
+        "# 18. Demian Character Arc"
+        not in json.dumps(beats[-1], ensure_ascii=True),
+        "Post-beat canon sections leaked into Beat 44.",
+    )
+    require(
+        plan["narrative_context_scope"]["beat_boundary_policy"]
+        == "top_level_heading_terminates_active_beat",
+        "Beat-boundary policy is missing from the compiled plan.",
+    )
+    test_count += 1
+
+    require(
         all(
             not packet["source_locator"]["path"].startswith("/")
             for packet in plan["scene_context_packets"]
@@ -257,7 +273,7 @@ def main() -> int:
 
     test_count += 1
 
-    require(test_count == 16, "Unexpected test count.")
+    require(test_count == 17, "Unexpected test count.")
 
     print(f"Scene-shot compiler tests passed: {test_count}")
     print("CANONFLOW NARRATIVE CONTEXT SCENE-SHOT COMPILER: OK")

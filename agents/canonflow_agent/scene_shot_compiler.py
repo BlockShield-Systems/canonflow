@@ -286,6 +286,10 @@ def parse_canon_beats(
         current_fields = []
 
     for line_number, line in enumerate(lines, start=1):
+        if current_number is not None and line.startswith("# "):
+            flush_beat(line_number - 1)
+            continue
+
         beat_match = BEAT_PATTERN.match(line)
 
         if beat_match:
@@ -846,6 +850,9 @@ def build_scene_shot_plan(repository_root: Path) -> dict[str, Any]:
             YD_REFERENCE_SHA256,
         ],
         "editorial_units": EDITORIAL_UNITS,
+        "beat_parser_boundary_policy": (
+            "top_level_heading_terminates_active_beat"
+        ),
     }
 
     return {
@@ -883,6 +890,9 @@ def build_scene_shot_plan(repository_root: Path) -> dict[str, Any]:
             "beat_ids": beat_ids(),
             "field_count_per_beat": 16,
             "field_sequence": list(beats[0]["field_sequence"]),
+            "beat_boundary_policy": (
+                "top_level_heading_terminates_active_beat"
+            ),
             "all_approved_canon_available": True,
             "complete_canon_sent_to_media_models": False,
         },

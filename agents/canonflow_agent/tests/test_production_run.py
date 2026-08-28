@@ -138,17 +138,23 @@ def test_showcase_profile_has_expected_sequence() -> None:
     selection = run["selection"]
 
     assert selection["presentation_units"] == [
-        "intro",
-        "claim",
-        "credits",
+        "cinematic_intro",
+        "project_claims",
+        "agentic_workflow_claims",
+        "technology_stack",
+        "cinematic_text_overlays",
+        "classical_end_credits",
     ]
     assert selection["segments"] == [
+        "prologue",
+        "act_1",
+        "act_2a",
         "act_2b",
         "act_3",
         "epilogue",
     ]
-    assert selection["selected_beat_count"] == 22
-    assert selection["first_beat_id"] == "P10G-BEAT-023"
+    assert selection["selected_beat_count"] == 44
+    assert selection["first_beat_id"] == "P10G-BEAT-001"
     assert selection["last_beat_id"] == "P10G-BEAT-044"
 
 

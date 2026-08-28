@@ -82,19 +82,18 @@ SEGMENT_ORDER = tuple(SEGMENT_RANGES)
 
 PROFILE_SEGMENTS: Mapping[str, tuple[str, ...]] = {
     "full_feature": SEGMENT_ORDER,
-    "showcase": (
-        "act_2b",
-        "act_3",
-        "epilogue",
-    ),
+    "showcase": SEGMENT_ORDER,
 }
 
 PROFILE_PRESENTATION_UNITS: Mapping[str, tuple[str, ...]] = {
     "full_feature": (),
     "showcase": (
-        "intro",
-        "claim",
-        "credits",
+        "cinematic_intro",
+        "project_claims",
+        "agentic_workflow_claims",
+        "technology_stack",
+        "cinematic_text_overlays",
+        "classical_end_credits",
     ),
 }
 
