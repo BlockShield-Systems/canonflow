@@ -1,0 +1,127 @@
+{
+  "artifact_id": "evidence-62-narrative-context-and-scene-shot-compiler-validation",
+  "artifact_type": "canonflow_narrative_context_scene_shot_validation",
+  "artifacts": {
+    "agents/canonflow_agent/production_run.py": "169f7f65b220832dab3e8a94ec665b5d2eb01f7b2b942347c9722df35894c23c",
+    "agents/canonflow_agent/scene_shot_compiler.py": "a0d4ce83a4c55b4880b61bbf58dc994d8fa0ccf39039dfdb3710b0d4f9eca657",
+    "agents/canonflow_agent/tests/test_scene_shot_compiler.py": "bafe21fe4e0728761d0dc47dd08c7a8d2cb88e3f340cbe8f46081cdca2e4438a",
+    "agents/pyproject.toml": "50f19eb4d8b1e86c45d50795f73b4d5cc6a6f98e8a3ffaa840f8884969561ee2",
+    "agents/scripts/compile_scene_shot_plan.py": "a48b95dcfad730cb06a02aa858116897ddf7775af993c0b515b5d5fbe5173a96",
+    "agents/uv.lock": "e96ceb81a40859414bf67701499c0bda0f975bd85f8bc543cede5bc84a13d953",
+    "docs/evidence/p10f-canon-story-bible/17-approved-canon-story-bible.md": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+    "docs/evidence/p10g-canon-beat-sheet/38-canon-beat-sheet-third-revised-draft.md": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+    "docs/evidence/p10g-canon-beat-sheet/61-production-run-contract-validation.json": "a4f720c140df67731d99f55baa2e1f92ab3523d51ddd413609c592a8681c0fa8",
+    "docs/evidence/p10g-canon-beat-sheet/reference-images/r4/demian-character-reference.jpg": "5ba8287cafa2fce14b03f4b505649bfc42a4a7aa916962a8dc2fbd16f0bc8c7f",
+    "docs/evidence/p10g-canon-beat-sheet/reference-images/r4/yd-character-reference.jpg": "589a886dd5f7fcf86055e6c6aedbafe67ec238bcf3b9f8f06936a63dd7f62ef1"
+  },
+  "baseline": {
+    "evidence_61_head": "64622e30de9899317ced36cd74dfbd7f78ef0439",
+    "evidence_61_tag": "p10g-production-run-contract-v1-validated",
+    "evidence_61_tag_matches_head": true
+  },
+  "canon_binding": {
+    "draft_path": "docs/evidence/p10g-canon-beat-sheet/38-canon-beat-sheet-third-revised-draft.md",
+    "draft_sha256": "465e5609e37d205227e854a37616ccc35f8955d22dd3de98fce108ed501a667e",
+    "story_bible_must_be_committed_with_evidence_62": true,
+    "story_bible_path": "docs/evidence/p10f-canon-story-bible/17-approved-canon-story-bible.md",
+    "story_bible_provenance_before_evidence_62": "worktree_only",
+    "story_bible_sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c"
+  },
+  "clarification_gate": {
+    "blocking_issue_count": 3,
+    "clarification_request_count": 3,
+    "generation_authorized": false,
+    "human_approval_status": "pending",
+    "required_fields": [
+      "selection_strategy",
+      "target_runtime_seconds",
+      "external_model_submission"
+    ],
+    "status": "blocking"
+  },
+  "generated_at_utc": "2026-08-28T03:00:47.393202+00:00",
+  "identity_bindings": {
+    "demian": {
+      "identity_state_separation_validated": true,
+      "path": "docs/evidence/p10g-canon-beat-sheet/reference-images/r4/demian-character-reference.jpg",
+      "sha256": "5ba8287cafa2fce14b03f4b505649bfc42a4a7aa916962a8dc2fbd16f0bc8c7f"
+    },
+    "yd": {
+      "identity_persona_voice_separation_validated": true,
+      "non_canon_label_exclusion_required": true,
+      "path": "docs/evidence/p10g-canon-beat-sheet/reference-images/r4/yd-character-reference.jpg",
+      "sha256": "589a886dd5f7fcf86055e6c6aedbafe67ec238bcf3b9f8f06936a63dd7f62ef1"
+    }
+  },
+  "next_controlled_action": {
+    "canon_mutation_allowed": false,
+    "media_generation_allowed": false,
+    "network_required": false,
+    "operation": "collect and bind human clarification decisions before scene selection and shot decomposition"
+  },
+  "plan": {
+    "final_scene_count": null,
+    "final_shot_count": null,
+    "narrative_context_beat_count": 44,
+    "plan_id": "76da142d-8e28-56eb-83ca-a2faf5997a53",
+    "plan_status": "compiled_pending_human_clarification",
+    "presentation_scope": [
+      "intro",
+      "claim",
+      "credits"
+    ],
+    "required_narrative_units": [
+      "prologue_foundation",
+      "character_foundation",
+      "escalation_bridge",
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "scene_context_packet_count": 44,
+    "selection_locked": false,
+    "shot_context_packet_count": 0
+  },
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches"
+  },
+  "retrieval_contract": {
+    "complete_canon_dump_to_media_models_forbidden": true,
+    "deterministic_source_locator_index_validated": true,
+    "exact_filters_precede_semantic_retrieval": true,
+    "minimum_required_provider_context": true,
+    "provider_retrieval_performed": false,
+    "repository_relative_locators_validated": true,
+    "vector_index_is_canon_authority": false
+  },
+  "schema_version": "1.0",
+  "security": {
+    "credentials_persisted": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "executor_invoked": false,
+    "external_execution_requires_new_human_approval": true,
+    "gemini_request_performed": false,
+    "http_request_performed": false,
+    "media_generation_performed": false,
+    "network_access_performed": false,
+    "reference_images_transmitted": false
+  },
+  "status": "validated_pending_human_clarification",
+  "validation": {
+    "atomic_non_overwrite_enabled": true,
+    "beat_count": 44,
+    "dependency_closure_validated": true,
+    "english_only_project_artifacts": true,
+    "fields_per_beat": 16,
+    "identity_pack_count": 2,
+    "python_compilation_passed": true,
+    "repository_relative_locators_validated": true,
+    "scene_context_packet_count": 44,
+    "scene_shot_test_count": 16,
+    "scene_shot_tests_passed": true,
+    "shot_context_packet_count": 0,
+    "smoke_plan_validated": true
+  }
+}
