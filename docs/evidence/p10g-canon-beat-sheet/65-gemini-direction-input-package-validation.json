@@ -1,0 +1,173 @@
+{
+  "artifact_id": "fc5d64f4-e2ac-50c1-a518-99f958a416de",
+  "artifact_type": "canonflow_gemini_direction_input_package_validation",
+  "baseline": {
+    "evidence_64_artifact_id": "73d5bbd5-3458-5269-8d09-a5522f28c237",
+    "evidence_64_manifest_path": "docs/evidence/p10g-canon-beat-sheet/SHA256SUMS.six-segment-showcase-selection-validation",
+    "evidence_64_manifest_sha256": "5df3ae85e393dd6136f18f1e0060f56dd96a13563e1170b851469f613fed937a",
+    "evidence_64_path": "docs/evidence/p10g-canon-beat-sheet/64-six-segment-showcase-selection-validation.json",
+    "evidence_64_sha256": "a2949559676d5ed332d5c5815e61ee89a58a8714f286d39b138560089d9ded2a",
+    "evidence_64_tag": "p10g-six-segment-showcase-selection-v1-validated",
+    "repository_head": "9f5efadfedb29081e44193f5f78f5c9ac6e21cf1",
+    "showcase_plan_id": "437f1eca-41e6-58e6-9899-a80b280de0bd"
+  },
+  "direction_package_contract": {
+    "global_contract_id": "d436347d-3068-5a0f-98db-21386ba492aa",
+    "identity_binding_count": 98,
+    "independent_parallel_processing_allowed": false,
+    "merge_manifest_id": "826f785d-fccb-57f6-91a3-28b45cac3055",
+    "narrative_runtime_seconds": 510,
+    "package_file_count": 8,
+    "package_file_sha256s": {
+      "00-global-contract.json": "e39bf4f7806764eb8777c17f63c9b86a34a924958e70e93d346c101fd4420bb0",
+      "01-prologue.json": "f25fc6e9a67b63f4550ee17f483ad296cb87dbfa6846d0751d70df70d8179db3",
+      "02-act_1.json": "eaa86bb7824412610df87dc7a57042d6702c3f3ace04b2aa9844ccc8f1a9f528",
+      "03-act_2a.json": "0d88db2a81fbce5e416593a2c4fe5ff93083ce59fb0eef697e90d39c4b10b06a",
+      "04-act_2b.json": "bd46b69187f2618fcc1129c685e6d7835dfebddeba7967286aa9884274388187",
+      "05-act_3.json": "d6c1a5c05fccc10579bd9b901a9e810f9288d4abfdba241746c9dd49dd77774f",
+      "06-epilogue.json": "3d8b425dc7f99d191cf30780766933b2f59e8ef1a5c8c60c2bed6ff4b23c3aec",
+      "07-merge-manifest.json": "5e04a87892012cec401478e61903dcacab155374c3d6fb0c2d929b22011174b1"
+    },
+    "prior_continuity_handoff_required_after_first": true,
+    "processing_is_sequential": true,
+    "processing_order": [
+      "prologue",
+      "act_1",
+      "act_2a",
+      "act_2b",
+      "act_3",
+      "epilogue"
+    ],
+    "segment_package_count": 6,
+    "segment_packages": [
+      {
+        "bytes": 45683,
+        "filename": "01-prologue.json",
+        "runtime_seconds": 65,
+        "scene_count": 3,
+        "segment_id": "prologue",
+        "segment_package_id": "e3d21c0b-8c2a-585f-9e6e-df7672851df5",
+        "sha256": "f25fc6e9a67b63f4550ee17f483ad296cb87dbfa6846d0751d70df70d8179db3",
+        "shot_count": 7
+      },
+      {
+        "bytes": 114315,
+        "filename": "02-act_1.json",
+        "runtime_seconds": 115,
+        "scene_count": 7,
+        "segment_id": "act_1",
+        "segment_package_id": "363c679a-b658-5578-9092-47516889057a",
+        "sha256": "eaa86bb7824412610df87dc7a57042d6702c3f3ace04b2aa9844ccc8f1a9f528",
+        "shot_count": 15
+      },
+      {
+        "bytes": 77518,
+        "filename": "03-act_2a.json",
+        "runtime_seconds": 75,
+        "scene_count": 4,
+        "segment_id": "act_2a",
+        "segment_package_id": "2d7bf4fe-7ea2-5749-a96c-9a3678e2ac2a",
+        "sha256": "0d88db2a81fbce5e416593a2c4fe5ff93083ce59fb0eef697e90d39c4b10b06a",
+        "shot_count": 9
+      },
+      {
+        "bytes": 96921,
+        "filename": "04-act_2b.json",
+        "runtime_seconds": 90,
+        "scene_count": 9,
+        "segment_id": "act_2b",
+        "segment_package_id": "c5e0d856-6592-5938-b27f-3e30ea110964",
+        "sha256": "bd46b69187f2618fcc1129c685e6d7835dfebddeba7967286aa9884274388187",
+        "shot_count": 11
+      },
+      {
+        "bytes": 111819,
+        "filename": "05-act_3.json",
+        "runtime_seconds": 115,
+        "scene_count": 6,
+        "segment_id": "act_3",
+        "segment_package_id": "74cedcf7-f9d1-569c-ab68-4bcdbae4999e",
+        "sha256": "d6c1a5c05fccc10579bd9b901a9e810f9288d4abfdba241746c9dd49dd77774f",
+        "shot_count": 14
+      },
+      {
+        "bytes": 44705,
+        "filename": "06-epilogue.json",
+        "runtime_seconds": 50,
+        "scene_count": 3,
+        "segment_id": "epilogue",
+        "segment_package_id": "343d18e1-2bb1-5339-ba11-f335206931f9",
+        "sha256": "3d8b425dc7f99d191cf30780766933b2f59e8ef1a5c8c60c2bed6ff4b23c3aec",
+        "shot_count": 6
+      }
+    ],
+    "shot_direction_input_count": 62
+  },
+  "generation_authorized": false,
+  "implementation": {
+    "builder": {
+      "path": "agents/canonflow_agent/direction_package_builder.py",
+      "sha256": "63ddc66296dca34a03e27b822cb85708e5a1c8b4957bbe47feb4af7fa1d5f78c"
+    },
+    "cli": {
+      "mode": "100755",
+      "path": "agents/scripts/compile_direction_package.py",
+      "sha256": "c063183c8df8bd3185efda8896d2b716845c0b66e0124043681aec4843c42ccf"
+    },
+    "tests": {
+      "path": "agents/canonflow_agent/tests/test_direction_package_builder.py",
+      "sha256": "9dd37958682e2a132f8df3b739b7cb4f702cd117f15a7ae6370df92bd4117c0f",
+      "test_count": 13
+    }
+  },
+  "next_controlled_action": "Human review and freeze of Evidence 65 before provider-specific Gemini request construction or execution.",
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches"
+  },
+  "schema_version": "1.0",
+  "security": {
+    "credentials_persisted": false,
+    "external_executor_invoked": false,
+    "http_requests": false,
+    "media_generation_authorized": false,
+    "media_generation_performed": false,
+    "network_access": false,
+    "provider_adapter_selected": false,
+    "provider_calls": false,
+    "reference_images_transmitted": false
+  },
+  "semantic_contract": {
+    "camera_fields_classification": "advisory_non_binding",
+    "canon_context_overrides_hints": true,
+    "continuity_overrides_unmotivated_variation": true,
+    "final_creative_direction_source": "gemini_structured_direction_synthesis",
+    "hard_constraints_override_hints": true,
+    "identity_and_character_state_are_separate": true,
+    "identity_asset_paths_included": false,
+    "legacy_production_staging_classification": "advisory_mixed_direction_reference",
+    "reference_asset_metadata_included": true,
+    "reference_image_bytes_included": false,
+    "shot_packets_role": "deterministic_context_and_runtime_containers"
+  },
+  "status": "locally_validated_provider_locked",
+  "validation": {
+    "all_62_shots_present_once": true,
+    "all_six_segments_present": true,
+    "atomic_non_overwrite": true,
+    "canon_source_locators_preserved": true,
+    "canonical_shot_order_preserved": true,
+    "deterministic_file_hashes": true,
+    "deterministic_identity": true,
+    "direction_package_builder_tests_passed": 13,
+    "identity_asset_paths_absent": true,
+    "modified_evidence_rejected": true,
+    "mutated_package_rejected": true,
+    "narrative_runtime_exact": true,
+    "production_run_tests_passed": 12,
+    "prototype_equivalence": true,
+    "scene_shot_compiler_tests_passed": 17,
+    "showcase_selector_tests_passed": 12,
+    "total_regression_tests_passed": 54
+  }
+}
