@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+collecting ... collected 28 items
+
+canonflow_agent/tests/test_policy.py::test_allows_scoped_select PASSED   [  3%]
+canonflow_agent/tests/test_policy.py::test_allows_project_slug_lookup PASSED [  7%]
+canonflow_agent/tests/test_policy.py::test_allows_system_metadata PASSED [ 10%]
+canonflow_agent/tests/test_policy.py::test_allows_information_schema_metadata PASSED [ 14%]
+canonflow_agent/tests/test_policy.py::test_allows_scoped_inner_join PASSED [ 17%]
+canonflow_agent/tests/test_policy.py::test_allows_contract_scope PASSED  [ 21%]
+canonflow_agent/tests/test_policy.py::test_allows_blocked_word_inside_literal PASSED [ 25%]
+canonflow_agent/tests/test_policy.py::test_blocks_insert PASSED          [ 28%]
+canonflow_agent/tests/test_policy.py::test_blocks_multiple_statements PASSED [ 32%]
+canonflow_agent/tests/test_policy.py::test_blocks_unscoped_project_query PASSED [ 35%]
+canonflow_agent/tests/test_policy.py::test_blocks_uuid_as_meaningless_literal PASSED [ 39%]
+canonflow_agent/tests/test_policy.py::test_blocks_uuid_in_unrelated_predicate PASSED [ 42%]
+canonflow_agent/tests/test_policy.py::test_blocks_scope_inside_or PASSED [ 46%]
+canonflow_agent/tests/test_policy.py::test_blocks_scope_inside_not PASSED [ 50%]
+canonflow_agent/tests/test_policy.py::test_blocks_unscoped_union_branch PASSED [ 53%]
+canonflow_agent/tests/test_policy.py::test_blocks_unscoped_join_alias PASSED [ 57%]
+canonflow_agent/tests/test_policy.py::test_blocks_outer_join_for_scoped_data PASSED [ 60%]
+canonflow_agent/tests/test_policy.py::test_blocks_external_database PASSED [ 64%]
+canonflow_agent/tests/test_policy.py::test_blocks_url_table_function PASSED [ 67%]
+canonflow_agent/tests/test_policy.py::test_blocks_file_table_function PASSED [ 71%]
+canonflow_agent/tests/test_policy.py::test_blocks_remote_table_function PASSED [ 75%]
+canonflow_agent/tests/test_policy.py::test_blocks_query_settings PASSED  [ 78%]
+canonflow_agent/tests/test_policy.py::test_blocks_into_outfile PASSED    [ 82%]
+canonflow_agent/tests/test_policy.py::test_allows_list_tables_for_canonflow PASSED [ 85%]
+canonflow_agent/tests/test_policy.py::test_blocks_list_tables_for_external_database PASSED [ 89%]
+canonflow_agent/tests/test_policy.py::test_blocks_unscoped_contract_query PASSED [ 92%]
+canonflow_agent/tests/test_policy.py::test_allows_scoped_context_memory_tables PASSED [ 96%]
+canonflow_agent/tests/test_policy.py::test_blocks_unscoped_context_memory_tables PASSED [100%]
+
+============================== 28 passed in 0.08s ==============================

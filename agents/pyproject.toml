@@ -5,8 +5,13 @@ description = "CanonFlow agents for the Google Cloud Agentic Cinema Hackathon"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "google-adk[mcp]==2.7.1",
+    "google-auth>=2.40,<3",
     "sqlglot>=30.17.0",
 ]
 
 [tool.uv]
 package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["canonflow_agent/tests"]

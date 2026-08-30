@@ -1,0 +1,262 @@
+{
+  "apiVersion": "serving.knative.dev/v1",
+  "kind": "Service",
+  "metadata": {
+    "annotations": {
+      "run.googleapis.com/ingress": "all",
+      "run.googleapis.com/ingress-status": "all",
+      "run.googleapis.com/maxScale": "3",
+      "run.googleapis.com/operation-id": "e0563409-2858-4087-9e46-5bb2be19b374",
+      "run.googleapis.com/urls": "[\"https://canonflow-agent-983202668214.europe-west4.run.app\",\"https://canonflow-agent-ektxaloq2a-ez.a.run.app\"]",
+      "serving.knative.dev/creator": "contact@ai-techart.com",
+      "serving.knative.dev/lastModifier": "contact@ai-techart.com"
+    },
+    "creationTimestamp": "2026-08-29T23:58:01.721113Z",
+    "generation": 5,
+    "labels": {
+      "cloud.googleapis.com/location": "europe-west4"
+    },
+    "name": "canonflow-agent",
+    "namespace": "983202668214",
+    "resourceVersion": "AAZaOQSCcyg",
+    "selfLink": "/apis/serving.knative.dev/v1/namespaces/983202668214/services/canonflow-agent",
+    "uid": "ba4d7278-de50-42af-865c-02be1da3e0b7"
+  },
+  "spec": {
+    "template": {
+      "metadata": {
+        "annotations": {
+          "autoscaling.knative.dev/maxScale": "2",
+          "run.googleapis.com/container-dependencies": "{\"agent\":[\"mcp\"]}",
+          "run.googleapis.com/execution-environment": "gen2",
+          "run.googleapis.com/network-interfaces": "[{\"network\":\"canonflow-runtime\",\"subnetwork\":\"canonflow-runtime-europe-west4\"}]",
+          "run.googleapis.com/startup-cpu-boost": "true",
+          "run.googleapis.com/vpc-access-egress": "all-traffic"
+        },
+        "labels": {
+          "run.googleapis.com/startupProbeType": "Custom"
+        }
+      },
+      "spec": {
+        "containerConcurrency": 4,
+        "containers": [
+          {
+            "env": [
+              {
+                "name": "CANONFLOW_MCP_URL",
+                "value": "http://127.0.0.1:8000/mcp"
+              },
+              {
+                "name": "CANONFLOW_MCP_TIMEOUT_SECONDS",
+                "value": "120"
+              },
+              {
+                "name": "CANONFLOW_MODEL",
+                "value": "gemini-3.1-pro-preview"
+              },
+              {
+                "name": "CANONFLOW_PROJECT_SLUG",
+                "value": "yd-when-paradise-glitches"
+              },
+              {
+                "name": "CANONFLOW_GEMINI_MIN_INTERVAL_SECONDS",
+                "value": "6.0"
+              },
+              {
+                "name": "GOOGLE_GENAI_USE_VERTEXAI",
+                "value": "FALSE"
+              },
+              {
+                "name": "GOOGLE_CLOUD_PROJECT",
+                "value": "canonflow-agentic-cinema"
+              },
+              {
+                "name": "GOOGLE_CLOUD_LOCATION",
+                "value": "us-central1"
+              },
+              {
+                "name": "GOOGLE_API_KEY",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "key": "latest",
+                    "name": "canonflow-gemini-api-key"
+                  }
+                }
+              },
+              {
+                "name": "CLICKHOUSE_MCP_AUTH_TOKEN",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "key": "latest",
+                    "name": "canonflow-mcp-auth-token"
+                  }
+                }
+              }
+            ],
+            "image": "europe-west4-docker.pkg.dev/canonflow-agentic-cinema/canonflow-services/canonflow-agent@sha256:412e1767d1b6fd79404437ecda58da8e22c689f3d33c57b2008db41c5925c79b",
+            "name": "agent",
+            "ports": [
+              {
+                "containerPort": 8080,
+                "name": "http1"
+              }
+            ],
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "1Gi"
+              }
+            },
+            "startupProbe": {
+              "failureThreshold": 40,
+              "periodSeconds": 5,
+              "tcpSocket": {
+                "port": 8080
+              },
+              "timeoutSeconds": 3
+            }
+          },
+          {
+            "env": [
+              {
+                "name": "CLICKHOUSE_HOST",
+                "value": "oz6d486f5k.europe-west4.gcp.clickhouse.cloud"
+              },
+              {
+                "name": "CLICKHOUSE_PORT",
+                "value": "8443"
+              },
+              {
+                "name": "CLICKHOUSE_USER",
+                "value": "canonflow_mcp"
+              },
+              {
+                "name": "CLICKHOUSE_DATABASE",
+                "value": "canonflow"
+              },
+              {
+                "name": "CLICKHOUSE_SECURE",
+                "value": "true"
+              },
+              {
+                "name": "CLICKHOUSE_VERIFY",
+                "value": "true"
+              },
+              {
+                "name": "CLICKHOUSE_CONNECT_TIMEOUT",
+                "value": "30"
+              },
+              {
+                "name": "CLICKHOUSE_SEND_RECEIVE_TIMEOUT",
+                "value": "300"
+              },
+              {
+                "name": "CLICKHOUSE_ALLOW_WRITE_ACCESS",
+                "value": "false"
+              },
+              {
+                "name": "CLICKHOUSE_ALLOW_DROP",
+                "value": "false"
+              },
+              {
+                "name": "CLICKHOUSE_MCP_SERVER_TRANSPORT",
+                "value": "http"
+              },
+              {
+                "name": "CLICKHOUSE_MCP_BIND_HOST",
+                "value": "0.0.0.0"
+              },
+              {
+                "name": "CLICKHOUSE_MCP_BIND_PORT",
+                "value": "8000"
+              },
+              {
+                "name": "FASTMCP_SHOW_SERVER_BANNER",
+                "value": "false"
+              },
+              {
+                "name": "FASTMCP_CHECK_FOR_UPDATES",
+                "value": "off"
+              },
+              {
+                "name": "CLICKHOUSE_PASSWORD",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "key": "latest",
+                    "name": "canonflow-clickhouse-mcp-password"
+                  }
+                }
+              },
+              {
+                "name": "CLICKHOUSE_MCP_AUTH_TOKEN",
+                "valueFrom": {
+                  "secretKeyRef": {
+                    "key": "latest",
+                    "name": "canonflow-mcp-auth-token"
+                  }
+                }
+              }
+            ],
+            "image": "europe-west4-docker.pkg.dev/canonflow-agentic-cinema/canonflow-services/canonflow-mcp@sha256:ad3a4c6dce4aea3121570a68afaa24e2dd751b2b2d5060ba95227c4e500cc9f1",
+            "name": "mcp",
+            "resources": {
+              "limits": {
+                "cpu": "1",
+                "memory": "512Mi"
+              }
+            },
+            "startupProbe": {
+              "failureThreshold": 30,
+              "periodSeconds": 5,
+              "tcpSocket": {
+                "port": 8000
+              },
+              "timeoutSeconds": 3
+            }
+          }
+        ],
+        "serviceAccountName": "canonflow-agent@canonflow-agentic-cinema.iam.gserviceaccount.com",
+        "timeoutSeconds": 900
+      }
+    },
+    "traffic": [
+      {
+        "latestRevision": true,
+        "percent": 100
+      }
+    ]
+  },
+  "status": {
+    "address": {
+      "url": "https://canonflow-agent-ektxaloq2a-ez.a.run.app"
+    },
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-08-30T00:46:35.557672Z",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-08-30T00:46:12.722605Z",
+        "status": "True",
+        "type": "ConfigurationsReady"
+      },
+      {
+        "lastTransitionTime": "2026-08-30T00:46:35.524357Z",
+        "status": "True",
+        "type": "RoutesReady"
+      }
+    ],
+    "latestCreatedRevisionName": "canonflow-agent-00005-x5f",
+    "latestReadyRevisionName": "canonflow-agent-00005-x5f",
+    "observedGeneration": 5,
+    "traffic": [
+      {
+        "latestRevision": true,
+        "percent": 100,
+        "revisionName": "canonflow-agent-00005-x5f"
+      }
+    ],
+    "url": "https://canonflow-agent-ektxaloq2a-ez.a.run.app"
+  }
+}
