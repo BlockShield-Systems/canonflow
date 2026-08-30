@@ -113,6 +113,32 @@ The secrets `GOOGLE_API_KEY`, `CLICKHOUSE_PASSWORD` and
 `CLICKHOUSE_MCP_AUTH_TOKEN` are referenced from Secret Manager and are never
 stored in this repository.
 
+## Notes for reviewers
+
+The hosted service runs on Cloud Run with `min-instances=0` to stay inside the
+project budget. The **first request after an idle period takes about 50-60
+seconds**: container cold start plus the first ClickHouse Cloud connection,
+which itself needs roughly 25 seconds to wake the idle service. Every
+subsequent request answers in about 1-3 seconds. This is expected behaviour,
+not a failure.
+
+Hosted endpoint: https://canonflow-agent-983202668214.europe-west4.run.app
+
+Warm the service before evaluating:
+
+    curl -s -o /dev/null -w '%{http_code}\n' \
+      https://canonflow-agent-983202668214.europe-west4.run.app/list-apps
+
+### Local development
+
+    uv run --directory agents --with pytest pytest -q --no-header
+
+110 tests, of which 28 cover the read-only ClickHouse guardrail in
+`agents/canonflow_agent/policy.py`. The scene shot compiler requires the
+character reference images under
+`docs/evidence/p10g-canon-beat-sheet/reference-images/r4/`; without them 12
+tests fail by design.
+
 ## Evidence
 
 `docs/evidence/` contains the runtime audit trail: Cloud Run service
