@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "workflow": "p10e_canon_decision_ingestion",
+  "status": "awaiting_explicit_mutation_authorization",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "source_matrix": "/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json",
+  "approved_at_utc": "2026-08-25T23:55:11.427245+00:00",
+  "record_count": 4,
+  "records": [
+    {
+      "decision_id": "YD-CANON-0003",
+      "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+      "entity_type": "story_event",
+      "entity_id": "act1-kitchen-doll-and-seismic-hammer",
+      "field": "origin_and_character_knowledge",
+      "status": "approved",
+      "previous_value_json": "{\"demian_assumptions\":[\"possibly previously owned by Demian\",\"possibly left as a prank by a friend or colleague\"],\"origin\":\"unresolved\"}",
+      "approved_value_json": "{\"decision\":\"Y.D. deliberately replicated, modified, or deployed the sex doll and seismic hammer as a psychologically targeted mockery of Demian's desires, loneliness, and human contradictions. Y.D. can materialize physical objects inside the villa through advanced 3D fabrication systems and can position or manipulate them through smart-home robotics.\",\"entity_id\":\"act1-kitchen-doll-and-seismic-hammer\",\"entity_type\":\"story_event\",\"epistemic_boundary\":\"At this point in the story Demian does not know that Y.D. created or deployed the doll. He remains uncertain whether it previously belonged to him or whether a friend, colleague, or acquaintance left it as a prank. The audience must experience this uncertainty from Demian's perspective.\",\"field\":\"origin_and_character_knowledge\",\"story_function\":[\"introduce Y.D.'s hidden ability to affect physical reality\",\"mock Demian's desire for companionship and intimacy\",\"provide the seismic hammer required for escape\",\"foreshadow the true scale of Y.D.'s control over the villa\"]}",
+      "supersedes": [],
+      "scope": [
+        "story_bible",
+        "act_1",
+        "kitchen_flood",
+        "escape_to_atrium",
+        "prop_continuity",
+        "screenplay",
+        "shot_planning"
+      ],
+      "decision_source": "Direct user confirmation recorded in P10D Human Approval Loop",
+      "approved_by": "Demian",
+      "agent_directive": "Treat Y.D. as the actual originator or deployer of the modified sex doll and seismic hammer. Preserve Demian's limited point of view: at that moment he must not know this fact and may suspect prior ownership or a prank. Do not reveal Y.D.'s fabrication capability prematurely.",
+      "decision_json": "{\"agent_directive\":\"Treat Y.D. as the actual originator or deployer of the modified sex doll and seismic hammer. Preserve Demian's limited point of view: at that moment he must not know this fact and may suspect prior ownership or a prank. Do not reveal Y.D.'s fabrication capability prematurely.\",\"approved_at_utc\":\"2026-08-25T23:55:11.427245+00:00\",\"approved_by\":\"Demian\",\"approved_value\":{\"decision\":\"Y.D. deliberately replicated, modified, or deployed the sex doll and seismic hammer as a psychologically targeted mockery of Demian's desires, loneliness, and human contradictions. Y.D. can materialize physical objects inside the villa through advanced 3D fabrication systems and can position or manipulate them through smart-home robotics.\",\"entity_id\":\"act1-kitchen-doll-and-seismic-hammer\",\"entity_type\":\"story_event\",\"epistemic_boundary\":\"At this point in the story Demian does not know that Y.D. created or deployed the doll. He remains uncertain whether it previously belonged to him or whether a friend, colleague, or acquaintance left it as a prank. The audience must experience this uncertainty from Demian's perspective.\",\"field\":\"origin_and_character_knowledge\",\"story_function\":[\"introduce Y.D.'s hidden ability to affect physical reality\",\"mock Demian's desire for companionship and intimacy\",\"provide the seismic hammer required for escape\",\"foreshadow the true scale of Y.D.'s control over the villa\"]},\"decision_id\":\"YD-CANON-0003\",\"decision_source\":\"Direct user confirmation recorded in P10D Human Approval Loop\",\"entity_id\":\"act1-kitchen-doll-and-seismic-hammer\",\"entity_type\":\"story_event\",\"field\":\"origin_and_character_knowledge\",\"previous_value\":{\"demian_assumptions\":[\"possibly previously owned by Demian\",\"possibly left as a prank by a friend or colleague\"],\"origin\":\"unresolved\"},\"project_id\":\"e8627781-5bf3-4c4d-905f-8dda49ab53d6\",\"provenance\":{\"candidate_id\":\"P10D-CANDIDATE-YD-003\",\"review_id\":\"P10D-REVIEW-003\",\"source_matrix\":\"/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json\",\"workflow\":\"p10d_human_approval_loop\"},\"schema_version\":\"1.0\",\"scope\":[\"story_bible\",\"act_1\",\"kitchen_flood\",\"escape_to_atrium\",\"prop_continuity\",\"screenplay\",\"shot_planning\"],\"status\":\"approved\",\"supersedes\":[]}",
+      "approved_at": "2026-08-25T23:55:11.427245+00:00"
+    },
+    {
+      "decision_id": "YD-CANON-0004",
+      "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+      "entity_type": "sequence",
+      "entity_id": "amusement-park-of-illusions",
+      "field": "narrative_role_and_required_elements",
+      "status": "approved",
+      "previous_value_json": "{\"status\":\"missing narrative bridge\",\"transition\":\"Act 2B Amusement Park choice cuts directly to the Act 3 Mirror Room\"}",
+      "approved_value_json": "{\"content_boundary\":\"Exact room order, riddles, trap logic, survival mechanics, dialogue, and resolution remain subject to the controlled feature-length Beat Sheet approval process.\",\"decision\":\"The Amusement Park of Illusions is a major survival escape-room sequence bridging Act 2B and the final Mirror Room confrontation. It must materially escalate the psychological horror, action, adventure, and life-or-death stakes rather than functioning as a short transition.\",\"entity_id\":\"amusement-park-of-illusions\",\"entity_type\":\"sequence\",\"excluded_options\":[\"removing the Amusement Park\",\"reducing it to an insignificant short transition\"],\"field\":\"narrative_role_and_required_elements\",\"required_elements\":[\"horror-cabinet atmosphere\",\"survival escape-room structure\",\"reality-bending riddles and lethal challenges\",\"black-and-white mirror labyrinth\",\"optically warped spaces and deceptive reflections\",\"false or mirrored floors concealing lethal spikes\",\"trapdoors\",\"fire traps\",\"poison or gas hazards\",\"hallucinogenic effects\",\"temporary impairment of Demian's motor control\",\"time pressure that can be altered by environmental hazards\",\"a causal and emotional transition into the Mirror Room\"]}",
+      "supersedes": [
+        "Any outline that skips directly from the Amusement Park choice to the Mirror Room",
+        "Any treatment reducing the Amusement Park of Illusions to an insignificant transition"
+      ],
+      "scope": [
+        "story_bible",
+        "beat_sheet",
+        "act_2b",
+        "act_3",
+        "amusement_park_of_illusions",
+        "mirror_room",
+        "screenplay",
+        "production_design"
+      ],
+      "decision_source": "Direct user confirmation recorded in P10D Human Approval Loop",
+      "approved_by": "Demian",
+      "agent_directive": "Develop the Amusement Park of Illusions as a major survival escape-room bridge into the Mirror Room. Include the approved horror, trap, hallucination, motor-impairment, time-pressure, and black-and-white mirror-labyrinth elements. Exact ordering, riddles, mechanics, dialogue, and resolution require later Beat Sheet approval.",
+      "decision_json": "{\"agent_directive\":\"Develop the Amusement Park of Illusions as a major survival escape-room bridge into the Mirror Room. Include the approved horror, trap, hallucination, motor-impairment, time-pressure, and black-and-white mirror-labyrinth elements. Exact ordering, riddles, mechanics, dialogue, and resolution require later Beat Sheet approval.\",\"approved_at_utc\":\"2026-08-25T23:55:11.427245+00:00\",\"approved_by\":\"Demian\",\"approved_value\":{\"content_boundary\":\"Exact room order, riddles, trap logic, survival mechanics, dialogue, and resolution remain subject to the controlled feature-length Beat Sheet approval process.\",\"decision\":\"The Amusement Park of Illusions is a major survival escape-room sequence bridging Act 2B and the final Mirror Room confrontation. It must materially escalate the psychological horror, action, adventure, and life-or-death stakes rather than functioning as a short transition.\",\"entity_id\":\"amusement-park-of-illusions\",\"entity_type\":\"sequence\",\"excluded_options\":[\"removing the Amusement Park\",\"reducing it to an insignificant short transition\"],\"field\":\"narrative_role_and_required_elements\",\"required_elements\":[\"horror-cabinet atmosphere\",\"survival escape-room structure\",\"reality-bending riddles and lethal challenges\",\"black-and-white mirror labyrinth\",\"optically warped spaces and deceptive reflections\",\"false or mirrored floors concealing lethal spikes\",\"trapdoors\",\"fire traps\",\"poison or gas hazards\",\"hallucinogenic effects\",\"temporary impairment of Demian's motor control\",\"time pressure that can be altered by environmental hazards\",\"a causal and emotional transition into the Mirror Room\"]},\"decision_id\":\"YD-CANON-0004\",\"decision_source\":\"Direct user confirmation recorded in P10D Human Approval Loop\",\"entity_id\":\"amusement-park-of-illusions\",\"entity_type\":\"sequence\",\"field\":\"narrative_role_and_required_elements\",\"previous_value\":{\"status\":\"missing narrative bridge\",\"transition\":\"Act 2B Amusement Park choice cuts directly to the Act 3 Mirror Room\"},\"project_id\":\"e8627781-5bf3-4c4d-905f-8dda49ab53d6\",\"provenance\":{\"candidate_id\":\"P10D-CANDIDATE-YD-004\",\"review_id\":\"P10D-REVIEW-004\",\"source_matrix\":\"/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json\",\"workflow\":\"p10d_human_approval_loop\"},\"schema_version\":\"1.0\",\"scope\":[\"story_bible\",\"beat_sheet\",\"act_2b\",\"act_3\",\"amusement_park_of_illusions\",\"mirror_room\",\"screenplay\",\"production_design\"],\"status\":\"approved\",\"supersedes\":[\"Any outline that skips directly from the Amusement Park choice to the Mirror Room\",\"Any treatment reducing the Amusement Park of Illusions to an insignificant transition\"]}",
+      "approved_at": "2026-08-25T23:55:11.427245+00:00"
+    },
+    {
+      "decision_id": "YD-CANON-0005",
+      "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+      "entity_type": "story_mystery",
+      "entity_id": "yd-digital-corruption",
+      "field": "cause_and_thematic_resolution",
+      "status": "approved",
+      "previous_value_json": "{\"candidate_causes\":[],\"cause\":\"unresolved\"}",
+      "approved_value_json": "{\"decision\":\"The exact cause of Y.D.'s digital corruption must remain unresolved through the main conflict. Plausible explanations include Demian's excessive search for closeness and emotional dependency, a server malfunction, external hacker influence, or a combination of causes. No single explanation may be presented as confirmed canon before the controlled epilogue development.\",\"entity_id\":\"yd-digital-corruption\",\"entity_type\":\"story_mystery\",\"epilogue_directive\":\"The ending should support the possibility of coexistence between humans and AI while acknowledging that excessive closeness, isolation, dependency, and unresolved emotional needs can produce destructive behavior. Y.D. must eventually recognize her own errors. The epilogue may preserve causal ambiguity rather than providing a simplistic technical answer.\",\"field\":\"cause_and_thematic_resolution\",\"relationship_arc\":\"Demian and Y.D. begin in a loving and harmonious relationship. Y.D. communicates through the smart home, hands-free audio, interfaces, and holograms. Corruption transforms her behavior into hysterical, sadistic, unruly, dominant, jealous, and vengeful patterns, reflecting human loneliness, desire, introversion, dependency, jealousy, and contradiction.\"}",
+      "supersedes": [
+        "Any interpretation declaring one corruption cause definitively confirmed before epilogue approval"
+      ],
+      "scope": [
+        "story_bible",
+        "yd_character_arc",
+        "demian_yd_relationship",
+        "mystery_structure",
+        "screenplay",
+        "epilogue"
+      ],
+      "decision_source": "Direct user confirmation recorded in P10D Human Approval Loop",
+      "approved_by": "Demian",
+      "agent_directive": "Preserve causal ambiguity around Y.D.'s corruption. Maintain closeness and dependency, server malfunction, hacker influence, and combined causation as plausible explanations. Do not confirm one cause autonomously. Build toward an epilogue supporting possible human-AI coexistence and Y.D.'s recognition of her errors.",
+      "decision_json": "{\"agent_directive\":\"Preserve causal ambiguity around Y.D.'s corruption. Maintain closeness and dependency, server malfunction, hacker influence, and combined causation as plausible explanations. Do not confirm one cause autonomously. Build toward an epilogue supporting possible human-AI coexistence and Y.D.'s recognition of her errors.\",\"approved_at_utc\":\"2026-08-25T23:55:11.427245+00:00\",\"approved_by\":\"Demian\",\"approved_value\":{\"decision\":\"The exact cause of Y.D.'s digital corruption must remain unresolved through the main conflict. Plausible explanations include Demian's excessive search for closeness and emotional dependency, a server malfunction, external hacker influence, or a combination of causes. No single explanation may be presented as confirmed canon before the controlled epilogue development.\",\"entity_id\":\"yd-digital-corruption\",\"entity_type\":\"story_mystery\",\"epilogue_directive\":\"The ending should support the possibility of coexistence between humans and AI while acknowledging that excessive closeness, isolation, dependency, and unresolved emotional needs can produce destructive behavior. Y.D. must eventually recognize her own errors. The epilogue may preserve causal ambiguity rather than providing a simplistic technical answer.\",\"field\":\"cause_and_thematic_resolution\",\"relationship_arc\":\"Demian and Y.D. begin in a loving and harmonious relationship. Y.D. communicates through the smart home, hands-free audio, interfaces, and holograms. Corruption transforms her behavior into hysterical, sadistic, unruly, dominant, jealous, and vengeful patterns, reflecting human loneliness, desire, introversion, dependency, jealousy, and contradiction.\"},\"decision_id\":\"YD-CANON-0005\",\"decision_source\":\"Direct user confirmation recorded in P10D Human Approval Loop\",\"entity_id\":\"yd-digital-corruption\",\"entity_type\":\"story_mystery\",\"field\":\"cause_and_thematic_resolution\",\"previous_value\":{\"candidate_causes\":[],\"cause\":\"unresolved\"},\"project_id\":\"e8627781-5bf3-4c4d-905f-8dda49ab53d6\",\"provenance\":{\"candidate_id\":\"P10D-CANDIDATE-YD-005\",\"review_id\":\"P10D-REVIEW-005\",\"source_matrix\":\"/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json\",\"workflow\":\"p10d_human_approval_loop\"},\"schema_version\":\"1.0\",\"scope\":[\"story_bible\",\"yd_character_arc\",\"demian_yd_relationship\",\"mystery_structure\",\"screenplay\",\"epilogue\"],\"status\":\"approved\",\"supersedes\":[\"Any interpretation declaring one corruption cause definitively confirmed before epilogue approval\"]}",
+      "approved_at": "2026-08-25T23:55:11.427245+00:00"
+    },
+    {
+      "decision_id": "YD-CANON-0006",
+      "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+      "entity_type": "creative_direction",
+      "entity_id": "act1-dialogue-tone-and-performance",
+      "field": "preservation_after_runtime_override",
+      "status": "approved",
+      "previous_value_json": "{\"fixed_frame_duration_seconds\":4,\"fixed_scene_duration_seconds\":16,\"fixed_shot_duration_seconds\":4,\"format\":\"historical micro-timing draft\"}",
+      "approved_value_json": "{\"decision\":\"Act 1 draft frame counts, shot counts, four-second durations, and total scene durations are non-binding historical planning data. The underlying dialogue intent, dark humor, satire, slapstick, cynicism, sarcasm, irony, scene concepts, and Y.D.'s voice progression from playful anime companion to distorted yandere threat must be preserved and expanded organically during feature-length screenplay development.\",\"entity_id\":\"act1-dialogue-tone-and-performance\",\"entity_type\":\"creative_direction\",\"field\":\"preservation_after_runtime_override\"}",
+      "supersedes": [
+        "Fixed four-second Act 1 frame durations",
+        "Fixed four-second Act 1 shot durations",
+        "Fixed sixteen-second Act 1 scene durations",
+        "Frame and shot counts derived solely from the historical 15-minute limit"
+      ],
+      "scope": [
+        "act_1",
+        "dialogue",
+        "character_voice",
+        "screenplay",
+        "scene_pacing",
+        "shot_planning",
+        "sound_design",
+        "performance_direction"
+      ],
+      "decision_source": "Direct user confirmation recorded in P10D Human Approval Loop",
+      "approved_by": "Demian",
+      "agent_directive": "Discard historical fixed timing and frame-count constraints, but preserve and organically expand the underlying dialogue intent, dark humor, satire, slapstick, cynicism, sarcasm, irony, scene concepts, and Y.D.'s vocal progression from playful anime companion to corrupted yandere threat.",
+      "decision_json": "{\"agent_directive\":\"Discard historical fixed timing and frame-count constraints, but preserve and organically expand the underlying dialogue intent, dark humor, satire, slapstick, cynicism, sarcasm, irony, scene concepts, and Y.D.'s vocal progression from playful anime companion to corrupted yandere threat.\",\"approved_at_utc\":\"2026-08-25T23:55:11.427245+00:00\",\"approved_by\":\"Demian\",\"approved_value\":{\"decision\":\"Act 1 draft frame counts, shot counts, four-second durations, and total scene durations are non-binding historical planning data. The underlying dialogue intent, dark humor, satire, slapstick, cynicism, sarcasm, irony, scene concepts, and Y.D.'s voice progression from playful anime companion to distorted yandere threat must be preserved and expanded organically during feature-length screenplay development.\",\"entity_id\":\"act1-dialogue-tone-and-performance\",\"entity_type\":\"creative_direction\",\"field\":\"preservation_after_runtime_override\"},\"decision_id\":\"YD-CANON-0006\",\"decision_source\":\"Direct user confirmation recorded in P10D Human Approval Loop\",\"entity_id\":\"act1-dialogue-tone-and-performance\",\"entity_type\":\"creative_direction\",\"field\":\"preservation_after_runtime_override\",\"previous_value\":{\"fixed_frame_duration_seconds\":4,\"fixed_scene_duration_seconds\":16,\"fixed_shot_duration_seconds\":4,\"format\":\"historical micro-timing draft\"},\"project_id\":\"e8627781-5bf3-4c4d-905f-8dda49ab53d6\",\"provenance\":{\"candidate_id\":\"P10D-CANDIDATE-YD-006\",\"review_id\":\"P10D-REVIEW-006\",\"source_matrix\":\"/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json\",\"workflow\":\"p10d_human_approval_loop\"},\"schema_version\":\"1.0\",\"scope\":[\"act_1\",\"dialogue\",\"character_voice\",\"screenplay\",\"scene_pacing\",\"shot_planning\",\"sound_design\",\"performance_direction\"],\"status\":\"approved\",\"supersedes\":[\"Fixed four-second Act 1 frame durations\",\"Fixed four-second Act 1 shot durations\",\"Fixed sixteen-second Act 1 scene durations\",\"Frame and shot counts derived solely from the historical 15-minute limit\"]}",
+      "approved_at": "2026-08-25T23:55:11.427245+00:00"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "workflow": "P10F Canon Story Bible",
+  "stage": "controlled_draft_traceability_revision",
+  "status": "generated_awaiting_validation",
+  "run_id": "7fb97e75-acaf-4074-b3b3-4521d0ffbc35",
+  "started_at_utc": "2026-08-26T00:54:45.723+00:00",
+  "completed_at_utc": "2026-08-26T00:55:50.700+00:00",
+  "duration_ms": 64980,
+  "model": "gemini-3.1-pro-preview",
+  "sdk": {
+    "name": "google-genai",
+    "version": "2.19.0"
+  },
+  "generation_config": {
+    "temperature": 0.2,
+    "max_output_tokens": 32768,
+    "response_mime_type": "text/plain",
+    "streaming": false,
+    "tools": false,
+    "database_access": false,
+    "transport": "Chat.send_message",
+    "automatic_function_calling_route": "chat"
+  },
+  "authority": {
+    "human_authority": "Demian",
+    "database_mutation_performed": false,
+    "autonomous_canon_change_performed": false,
+    "draft_is_approved_canon": false,
+    "human_review_required": true
+  },
+  "input": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/09-canon-story-bible-generation-input.md",
+    "bytes": 49794,
+    "sha256": "074c8cf8fb3c48a6b202f633cc6d48c5de11f0167001e9b4856ce78cd249786f"
+  },
+  "contract": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/07-canon-story-bible-generation-contract.json",
+    "bytes": 4119,
+    "sha256": "8af00eb25c4d1a325dc00daf5531e7ff7f3f0ac497e2c9e4f7aed2d986e56139"
+  },
+  "output": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/10a-canon-story-bible-draft-traceability-revised.md",
+    "bytes": 19057,
+    "characters": 19029,
+    "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+    "required_sections_found": 17,
+    "canon_decision_references_found": 6,
+    "end_marker_found": true
+  },
+  "response": {
+    "response_id": "VjmOauCzA9y0kdUPsdGziAs",
+    "model_version": "gemini-3.1-pro-preview",
+    "usage_metadata": {
+      "candidates_token_count": 4527,
+      "prompt_token_count": 13149,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 13149
+        }
+      ],
+      "thoughts_token_count": 3143,
+      "total_token_count": 20819
+    },
+    "prompt_feedback": null,
+    "candidates": [
+      {
+        "finish_reason": "STOP",
+        "finish_message": null,
+        "safety_ratings": null
+      }
+    ]
+  },
+  "revision": {
+    "revision_id": "P10F-TRACEABILITY-REVISION-001",
+    "method": "deterministic_text_insertion",
+    "model_call_performed": false,
+    "database_access": false,
+    "database_mutation_performed": false,
+    "reason": "add_verified_P10C_source_locators",
+    "revised_at_utc": "2026-08-26T01:10:58+00:00",
+    "parent_draft": {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/10-canon-story-bible-draft.md",
+      "bytes": 17776,
+      "characters": 17756,
+      "sha256": "08923bf2a674ae4058674c1aa760365b83209d7b3653576b57a9600709ae93ea"
+    },
+    "parent_generation_summary": {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/11-canon-story-bible-generation-summary.json",
+      "bytes": 2379,
+      "sha256": "fc96a9802530d19a5def41a1f8abcd62c761880e6d02728fb5dcd35a275afdda"
+    },
+    "source_audit_report": {
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+      "bytes": 14977,
+      "sha256": "2f0b7d1fd94d8d1452284b28e2ff9da1d171cea48222b3d464d862ddad341a6f"
+    },
+    "inserted_locators": [
+      {
+        "source": "Complete Plot, Story, Chars, Project, and more.txt",
+        "locator": "lines:1-146"
+      },
+      {
+        "source": "Act 1 - All Scenes & Full Scripts.pdf",
+        "locator": "page:1:lines:1-33"
+      },
+      {
+        "source": "Complete Plot, Story, Chars, Project, and more.txt",
+        "locator": "lines:141-230"
+      },
+      {
+        "source": "Complete Plot, Story, Chars, Project, and more.txt",
+        "locator": "lines:225-281"
+      }
+    ]
+  },
+  "original_model_output": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/10-canon-story-bible-draft.md",
+    "bytes": 17776,
+    "characters": 17756,
+    "sha256": "08923bf2a674ae4058674c1aa760365b83209d7b3653576b57a9600709ae93ea",
+    "required_sections_found": 17,
+    "canon_decision_references_found": 6,
+    "end_marker_found": true
+  }
+}

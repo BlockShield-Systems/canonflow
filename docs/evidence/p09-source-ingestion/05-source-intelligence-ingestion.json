@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "completed_at_utc": "2026-08-25T00:44:31.455884+00:00",
+  "inserted": {
+    "source_documents": 11,
+    "source_pages": 45,
+    "source_chunks": 65,
+    "source_quality_dispositions": 2,
+    "canon_decisions": 2
+  },
+  "skipped": {
+    "source_documents": 0,
+    "source_pages": 0,
+    "source_chunks": 0,
+    "source_quality_dispositions": 0,
+    "canon_decisions": 0
+  },
+  "database_counts": {
+    "source_documents": 11,
+    "source_pages": 45,
+    "source_chunks": 65,
+    "source_quality_dispositions": 2,
+    "canon_decisions": 2
+  },
+  "nonindexable_pages": 2,
+  "nonindexable_chunks": 2
+}

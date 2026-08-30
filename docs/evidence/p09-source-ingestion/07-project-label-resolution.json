@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "finding": "stale_project_title_in_initial_ingestion_log",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "stale_title": "Spider World",
+  "canonical_title": "Y.D. – When Paradise Glitches",
+  "cause": "The initial project lookup queried a SharedReplacingMergeTree without FINAL and returned an obsolete physical row version.",
+  "impact": {
+    "incorrect_project_assignment": false,
+    "data_loss": false,
+    "duplicate_ingestion": false,
+    "affected_area": "Initial terminal and evidence-log display only"
+  },
+  "resolution": [
+    "Project lookup changed to FROM projects FINAL.",
+    "Idempotency run returned the current canonical project title.",
+    "All inserted records retain the correct project UUID.",
+    "No deletion or re-ingestion was required."
+  ],
+  "verification": {
+    "source_documents": 11,
+    "source_pages": 45,
+    "source_chunks": 65,
+    "source_quality_dispositions": 2,
+    "canon_decisions": 2,
+    "idempotency_confirmed": true
+  },
+  "related_evidence_sha256": {
+    "05-source-intelligence-ingestion.json": "c9c9400de76804ab5d9ca01c3bfb834aa355695afcba2441cd0865838cb94b93",
+    "05-source-intelligence-ingestion.log": "202b87b3ae1bc76bebc91f1d6b731d63adfaede4cf6c6cd019822c755d47de3c",
+    "06-source-intelligence-idempotency.json": "902b0892ad0c70190884b21d281a3892cea705850aea0479068198e78d796fd3",
+    "06-source-intelligence-idempotency.log": "02fa93805ed6461a02fb1e38d79442073d9b66ee536835e5d044134c9bc524c6"
+  },
+  "recorded_at_utc": "2026-08-25T00:49:32.497029+00:00"
+}

@@ -1,0 +1,7 @@
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+  check_feature_enabled()
+Agent name : canonflow_agent
+Model      : gemini-3.7-flash
+Tools      : 1
+Callback   : enforce_read_only_clickhouse
+SOURCE AUDIT AGENT IMPORT: OK

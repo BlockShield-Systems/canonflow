@@ -1,0 +1,1243 @@
+{
+  "schema_version": "1.0",
+  "inspection_mode": "read_only",
+  "generated_at_utc": "2026-08-25T00:27:59.423473+00:00",
+  "connection": {
+    "host": "oz6d486f5k.europe-west4.gcp.clickhouse.cloud",
+    "port": 8443,
+    "database": "canonflow",
+    "secure": true,
+    "verify": true,
+    "username": "canonflow_mcp",
+    "password_included": false
+  },
+  "server": {
+    "server_version": "26.2.1.558",
+    "current_database": "canonflow",
+    "current_user": "canonflow_mcp"
+  },
+  "tables": [
+    {
+      "database": "canonflow",
+      "name": "agent_runs",
+      "engine": "SharedMergeTree",
+      "total_rows": 1,
+      "total_bytes": 1643
+    },
+    {
+      "database": "canonflow",
+      "name": "canon_entities",
+      "engine": "SharedReplacingMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    },
+    {
+      "database": "canonflow",
+      "name": "continuity_findings",
+      "engine": "SharedMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    },
+    {
+      "database": "canonflow",
+      "name": "media_assets",
+      "engine": "SharedMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    },
+    {
+      "database": "canonflow",
+      "name": "projects",
+      "engine": "SharedReplacingMergeTree",
+      "total_rows": 2,
+      "total_bytes": 2680
+    },
+    {
+      "database": "canonflow",
+      "name": "scenes",
+      "engine": "SharedReplacingMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    },
+    {
+      "database": "canonflow",
+      "name": "shot_specs",
+      "engine": "SharedReplacingMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    },
+    {
+      "database": "canonflow",
+      "name": "source_documents",
+      "engine": "SharedMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    },
+    {
+      "database": "canonflow",
+      "name": "tool_events",
+      "engine": "SharedMergeTree",
+      "total_rows": 0,
+      "total_bytes": 0
+    }
+  ],
+  "columns": [
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 1,
+      "name": "run_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 3,
+      "name": "agent_name",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 4,
+      "name": "workflow_name",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 5,
+      "name": "model_name",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 6,
+      "name": "status",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 7,
+      "name": "input_summary",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 8,
+      "name": "output_summary",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 9,
+      "name": "error_message",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 10,
+      "name": "started_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 11,
+      "name": "completed_at",
+      "type": "Nullable(DateTime64(3, 'UTC'))",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 12,
+      "name": "duration_ms",
+      "type": "UInt64",
+      "default_kind": "DEFAULT",
+      "default_expression": "0",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "position": 13,
+      "name": "metadata_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 1,
+      "name": "entity_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 3,
+      "name": "entity_type",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 4,
+      "name": "canonical_name",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 5,
+      "name": "aliases",
+      "type": "Array(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "[]",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 6,
+      "name": "description",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 7,
+      "name": "attributes_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 8,
+      "name": "source_document_ids",
+      "type": "Array(UUID)",
+      "default_kind": "DEFAULT",
+      "default_expression": "[]",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 9,
+      "name": "version",
+      "type": "UInt32",
+      "default_kind": "DEFAULT",
+      "default_expression": "1",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 10,
+      "name": "confidence",
+      "type": "Float32",
+      "default_kind": "DEFAULT",
+      "default_expression": "1.",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "position": 11,
+      "name": "created_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 1,
+      "name": "finding_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 3,
+      "name": "scene_id",
+      "type": "Nullable(UUID)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 4,
+      "name": "shot_id",
+      "type": "Nullable(UUID)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 5,
+      "name": "severity",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 6,
+      "name": "category",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 7,
+      "name": "description",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 8,
+      "name": "evidence_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 9,
+      "name": "recommendation",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 10,
+      "name": "status",
+      "type": "LowCardinality(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "'open'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "position": 11,
+      "name": "detected_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 1,
+      "name": "asset_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 3,
+      "name": "scene_id",
+      "type": "Nullable(UUID)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 4,
+      "name": "shot_id",
+      "type": "Nullable(UUID)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 5,
+      "name": "asset_type",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 6,
+      "name": "generation_provider",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 7,
+      "name": "model_name",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 8,
+      "name": "storage_uri",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 9,
+      "name": "mime_type",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 10,
+      "name": "checksum_sha256",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 11,
+      "name": "duration_ms",
+      "type": "UInt64",
+      "default_kind": "DEFAULT",
+      "default_expression": "0",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 12,
+      "name": "width",
+      "type": "UInt32",
+      "default_kind": "DEFAULT",
+      "default_expression": "0",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 13,
+      "name": "height",
+      "type": "UInt32",
+      "default_kind": "DEFAULT",
+      "default_expression": "0",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 14,
+      "name": "prompt",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 15,
+      "name": "metadata_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "position": 16,
+      "name": "created_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 1,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 2,
+      "name": "slug",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 3,
+      "name": "title",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 4,
+      "name": "description",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 5,
+      "name": "language",
+      "type": "LowCardinality(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "'en'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 6,
+      "name": "status",
+      "type": "LowCardinality(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "'development'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 7,
+      "name": "metadata_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 8,
+      "name": "created_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "position": 9,
+      "name": "updated_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 1,
+      "name": "scene_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 3,
+      "name": "scene_number",
+      "type": "UInt32",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 4,
+      "name": "title",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 5,
+      "name": "synopsis",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 6,
+      "name": "location_entity_id",
+      "type": "Nullable(UUID)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 7,
+      "name": "time_of_day",
+      "type": "LowCardinality(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 8,
+      "name": "character_entity_ids",
+      "type": "Array(UUID)",
+      "default_kind": "DEFAULT",
+      "default_expression": "[]",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 9,
+      "name": "story_beats",
+      "type": "Array(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "[]",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 10,
+      "name": "continuity_requirements",
+      "type": "Array(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "[]",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 11,
+      "name": "version",
+      "type": "UInt32",
+      "default_kind": "DEFAULT",
+      "default_expression": "1",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 12,
+      "name": "metadata_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "position": 13,
+      "name": "created_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 1,
+      "name": "shot_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 3,
+      "name": "scene_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 4,
+      "name": "shot_number",
+      "type": "UInt32",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 5,
+      "name": "shot_type",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 6,
+      "name": "duration_ms",
+      "type": "UInt32",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 7,
+      "name": "description",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 8,
+      "name": "camera_movement",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 9,
+      "name": "lens",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 10,
+      "name": "visual_prompt",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 11,
+      "name": "negative_prompt",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 12,
+      "name": "dialogue",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 13,
+      "name": "sound_design",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 14,
+      "name": "continuity_constraints",
+      "type": "Array(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "[]",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 15,
+      "name": "status",
+      "type": "LowCardinality(String)",
+      "default_kind": "DEFAULT",
+      "default_expression": "'planned'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 16,
+      "name": "version",
+      "type": "UInt32",
+      "default_kind": "DEFAULT",
+      "default_expression": "1",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 17,
+      "name": "metadata_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "position": 18,
+      "name": "created_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 1,
+      "name": "document_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 2,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 3,
+      "name": "file_name",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 4,
+      "name": "source_path",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 5,
+      "name": "content_type",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 6,
+      "name": "checksum_sha256",
+      "type": "FixedString(64)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 7,
+      "name": "content",
+      "type": "String",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 8,
+      "name": "metadata_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "position": 9,
+      "name": "ingested_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 1,
+      "name": "event_id",
+      "type": "UUID",
+      "default_kind": "DEFAULT",
+      "default_expression": "generateUUIDv4()",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 2,
+      "name": "run_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 3,
+      "name": "project_id",
+      "type": "UUID",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 4,
+      "name": "tool_name",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 5,
+      "name": "operation",
+      "type": "LowCardinality(String)",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 6,
+      "name": "success",
+      "type": "Bool",
+      "default_kind": "",
+      "default_expression": "",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 7,
+      "name": "request_json",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "'{}'",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 8,
+      "name": "response_summary",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 9,
+      "name": "error_message",
+      "type": "String",
+      "default_kind": "DEFAULT",
+      "default_expression": "''",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 10,
+      "name": "duration_ms",
+      "type": "UInt64",
+      "default_kind": "DEFAULT",
+      "default_expression": "0",
+      "comment": ""
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "position": 11,
+      "name": "occurred_at",
+      "type": "DateTime64(3, 'UTC')",
+      "default_kind": "DEFAULT",
+      "default_expression": "now64(3)",
+      "comment": ""
+    }
+  ],
+  "create_statements": [
+    {
+      "database": "canonflow",
+      "table": "agent_runs",
+      "create_statement": "CREATE TABLE canonflow.agent_runs\n(\n    `run_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `agent_name` LowCardinality(String),\n    `workflow_name` LowCardinality(String),\n    `model_name` LowCardinality(String),\n    `status` LowCardinality(String),\n    `input_summary` String DEFAULT '',\n    `output_summary` String DEFAULT '',\n    `error_message` String DEFAULT '',\n    `started_at` DateTime64(3, 'UTC') DEFAULT now64(3),\n    `completed_at` Nullable(DateTime64(3, 'UTC')),\n    `duration_ms` UInt64 DEFAULT 0,\n    `metadata_json` String DEFAULT '{}'\n)\nENGINE = SharedMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}')\nORDER BY (project_id, started_at, run_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "canon_entities",
+      "create_statement": "CREATE TABLE canonflow.canon_entities\n(\n    `entity_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `entity_type` LowCardinality(String),\n    `canonical_name` String,\n    `aliases` Array(String) DEFAULT [],\n    `description` String DEFAULT '',\n    `attributes_json` String DEFAULT '{}',\n    `source_document_ids` Array(UUID) DEFAULT [],\n    `version` UInt32 DEFAULT 1,\n    `confidence` Float32 DEFAULT 1.,\n    `created_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedReplacingMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}', version)\nORDER BY (project_id, entity_type, entity_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "continuity_findings",
+      "create_statement": "CREATE TABLE canonflow.continuity_findings\n(\n    `finding_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `scene_id` Nullable(UUID),\n    `shot_id` Nullable(UUID),\n    `severity` LowCardinality(String),\n    `category` LowCardinality(String),\n    `description` String,\n    `evidence_json` String DEFAULT '{}',\n    `recommendation` String DEFAULT '',\n    `status` LowCardinality(String) DEFAULT 'open',\n    `detected_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}')\nORDER BY (project_id, detected_at, finding_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "media_assets",
+      "create_statement": "CREATE TABLE canonflow.media_assets\n(\n    `asset_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `scene_id` Nullable(UUID),\n    `shot_id` Nullable(UUID),\n    `asset_type` LowCardinality(String),\n    `generation_provider` LowCardinality(String),\n    `model_name` LowCardinality(String),\n    `storage_uri` String,\n    `mime_type` LowCardinality(String),\n    `checksum_sha256` String DEFAULT '',\n    `duration_ms` UInt64 DEFAULT 0,\n    `width` UInt32 DEFAULT 0,\n    `height` UInt32 DEFAULT 0,\n    `prompt` String DEFAULT '',\n    `metadata_json` String DEFAULT '{}',\n    `created_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}')\nORDER BY (project_id, asset_type, created_at, asset_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "projects",
+      "create_statement": "CREATE TABLE canonflow.projects\n(\n    `project_id` UUID DEFAULT generateUUIDv4(),\n    `slug` LowCardinality(String),\n    `title` String,\n    `description` String DEFAULT '',\n    `language` LowCardinality(String) DEFAULT 'en',\n    `status` LowCardinality(String) DEFAULT 'development',\n    `metadata_json` String DEFAULT '{}',\n    `created_at` DateTime64(3, 'UTC') DEFAULT now64(3),\n    `updated_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedReplacingMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}', updated_at)\nORDER BY project_id\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "scenes",
+      "create_statement": "CREATE TABLE canonflow.scenes\n(\n    `scene_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `scene_number` UInt32,\n    `title` String,\n    `synopsis` String DEFAULT '',\n    `location_entity_id` Nullable(UUID),\n    `time_of_day` LowCardinality(String) DEFAULT '',\n    `character_entity_ids` Array(UUID) DEFAULT [],\n    `story_beats` Array(String) DEFAULT [],\n    `continuity_requirements` Array(String) DEFAULT [],\n    `version` UInt32 DEFAULT 1,\n    `metadata_json` String DEFAULT '{}',\n    `created_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedReplacingMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}', version)\nORDER BY (project_id, scene_number, scene_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "shot_specs",
+      "create_statement": "CREATE TABLE canonflow.shot_specs\n(\n    `shot_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `scene_id` UUID,\n    `shot_number` UInt32,\n    `shot_type` LowCardinality(String),\n    `duration_ms` UInt32,\n    `description` String,\n    `camera_movement` String DEFAULT '',\n    `lens` String DEFAULT '',\n    `visual_prompt` String DEFAULT '',\n    `negative_prompt` String DEFAULT '',\n    `dialogue` String DEFAULT '',\n    `sound_design` String DEFAULT '',\n    `continuity_constraints` Array(String) DEFAULT [],\n    `status` LowCardinality(String) DEFAULT 'planned',\n    `version` UInt32 DEFAULT 1,\n    `metadata_json` String DEFAULT '{}',\n    `created_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedReplacingMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}', version)\nORDER BY (project_id, scene_id, shot_number, shot_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "source_documents",
+      "create_statement": "CREATE TABLE canonflow.source_documents\n(\n    `document_id` UUID DEFAULT generateUUIDv4(),\n    `project_id` UUID,\n    `file_name` String,\n    `source_path` String DEFAULT '',\n    `content_type` LowCardinality(String),\n    `checksum_sha256` FixedString(64),\n    `content` String,\n    `metadata_json` String DEFAULT '{}',\n    `ingested_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}')\nORDER BY (project_id, document_id)\nSETTINGS index_granularity = 8192"
+    },
+    {
+      "database": "canonflow",
+      "table": "tool_events",
+      "create_statement": "CREATE TABLE canonflow.tool_events\n(\n    `event_id` UUID DEFAULT generateUUIDv4(),\n    `run_id` UUID,\n    `project_id` UUID,\n    `tool_name` LowCardinality(String),\n    `operation` LowCardinality(String),\n    `success` Bool,\n    `request_json` String DEFAULT '{}',\n    `response_summary` String DEFAULT '',\n    `error_message` String DEFAULT '',\n    `duration_ms` UInt64 DEFAULT 0,\n    `occurred_at` DateTime64(3, 'UTC') DEFAULT now64(3)\n)\nENGINE = SharedMergeTree('/clickhouse/tables/{uuid}/{shard}', '{replica}')\nORDER BY (project_id, occurred_at, event_id)\nSETTINGS index_granularity = 8192"
+    }
+  ]
+}

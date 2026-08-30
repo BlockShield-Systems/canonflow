@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "workflow": "p10d_human_approval_loop",
+  "status": "awaiting_human_review",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "source_run_id": "6c809e50-75bb-4934-9505-cc7c4065637f",
+  "source_model": "model='gemini-3.1-pro-preview' base_url=None speech_config=None use_interactions_api=True retry_options=None",
+  "source_report": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+  "source_report_sha256": "2f0b7d1fd94d8d1452284b28e2ff9da1d171cea48222b3d464d862ddad341a6f",
+  "source_summary": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/09-source-audit-summary.json",
+  "source_summary_sha256": "30394b143b953186666c33cf185405fd6693d1f8bb1557fdbc5d161db86d2f94",
+  "accepted_checksums": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/12-source-audit-accepted-SHA256SUMS",
+  "accepted_checksums_sha256": "4aa70f80202d15a8468fc854f59fb05b9f4a1106b62a99bad58458f556e28ad1",
+  "review_extract": "/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/01-source-audit-review-extract.md",
+  "review_extract_sha256": "3dfe064806298b0affc54606f14eabb5d9556869dc4fadd2596f329699713d76",
+  "selected_sections": [
+    {
+      "review_section": "Executive Audit Status",
+      "source_heading": "1. Executive Audit Status",
+      "heading_level": 2,
+      "character_count": 706
+    },
+    {
+      "review_section": "Approved Canon Decisions",
+      "source_heading": "3. Approved Canon Decisions",
+      "heading_level": 2,
+      "character_count": 533
+    },
+    {
+      "review_section": "Source Coverage Ledger",
+      "source_heading": "4. Source Coverage Ledger",
+      "heading_level": 2,
+      "character_count": 1401
+    },
+    {
+      "review_section": "Canon Inventory",
+      "source_heading": "6. Canon Inventory",
+      "heading_level": 2,
+      "character_count": 1247
+    },
+    {
+      "review_section": "Proposed Continuity Findings",
+      "source_heading": "12. Proposed Continuity Findings",
+      "heading_level": 2,
+      "character_count": 3362
+    },
+    {
+      "review_section": "Missing-information Questions",
+      "source_heading": "13. Missing-information Questions for Demian",
+      "heading_level": 2,
+      "character_count": 742
+    },
+    {
+      "review_section": "Recommended Next Controlled Workflow",
+      "source_heading": "14. Recommended Next Controlled Workflow",
+      "heading_level": 2,
+      "character_count": 519
+    }
+  ],
+  "generated_at_utc": "2026-08-25T23:20:25.599938+00:00",
+  "canon_authority": "Demian",
+  "agent_authority": "proposal_only",
+  "database_mutation_permitted": false
+}

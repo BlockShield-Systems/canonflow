@@ -1,0 +1,20 @@
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+  check_feature_enabled()
+mTLS was requested but AsyncAuthorizedSession channel is not mTLS
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/tools/mcp_tool/mcp_toolset.py:459: UserWarning: [EXPERIMENTAL] feature FeatureName._MCP_GRACEFUL_ERROR_HANDLING is enabled.
+  session = await self._mcp_session_manager.create_session(
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.BASE_AUTHENTICATED_TOOL is enabled.
+  check_feature_enabled()
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/models/llm_request.py:273: UserWarning: [EXPERIMENTAL] feature FeatureName.JSON_SCHEMA_FOR_FUNC_DECL is enabled.
+  declaration = tool._get_declaration()
+Run ID          : b6a93684-e2ad-41b7-9bf9-9afb19ade2b3
+Session ID      : baa7d01e-cd96-40c0-8c9f-43108f5a719b
+Model           : model='gemini-3.1-pro-preview' base_url=None speech_config=None use_interactions_api=True retry_options=None
+Events          : 17
+Tool calls      : 33
+Tool responses  : 33
+Report chars    : 13429
+Events evidence : /home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/07-source-audit-events.jsonl
+Audit report    : /home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md
+Run summary     : /home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/09-source-audit-summary.json
+GEMINI SOURCE AUDIT RUN: OK

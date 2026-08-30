@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "workflow": "P10F Canon Story Bible",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "status": "completed_and_verified",
+  "story_bible_status": "reviewed_approved_and_frozen",
+  "verified_at": "2026-08-26T01:35:26Z",
+  "human_authority": {
+    "reviewer": "Demian",
+    "review_items": [
+      "P10F-REVIEW-001",
+      "P10F-REVIEW-002",
+      "P10F-REVIEW-003",
+      "P10F-REVIEW-004",
+      "P10F-REVIEW-005",
+      "P10F-REVIEW-006",
+      "P10F-REVIEW-007",
+      "P10F-REVIEW-008",
+      "P10F-REVIEW-009",
+      "P10F-REVIEW-010"
+    ],
+    "approved_count": 10,
+    "final_draft_approved": true,
+    "authorization_statement": "Ja ich genehmige alle diese Punkte. Der Draft ist absolut im Einklang mit meinen Vorstellungen und ich habe jeden einzelnen Abschnitt detailliert geprüft und stimme jedem Abschnitt zu."
+  },
+  "reviewed_draft": {
+    "path": "10a-canon-story-bible-draft-traceability-revised.md",
+    "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c"
+  },
+  "approved_story_bible": {
+    "path": "17-approved-canon-story-bible.md",
+    "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c",
+    "byte_identical_to_reviewed_draft": true
+  },
+  "generation": {
+    "run_id": "7fb97e75-acaf-4074-b3b3-4521d0ffbc35",
+    "structural_validation_status": "passed_structural_awaiting_human_review"
+  },
+  "verification_checks": {
+    "authoritative_input_chain_verified": true,
+    "reviewed_draft_sha256_verified": true,
+    "structural_validation_passed": true,
+    "review_items_present": 10,
+    "review_items_approved": 10,
+    "final_disposition_approved": true,
+    "approved_copy_matches_reviewed_draft": true,
+    "unresolved_review_items": 0
+  },
+  "artifacts": {
+    "review_decisions": {
+      "path": "16-human-review-decisions.json",
+      "sha256": "e017b18dc68268bdb5019ec8aad42af851589da0b853b6d665cfcb872447c0e9"
+    },
+    "structural_validation": {
+      "path": "12-canon-story-bible-draft-validation.json",
+      "sha256": "068b0234bed3ca3e90c9c31b699020cbe9e00ff264b36470f4d423ff2bfc5c8a"
+    },
+    "pending_review_matrix": {
+      "path": "13-canon-story-bible-human-review.md",
+      "sha256": "3ff60eac831f2f9d21344efcdae2cb0aae26699fd6c549f955e68fe4a801ca69"
+    },
+    "approved_story_bible": {
+      "path": "17-approved-canon-story-bible.md",
+      "sha256": "b53c6e01afeb38abf91e8b523cd5237b9d9cf64a949bc0d02713aae05a1e655c"
+    }
+  },
+  "controls": {
+    "additional_model_call_performed": false,
+    "database_access_performed": false,
+    "database_mutation_performed": false,
+    "prior_evidence_files_overwritten": false
+  },
+  "next_controlled_action": {
+    "action": "use_approved_story_bible_as_authoritative_story_reference",
+    "artifact": "17-approved-canon-story-bible.md",
+    "requires_database_mutation": false
+  }
+}

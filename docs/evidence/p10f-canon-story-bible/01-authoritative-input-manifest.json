@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "workflow": "P10F Canon Story Bible",
+  "status": "awaiting_read_only_canon_snapshot",
+  "created_at_utc": "2026-08-26T00:17:01+00:00",
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches"
+  },
+  "authority": {
+    "human_authority": "Demian",
+    "database_mutation_permitted": false,
+    "autonomous_canon_changes_permitted": false
+  },
+  "authoritative_canon_decision_ids": [
+    "YD-CANON-0001",
+    "YD-CANON-0002",
+    "YD-CANON-0003",
+    "YD-CANON-0004",
+    "YD-CANON-0005",
+    "YD-CANON-0006"
+  ],
+  "input_policy": {
+    "primary_sources_authoritative": true,
+    "approved_canon_decisions_authoritative": true,
+    "proposed_or_deferred_findings_authoritative": false,
+    "historical_or_superseded_material_authoritative": false,
+    "uncertainty_must_be_explicit": true,
+    "source_citations_required": true
+  },
+  "next_controlled_action": {
+    "name": "read_only_canon_snapshot",
+    "target_table": "canonflow.canon_decisions",
+    "expected_decision_count": 6,
+    "database_write": false
+  },
+  "inputs": [
+    {
+      "stage": "P10C",
+      "role": "accepted_source_audit_report",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+      "bytes": 14977,
+      "sha256": "2f0b7d1fd94d8d1452284b28e2ff9da1d171cea48222b3d464d862ddad341a6f"
+    },
+    {
+      "stage": "P10C",
+      "role": "accepted_source_audit_summary",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/09-source-audit-summary.json",
+      "bytes": 8979,
+      "sha256": "30394b143b953186666c33cf185405fd6693d1f8bb1557fdbc5d161db86d2f94"
+    },
+    {
+      "stage": "P10C",
+      "role": "accepted_source_audit_checksums",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/12-source-audit-accepted-SHA256SUMS",
+      "bytes": 562,
+      "sha256": "4aa70f80202d15a8468fc854f59fb05b9f4a1106b62a99bad58458f556e28ad1"
+    },
+    {
+      "stage": "P10D",
+      "role": "human_decision_matrix_json",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json",
+      "bytes": 8433,
+      "sha256": "61f78bee6243601f2544e2fe765100d0890317ba3f7cabfb7cb0a2f5e199f480"
+    },
+    {
+      "stage": "P10D",
+      "role": "human_decision_matrix_markdown",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/04-human-decision-matrix.md",
+      "bytes": 3662,
+      "sha256": "163cce785b5c3ee3e2523fdf66100ae7f535893e529323a23599632499293dfc"
+    },
+    {
+      "stage": "P10D",
+      "role": "human_decision_checksums",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/SHA256SUMS.decisions",
+      "bytes": 190,
+      "sha256": "718c7f084e3189d45906dd230e600f10d8a98305f1c72e228b35a937fed1c9f1"
+    },
+    {
+      "stage": "P10E",
+      "role": "canon_decision_ingestion_payload",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10e-canon-decision-ingestion/02-canon-decisions-payload.json",
+      "bytes": 20021,
+      "sha256": "348a2d8dc30f10e9e4442cf9f5ea85c1ba6c244f88137b58c105fb46a3296727"
+    },
+    {
+      "stage": "P10E",
+      "role": "post_ingestion_verification",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10e-canon-decision-ingestion/06-post-ingestion-verification.json",
+      "bytes": 2789,
+      "sha256": "ecdfaf5b8b608f5921921ee969738304d17a95be3142a738397990e44c421839"
+    },
+    {
+      "stage": "P10E",
+      "role": "completion_record",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10e-canon-decision-ingestion/07-completion-record.md",
+      "bytes": 1054,
+      "sha256": "06df689292d1cb0a3b517fa230d8ff282c324636a3b6573a2ec0bf09db726c25"
+    },
+    {
+      "stage": "P10E",
+      "role": "completed_package_checksums",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10e-canon-decision-ingestion/SHA256SUMS.completed",
+      "bytes": 843,
+      "sha256": "be41d93f7dc029921dc4a667c4233fcb5a8149c537a0a1470dbb41c1172d96b9"
+    }
+  ]
+}

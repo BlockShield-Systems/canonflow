@@ -1,0 +1,5 @@
+32cffee7c48037eb4b10f95fe48482ce3dce6e8f59e166a6ea08fe2ec516d529  README.md
+616e9aa11f646d7887e75c92d5e3a0a06684a4412242376232e72040ba18effd  01-read-only-schema-preflight.md
+348a2d8dc30f10e9e4442cf9f5ea85c1ba6c244f88137b58c105fb46a3296727  02-canon-decisions-payload.json
+87292ac6b69b1e0972f93aaf3877a02836047708ed29515f2668e0c8e27fa9c8  03-canon-decisions-ingestion.sql
+7356232ba0eb790d4a1f1993a8eb5e71f4b48c8cdb0f163b1202cb7ac5e198a8  04-post-ingestion-validation.sql

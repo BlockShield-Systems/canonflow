@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "workflow": "P10E Canon Decision Ingestion",
+  "status": "completed_and_verified",
+  "completed_at_utc": "2026-08-26T00:13:49+00:00",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "project_slug": "yd-when-paradise-glitches",
+  "target_table": "canonflow.canon_decisions",
+  "authority": {
+    "authorized_by": "Demian",
+    "authorization_statement": "AUTHORIZE P10E INSERT YD-CANON-0003..0006",
+    "execution_mode": "manual_clickhouse_console",
+    "agent_database_write": false
+  },
+  "inserted_decision_ids": [
+    "YD-CANON-0003",
+    "YD-CANON-0004",
+    "YD-CANON-0005",
+    "YD-CANON-0006"
+  ],
+  "record_count": 4,
+  "payload_validation": {
+    "decision_ids_discovered_recursively": [
+      "YD-CANON-0003",
+      "YD-CANON-0004",
+      "YD-CANON-0005",
+      "YD-CANON-0006"
+    ],
+    "expected_decision_ids_present": true,
+    "unexpected_canon_ids_present": false,
+    "four_ingestion_statements_present": true
+  },
+  "post_ingestion_validation": {
+    "reported_by": "Demian",
+    "all_validation_status_values_zero": true,
+    "approved_status_check": {
+      "passed": true,
+      "expected_value_per_record": "approved"
+    },
+    "approved_by_check": {
+      "passed": true,
+      "expected_value_per_record": "Demian"
+    },
+    "json_validity_check": {
+      "passed": true,
+      "expected_value_per_record": 1
+    },
+    "duplicate_check": {
+      "passed": true,
+      "expected_row_count_per_decision_id": 1
+    },
+    "total_count_check": {
+      "passed": true,
+      "expected_approved_decision_count": 4
+    }
+  },
+  "exclusions": {
+    "not_rewritten": [
+      "YD-CANON-0001",
+      "YD-CANON-0002"
+    ],
+    "not_ingested": [
+      "P10D-REVIEW-007"
+    ]
+  },
+  "source_artifacts": {
+    "README.md": {
+      "sha256": "32cffee7c48037eb4b10f95fe48482ce3dce6e8f59e166a6ea08fe2ec516d529",
+      "bytes": 885
+    },
+    "01-read-only-schema-preflight.md": {
+      "sha256": "616e9aa11f646d7887e75c92d5e3a0a06684a4412242376232e72040ba18effd",
+      "bytes": 904
+    },
+    "02-canon-decisions-payload.json": {
+      "sha256": "348a2d8dc30f10e9e4442cf9f5ea85c1ba6c244f88137b58c105fb46a3296727",
+      "bytes": 20021
+    },
+    "03-canon-decisions-ingestion.sql": {
+      "sha256": "87292ac6b69b1e0972f93aaf3877a02836047708ed29515f2668e0c8e27fa9c8",
+      "bytes": 26871
+    },
+    "04-post-ingestion-validation.sql": {
+      "sha256": "7356232ba0eb790d4a1f1993a8eb5e71f4b48c8cdb0f163b1202cb7ac5e198a8",
+      "bytes": 1199
+    },
+    "05-mutation-authorization.md": {
+      "sha256": "952db4ebe830d7d265ab86c1d64c9286c52c85add26a5c6fd1dda0b5ceaf0f1b",
+      "bytes": 703
+    },
+    "SHA256SUMS.package": {
+      "sha256": "779b0c1863a81cad6596487c9427c3a09255bc3a31df6b78e617df7d7aa53b2b",
+      "bytes": 471
+    }
+  }
+}

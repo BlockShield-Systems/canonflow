@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "migration_id": "P09C-source-intelligence-v1",
+  "database": "canonflow",
+  "applied_at_utc": "2026-08-25T00:41:40.882416+00:00",
+  "tables": [
+    {
+      "name": "canon_decisions",
+      "engine": "SharedMergeTree"
+    },
+    {
+      "name": "source_chunks",
+      "engine": "SharedMergeTree"
+    },
+    {
+      "name": "source_pages",
+      "engine": "SharedMergeTree"
+    },
+    {
+      "name": "source_quality_dispositions",
+      "engine": "SharedMergeTree"
+    }
+  ]
+}

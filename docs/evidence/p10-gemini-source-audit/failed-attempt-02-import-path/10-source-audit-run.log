@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/agents/scripts/run_source_audit.py", line 18, in <module>
+    from canonflow_agent import root_agent
+ModuleNotFoundError: No module named 'canonflow_agent'

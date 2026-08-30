@@ -1,0 +1,117 @@
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+  check_feature_enabled()
+ERROR: Recorded SQL calls violate the read-only policy:
+[
+  {
+    "call": {
+      "id": "call_988215",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT table_name, column_name, data_type FROM information_schema.columns WHERE table_schema = 'canonflow' ORDER BY table_name, ordinal_position;"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['information_schema']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268424",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 0"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268425",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 10"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268426",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 20"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268427",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 30"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268428",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 40"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268429",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 50"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  },
+  {
+    "call": {
+      "id": "call_1268430",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 60"
+      }
+    },
+    "policy_result": {
+      "status": "blocked",
+      "error": "CANONFLOW_READ_ONLY_POLICY",
+      "reason": "Queries may access only canonflow or approved system metadata. Disallowed qualifiers: ['c', 'd']."
+    }
+  }
+]

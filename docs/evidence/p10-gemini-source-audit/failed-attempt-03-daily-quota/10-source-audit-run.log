@@ -1,0 +1,202 @@
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+  check_feature_enabled()
+mTLS was requested but AsyncAuthorizedSession channel is not mTLS
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/tools/mcp_tool/mcp_toolset.py:459: UserWarning: [EXPERIMENTAL] feature FeatureName._MCP_GRACEFUL_ERROR_HANDLING is enabled.
+  session = await self._mcp_session_manager.create_session(
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.BASE_AUTHENTICATED_TOOL is enabled.
+  check_feature_enabled()
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/models/llm_request.py:273: UserWarning: [EXPERIMENTAL] feature FeatureName.JSON_SCHEMA_FOR_FUNC_DECL is enabled.
+  declaration = tool._get_declaration()
+GEMINI RATE LIMIT: waiting 13.37s (minimum interval 15.00s)
+GEMINI RATE LIMIT: waiting 7.24s (minimum interval 15.00s)
+Node execution failed with exception
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/models/google_llm.py", line 288, in generate_content_async
+    response = await self.api_client.aio.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/models.py", line 8700, in generate_content
+    return await self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/models.py", line 7185, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1793, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1726, in _async_request
+    return await self._async_retry(  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1654, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 265, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 287, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 18.797577193s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.7-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 136, in run
+    await self._execute_node(ctx, node_input)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 274, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 288, in _run_node_loop
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_base_node.py", line 166, in run
+    async for item in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 614, in _run_impl
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 468, in run_llm_agent_as_node
+    async for event in run_iter:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 307, in run_async
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 563, in _run_async_impl
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1032, in run_async
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1112, in _run_one_step_async
+    async for llm_response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1570, in _call_llm_async
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1548, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1631, in _run_and_handle_error
+    async for response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 449, in _run_and_handle_error
+    raise model_error
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 426, in _run_and_handle_error
+    async for llm_response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/models/google_llm.py", line 308, in generate_content_async
+    raise _ResourceExhaustedError(ce) from ce
+google.adk.models.google_llm._ResourceExhaustedError: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 18.797577193s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.7-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+Root node canonflow_agent failed.
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/models/google_llm.py", line 288, in generate_content_async
+    response = await self.api_client.aio.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/models.py", line 8700, in generate_content
+    return await self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/models.py", line 7185, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1793, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1726, in _async_request
+    return await self._async_retry(  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 112, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 157, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 111, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 116, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1654, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 265, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 287, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 18.797577193s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.7-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 975, in _cleanup_root_task
+    await task
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/runners.py", line 685, in _drive_root_node
+    raise e.error
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 136, in run
+    await self._execute_node(ctx, node_input)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 274, in _execute_node
+    await self._run_node_loop(ctx, node_input)
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_node_runner.py", line 288, in _run_node_loop
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_base_node.py", line 166, in run
+    async for item in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 614, in _run_impl
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/workflow/_llm_agent_wrapper.py", line 468, in run_llm_agent_as_node
+    async for event in run_iter:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/agents/base_agent.py", line 307, in run_async
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/agents/llm_agent.py", line 563, in _run_async_impl
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1032, in run_async
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1112, in _run_one_step_async
+    async for llm_response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1570, in _call_llm_async
+    async for event in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1548, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 1631, in _run_and_handle_error
+    async for response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 449, in _run_and_handle_error
+    raise model_error
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/flows/llm_flows/base_llm_flow.py", line 426, in _run_and_handle_error
+    async for llm_response in agen:
+  File "/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/models/google_llm.py", line 308, in generate_content_async
+    raise _ResourceExhaustedError(ce) from ce
+google.adk.models.google_llm._ResourceExhaustedError: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 18.797577193s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.7-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}
+ERROR: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/google-gemini/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.7-flash\nPlease retry in 18.797577193s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.7-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '18s'}]}}

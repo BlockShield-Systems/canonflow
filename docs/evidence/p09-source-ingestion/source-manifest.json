@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "project": "Y.D. - When Paradise Glitches",
+  "source_root_windows_wsl": "/mnt/c/Users/Administrator/Desktop/Ideas, Projects, Guides (by me)/PROJECT ODYSSEY 2 - SCENES & SHOTS",
+  "archive_root": "/home/darky/projects/canonflow/content/source/yd/originals/project-odyssey-2",
+  "created_at_utc": "2026-08-25T00:02:36.220942+00:00",
+  "required_file_count": 11,
+  "verified_file_count": 11,
+  "entries": [
+    {
+      "expected_file_name": "Beats - Keyscenes (not filled out at moment for the whole complete story).txt",
+      "relative_path": "Beats - Keyscenes (not filled out at moment for the whole complete story).txt",
+      "media_type": "text/plain",
+      "size_bytes": 1215,
+      "sha256": "344e6dd16a30f0a0cd9416703d1d561058816a48283d7145f4b1cc16f3c67d3c",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Complete Plot, Story, Chars, Project, and more.txt",
+      "relative_path": "Complete Plot, Story, Chars, Project, and more.txt",
+      "media_type": "text/plain",
+      "size_bytes": 15969,
+      "sha256": "52ab31cd7adecbd202799bd9a1b1b3d6567b8d10410780fe5c791e04e48db5e5",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Description for Jungle Creature in exotic maze jungle (in German).txt",
+      "relative_path": "Description for Jungle Creature in exotic maze jungle (in German).txt",
+      "media_type": "text/plain",
+      "size_bytes": 6025,
+      "sha256": "b193f058b1c5ebc1dc4f704adec3c6904e41aabf9b26f6220b85cf6e6e8297b8",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "developed progress of entire story with lot of details until part with beats for keyscenes (needs additional details of other summarizations of documents).txt",
+      "relative_path": "developed progress of entire story with lot of details until part with beats for keyscenes (needs additional details of other summarizations of documents).txt",
+      "media_type": "text/plain",
+      "size_bytes": 44910,
+      "sha256": "10f17c79cf85092f449c43dd10ade7ee8a62434365d704f4131d7d2e5f00f5e3",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Act 1 - All Scenes & Full Scripts.pdf",
+      "relative_path": "PLOT & FULL STORY-SCREENPLAY INFO/ACT 1/Act 1 - All Scenes & Full Scripts.pdf",
+      "media_type": "application/pdf",
+      "size_bytes": 253754,
+      "sha256": "fe0b81f1585eddec69084b2a002b6f6569c26e839de5d4d874ba7d25721204b7",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Scene 1 - Frame 1 - 5 incl. Shots.pdf",
+      "relative_path": "PLOT & FULL STORY-SCREENPLAY INFO/ACT 2/Scene 1 - Frame 1 - 5 incl. Shots.pdf",
+      "media_type": "application/pdf",
+      "size_bytes": 69433,
+      "sha256": "3157feb2fc33d5f271387af804075a2175d43bd2105ea23f696e3ddcc8ba5d4b",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Scene 2 - Frame 1 - 6 incl. Shots.pdf",
+      "relative_path": "PLOT & FULL STORY-SCREENPLAY INFO/ACT 2/Scene 2 - Frame 1 - 6 incl. Shots.pdf",
+      "media_type": "application/pdf",
+      "size_bytes": 73478,
+      "sha256": "3cda2fd7c57033e60bc9c43181bdafaf501d32a39da59a40b2b6b57b084cc218",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Plot Overview about Logline, Storyline, Character Progress, Situations, and more.pdf",
+      "relative_path": "PLOT & FULL STORY-SCREENPLAY INFO/Plot Overview about Logline, Storyline, Character Progress, Situations, and more.pdf",
+      "media_type": "application/pdf",
+      "size_bytes": 81497,
+      "sha256": "3da4473fde0f8693b91cdb140c11eac66833196e8cf7106e7458f2b461a14505",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Prologue - All Scenes & Full Scripts.pdf",
+      "relative_path": "PLOT & FULL STORY-SCREENPLAY INFO/PROLOGUE/Prologue - All Scenes & Full Scripts.pdf",
+      "media_type": "application/pdf",
+      "size_bytes": 256337,
+      "sha256": "25b532f476021d9e7d9099e0b7f2c90aa353edc004102e3aef10688fdea11cfd",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Plot Zusammenfassung von Szenen und Shots (Erst-Fassung von Idee) Shots, Views und Szenen sehr wichtig für Details hier.txt",
+      "relative_path": "Plot Zusammenfassung von Szenen und Shots (Erst-Fassung von Idee) Shots, Views und Szenen sehr wichtig für Details hier.txt",
+      "media_type": "text/plain",
+      "size_bytes": 7879,
+      "sha256": "0767e927d7fbd441a771c60b692b824c1a51e41386228c82c78fc4ef0305a9f1",
+      "status": "copied"
+    },
+    {
+      "expected_file_name": "Some Story Related Content for Cinematic Move Y.D. When Paradise glitches.txt",
+      "relative_path": "Some Story Related Content for Cinematic Move Y.D. When Paradise glitches.txt",
+      "media_type": "text/plain",
+      "size_bytes": 25965,
+      "sha256": "5fc0fe27fe5b8c3416e3db86d31893674409f48807e2d707f08c390d6e9bd81d",
+      "status": "copied"
+    }
+  ]
+}

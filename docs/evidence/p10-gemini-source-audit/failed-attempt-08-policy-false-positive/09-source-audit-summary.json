@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "workflow": "source_audit",
+  "status": "completed",
+  "read_only": true,
+  "run_id": "b6a93684-e2ad-41b7-9bf9-9afb19ade2b3",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "app_name": "canonflow-source-audit",
+  "agent_name": "canonflow_agent",
+  "model": "model='gemini-3.1-pro-preview' base_url=None speech_config=None use_interactions_api=True retry_options=None",
+  "session_id": "baa7d01e-cd96-40c0-8c9f-43108f5a719b",
+  "started_at_utc": "2026-08-25T22:17:28.585232+00:00",
+  "completed_at_utc": "2026-08-25T22:23:15.593093+00:00",
+  "duration_ms": 347007,
+  "request_path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/06-source-audit-request.md",
+  "request_sha256": "9d7a6b76ad65abb8f118d4eb0509aa481f3018caac0ba9f10ba4358fec5291e7",
+  "event_count": 17,
+  "tool_call_count": 33,
+  "tool_response_count": 33,
+  "tool_calls": [
+    {
+      "id": "call_988215",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT table_name, column_name, data_type FROM information_schema.columns WHERE table_schema = 'canonflow' ORDER BY table_name, ordinal_position;"
+      }
+    },
+    {
+      "id": "call_1195712",
+      "name": "list_tables",
+      "args": {
+        "database": "canonflow"
+      }
+    },
+    {
+      "id": "call_826534",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.projects FINAL WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' FORMAT JSON"
+      }
+    },
+    {
+      "id": "call_826535",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.canon_decisions WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' FORMAT JSON"
+      }
+    },
+    {
+      "id": "call_826536",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.source_documents WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' FORMAT JSON"
+      }
+    },
+    {
+      "id": "call_826537",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.source_quality_dispositions WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' FORMAT JSON"
+      }
+    },
+    {
+      "id": "call_1273767",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.projects FINAL WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6'"
+      }
+    },
+    {
+      "id": "call_1273768",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.canon_decisions WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6'"
+      }
+    },
+    {
+      "id": "call_1273769",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.source_documents WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6'"
+      }
+    },
+    {
+      "id": "call_1273770",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT * FROM canonflow.source_quality_dispositions WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6'"
+      }
+    },
+    {
+      "id": "call_978349",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT COUNT(*), indexable FROM canonflow.source_pages WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' GROUP BY indexable"
+      }
+    },
+    {
+      "id": "call_978350",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT COUNT(*), indexable FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' GROUP BY indexable"
+      }
+    },
+    {
+      "id": "call_829050",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 0"
+      }
+    },
+    {
+      "id": "call_829051",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 10"
+      }
+    },
+    {
+      "id": "call_829052",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 20"
+      }
+    },
+    {
+      "id": "call_829053",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 30"
+      }
+    },
+    {
+      "id": "call_829054",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 40"
+      }
+    },
+    {
+      "id": "call_829055",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 50"
+      }
+    },
+    {
+      "id": "call_829056",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY source_path, page_number, sequence, chunk_id LIMIT 10 OFFSET 60"
+      }
+    },
+    {
+      "id": "call_1268424",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 0"
+      }
+    },
+    {
+      "id": "call_1268425",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 10"
+      }
+    },
+    {
+      "id": "call_1268426",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 20"
+      }
+    },
+    {
+      "id": "call_1268427",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 30"
+      }
+    },
+    {
+      "id": "call_1268428",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 40"
+      }
+    },
+    {
+      "id": "call_1268429",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 50"
+      }
+    },
+    {
+      "id": "call_1268430",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT c.chunk_id, c.document_id, d.source_path, c.page_number, c.sequence, c.locator, c.content FROM canonflow.source_chunks c JOIN canonflow.source_documents d ON c.document_id = d.document_id WHERE c.project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND c.indexable = true ORDER BY d.source_path, c.page_number, c.sequence, c.chunk_id LIMIT 10 OFFSET 60"
+      }
+    },
+    {
+      "id": "call_960636",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 0"
+      }
+    },
+    {
+      "id": "call_960637",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 10"
+      }
+    },
+    {
+      "id": "call_960638",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 20"
+      }
+    },
+    {
+      "id": "call_960639",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 30"
+      }
+    },
+    {
+      "id": "call_960640",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 40"
+      }
+    },
+    {
+      "id": "call_960641",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 50"
+      }
+    },
+    {
+      "id": "call_960642",
+      "name": "run_query",
+      "args": {
+        "query": "SELECT chunk_id, document_id, sequence, locator, content, page_number FROM canonflow.source_chunks WHERE project_id = 'e8627781-5bf3-4c4d-905f-8dda49ab53d6' AND indexable = true ORDER BY document_id, page_number, sequence, chunk_id LIMIT 10 OFFSET 60"
+      }
+    }
+  ],
+  "events_path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/07-source-audit-events.jsonl",
+  "events_sha256": "94c829b31f9f8d7d4b0159cc6015a78ab912ed71a4dbea4a3316a7b2b0808afb",
+  "report_path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+  "report_sha256": "1b7c77f355a6e9c553a3807523fa88a92797b9c3f0fcef4989d8907115d54fec",
+  "report_character_count": 13429
+}

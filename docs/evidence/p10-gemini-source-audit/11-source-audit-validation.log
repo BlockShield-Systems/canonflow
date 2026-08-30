@@ -1,0 +1,10 @@
+/home/darky/projects/canonflow/agents/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+  check_feature_enabled()
+Run ID          : 6c809e50-75bb-4934-9505-cc7c4065637f
+Project ID      : e8627781-5bf3-4c4d-905f-8dda49ab53d6
+Tool calls      : 21
+Read-only SQL   : 21
+Policy failures : 0
+Report chars    : 14975
+Missing sections: 0
+GEMINI SOURCE AUDIT VALIDATION: OK

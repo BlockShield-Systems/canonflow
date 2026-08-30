@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "workflow": "P10F Canon Story Bible",
+  "stage": "controlled_draft_generation",
+  "status": "awaiting_controlled_draft_generation",
+  "created_at_utc": "2026-08-26T00:38:45+00:00",
+  "project": {
+    "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+    "project_slug": "yd-when-paradise-glitches",
+    "title": "Y.D. - When Paradise Glitches"
+  },
+  "authority": {
+    "human_authority": "Demian",
+    "database_mutation_permitted": false,
+    "autonomous_canon_changes_permitted": false,
+    "draft_is_approved_canon": false,
+    "human_review_required": true
+  },
+  "canon_precedence": [
+    "approved_canon_decisions_YD-CANON-0001_through_0006",
+    "accepted_primary_source_evidence",
+    "explicitly_labeled_unresolved_or_proposed_material"
+  ],
+  "authoritative_decision_ids": [
+    "YD-CANON-0001",
+    "YD-CANON-0002",
+    "YD-CANON-0003",
+    "YD-CANON-0004",
+    "YD-CANON-0005",
+    "YD-CANON-0006"
+  ],
+  "required_sections": [
+    "1. Document Control and Authority",
+    "2. Canon Authority and Precedence",
+    "3. Project Definition",
+    "4. Core Premise, Genre, Tone, and Themes",
+    "5. World, Era, and Setting",
+    "6. Character Bible",
+    "7. Demian and Y.D. Relationship Arc",
+    "8. Narrative Structure and Sequence Inventory",
+    "9. Canon Events and Continuity Rules",
+    "10. Technology, Props, and Physical Capabilities",
+    "11. Visual and Production Language",
+    "12. Dialogue, Voice, Sound, and Performance",
+    "13. Mysteries and Epistemic Boundaries",
+    "14. Superseded and Historical Material",
+    "15. Open Questions and Human-Approval Boundaries",
+    "16. Source and Decision Traceability",
+    "17. Next Controlled Workflow"
+  ],
+  "draft_requirements": {
+    "format": "Markdown",
+    "minimum_characters": 12000,
+    "source_citations_required": true,
+    "canon_decision_references_required": true,
+    "unsupported_fact_invention_prohibited": true,
+    "unresolved_questions_must_remain_unresolved": true,
+    "superseded_material_must_be_labeled": true,
+    "database_write": false
+  },
+  "hard_constraints": [
+    "Demian is canonically 40, not 38.",
+    "The project is a full-length film; no fixed runtime is approved.",
+    "Historical four-second shot and frame timings are non-binding.",
+    "Y.D. deployed or created the doll and seismic hammer, but Demian does not know this at that point.",
+    "The Amusement Park of Illusions remains a major survival escape-room bridge into the Mirror Room.",
+    "The exact cause of Y.D.'s corruption remains unresolved.",
+    "Act 1 dialogue intent, dark humor, satire, cynicism, sarcasm, irony, and voice progression must be preserved."
+  ],
+  "authoritative_inputs": [
+    {
+      "role": "accepted_source_audit_report",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/08-source-audit-report.md",
+      "bytes": 14977,
+      "sha256": "2f0b7d1fd94d8d1452284b28e2ff9da1d171cea48222b3d464d862ddad341a6f"
+    },
+    {
+      "role": "human_decision_matrix",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10d-human-approval-loop/03-human-decision-matrix.json",
+      "bytes": 8433,
+      "sha256": "61f78bee6243601f2544e2fe765100d0890317ba3f7cabfb7cb0a2f5e199f480"
+    },
+    {
+      "role": "verified_canon_decision_snapshot",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/03-read-only-canon-snapshot.jsonl",
+      "bytes": 23594,
+      "sha256": "adbc855da86757fb72fea1df4f578f4de66db61e822b56c2a4e98a75230f84b1"
+    },
+    {
+      "role": "snapshot_verification",
+      "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/06-read-only-canon-snapshot-verification.json",
+      "bytes": 1703,
+      "sha256": "ba29441614d73b023af74c0886b3bc6755cfaec42446cfba08d1d8ded0e245d5"
+    }
+  ],
+  "expected_outputs": {
+    "draft": "10-canon-story-bible-draft.md",
+    "generation_summary": "11-canon-story-bible-generation-summary.json",
+    "validation_report": "12-canon-story-bible-draft-validation.json",
+    "human_review_matrix": "13-canon-story-bible-human-review.md"
+  }
+}

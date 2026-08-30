@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "workflow": "P10F Canon Story Bible",
+  "stage": "draft_validation",
+  "status": "failed_structural_validation",
+  "validated_at_utc": "2026-08-26T01:08:36+00:00",
+  "run_id": "7fb97e75-acaf-4074-b3b3-4521d0ffbc35",
+  "model": "gemini-3.1-pro-preview",
+  "draft": {
+    "path": "/home/darky/projects/canonflow/docs/evidence/p10f-canon-story-bible/10-canon-story-bible-draft.md",
+    "bytes": 17776,
+    "characters": 17756,
+    "sha256": "08923bf2a674ae4058674c1aa760365b83209d7b3653576b57a9600709ae93ea"
+  },
+  "authority": {
+    "human_authority": "Demian",
+    "draft_is_approved_canon": false,
+    "database_mutation_permitted": false,
+    "human_review_required": true
+  },
+  "checks": [
+    {
+      "name": "contract_status",
+      "category": "structural",
+      "passed": true,
+      "details": "awaiting_controlled_draft_generation"
+    },
+    {
+      "name": "contract_database_mutation_prohibited",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "contract_autonomous_canon_change_prohibited",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "summary_status",
+      "category": "structural",
+      "passed": true,
+      "details": "generated_awaiting_validation"
+    },
+    {
+      "name": "summary_database_mutation_not_performed",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "summary_draft_not_approved_canon",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "afc_chat_transport",
+      "category": "structural",
+      "passed": true,
+      "details": "Chat.send_message"
+    },
+    {
+      "name": "afc_chat_route",
+      "category": "structural",
+      "passed": true,
+      "details": "chat"
+    },
+    {
+      "name": "streaming_disabled",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "tools_disabled",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "database_access_disabled",
+      "category": "structural",
+      "passed": true,
+      "details": false
+    },
+    {
+      "name": "draft_sha256_matches_summary",
+      "category": "structural",
+      "passed": true,
+      "details": {
+        "summary": "08923bf2a674ae4058674c1aa760365b83209d7b3653576b57a9600709ae93ea",
+        "actual": "08923bf2a674ae4058674c1aa760365b83209d7b3653576b57a9600709ae93ea"
+      }
+    },
+    {
+      "name": "draft_bytes_match_summary",
+      "category": "structural",
+      "passed": true,
+      "details": {
+        "summary": 17776,
+        "actual": 17776
+      }
+    },
+    {
+      "name": "minimum_character_count",
+      "category": "structural",
+      "passed": true,
+      "details": {
+        "minimum": 12000,
+        "actual": 17756
+      }
+    },
+    {
+      "name": "required_section_count",
+      "category": "structural",
+      "passed": true,
+      "details": 17
+    },
+    {
+      "name": "required_section_headings",
+      "category": "structural",
+      "passed": true,
+      "details": {
+        "expected": 17,
+        "missing": []
+      }
+    },
+    {
+      "name": "canon_decision_references",
+      "category": "structural",
+      "passed": true,
+      "details": {
+        "missing": [],
+        "counts": {
+          "YD-CANON-0001": 4,
+          "YD-CANON-0002": 5,
+          "YD-CANON-0003": 4,
+          "YD-CANON-0004": 5,
+          "YD-CANON-0005": 3,
+          "YD-CANON-0006": 5
+        }
+      }
+    },
+    {
+      "name": "exact_end_marker",
+      "category": "structural",
+      "passed": true,
+      "details": "P10F CANON STORY BIBLE DRAFT END"
+    },
+    {
+      "name": "required_epistemic_labels",
+      "category": "structural",
+      "passed": true,
+      "details": {
+        "missing": [],
+        "counts": {
+          "CANON": 70,
+          "SUPERSEDED": 10,
+          "UNRESOLVED": 3,
+          "PROPOSED — HUMAN APPROVAL REQUIRED": 4
+        }
+      }
+    },
+    {
+      "name": "source_traceability_markers",
+      "category": "traceability",
+      "passed": false,
+      "details": {
+        "page_locator": false,
+        "line_locator": false,
+        "source_filename": true
+      }
+    },
+    {
+      "name": "canon_topic_presence",
+      "category": "semantic_presence_only",
+      "passed": true,
+      "details": {
+        "canonical_age_40": true,
+        "full_length_film": true,
+        "doll_and_hammer": true,
+        "amusement_park": true,
+        "corruption_unresolved": true,
+        "four_second_history": true
+      }
+    }
+  ],
+  "check_count": 21,
+  "failure_count": 1,
+  "failures": [
+    {
+      "name": "source_traceability_markers",
+      "category": "traceability",
+      "passed": false,
+      "details": {
+        "page_locator": false,
+        "line_locator": false,
+        "source_filename": true
+      }
+    }
+  ],
+  "semantic_validation_boundary": "Automated checks validate structure, hashes, required references, labels, and topic presence. They do not constitute human approval of narrative meaning."
+}

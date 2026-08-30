@@ -1,0 +1,7 @@
+google-adk: 2.7.1
+google-genai: 2.19.0
+git-commit: 12e5280a8e43737381a60c356866c86b1763664b
+model: gemini-3.1-pro-preview
+api: Interactions API
+thinking-level: high
+max-output-tokens: 16384

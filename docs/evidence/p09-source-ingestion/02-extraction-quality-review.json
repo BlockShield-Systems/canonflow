@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "review_type": "source_extraction_quality_disposition",
+  "created_at_utc": "2026-08-25T00:26:21.478658+00:00",
+  "reviewed_warning_count": 2,
+  "unresolved_warning_count": 0,
+  "overall_disposition": "accepted",
+  "reviews": [
+    {
+      "document_id": "ffa01649-b0e3-595e-96a0-9f5b8116eebc",
+      "source_path": "PLOT & FULL STORY-SCREENPLAY INFO/PROLOGUE/Prologue - All Scenes & Full Scripts.pdf",
+      "source_sha256": "25b532f476021d9e7d9099e0b7f2c90aa353edc004102e3aef10688fdea11cfd",
+      "page_number": 4,
+      "original_quality": "low_text",
+      "quality_disposition": "accepted_low_text",
+      "content_class": "export_footer",
+      "indexable": false,
+      "ocr_required": false,
+      "reason": "Export footer containing document title, date, a short section label and page counter; no missing story or dialogue content detected."
+    },
+    {
+      "document_id": "ffa01649-b0e3-595e-96a0-9f5b8116eebc",
+      "source_path": "PLOT & FULL STORY-SCREENPLAY INFO/PROLOGUE/Prologue - All Scenes & Full Scripts.pdf",
+      "source_sha256": "25b532f476021d9e7d9099e0b7f2c90aa353edc004102e3aef10688fdea11cfd",
+      "page_number": 8,
+      "original_quality": "low_text",
+      "quality_disposition": "accepted_low_text",
+      "content_class": "export_footer",
+      "indexable": false,
+      "ocr_required": false,
+      "reason": "Export footer containing document title, date, a short section label and page counter; no missing story or dialogue content detected."
+    }
+  ]
+}

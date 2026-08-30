@@ -1,0 +1,31 @@
+Project root: /home/darky/projects/canonflow
+Git branch  : main
+Git commit  : None
+
+Root: /home/darky/projects/canonflow/agents/canonflow_agent
+  Exists : True
+  Files  : 2
+  Signals: 8
+
+Root: /home/darky/projects/canonflow/services/mcp-clickhouse
+  Exists : True
+  Files  : 5
+  Signals: 5
+  Package: canonflow-mcp-service
+  Version: 0.1.0
+  Python : >=3.12
+    dependency: clickhouse-connect==1.7.2
+    dependency: mcp-clickhouse>=0.4,<0.5
+
+Root: /home/darky/projects/canonflow/services/source-pipeline
+  Exists : True
+  Files  : 6
+  Signals: 17
+  Package: canonflow-source-pipeline
+  Version: 0.1.0
+  Python : >=3.11,<3.15
+    dependency: pypdf==6.16.2
+    dependency: clickhouse-connect==1.7.2
+
+Report: /home/darky/projects/canonflow/docs/evidence/p10-gemini-source-audit/01-agent-stack-inventory.json
+P10 AGENT STACK INVENTORY: OK

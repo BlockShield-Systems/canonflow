@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "workflow": "P10F Canon Story Bible",
+  "stage": "read_only_canon_snapshot",
+  "status": "completed_and_verified",
+  "verified_at_utc": "2026-08-26T00:35:37+00:00",
+  "project_id": "e8627781-5bf3-4c4d-905f-8dda49ab53d6",
+  "target_table": "canonflow.canon_decisions",
+  "read_only": true,
+  "database_mutation_performed": false,
+  "snapshot_format": "JSONEachRow",
+  "expected_schema_columns": 16,
+  "decision_count": 6,
+  "decision_ids": [
+    "YD-CANON-0001",
+    "YD-CANON-0002",
+    "YD-CANON-0003",
+    "YD-CANON-0004",
+    "YD-CANON-0005",
+    "YD-CANON-0006"
+  ],
+  "validation": {
+    "one_row_per_decision_id": true,
+    "all_status_approved": true,
+    "all_approved_by_demian": true,
+    "local_validation_passed": true
+  },
+  "artifacts": {
+    "SHA256SUMS.bootstrap": {
+      "bytes": 179,
+      "sha256": "c04f968da513bc1e8739407e9970c0df5a6b98e78fa68f0d348b694d42132839"
+    },
+    "02-read-only-canon-snapshot.sql": {
+      "bytes": 301,
+      "sha256": "90f964a574cfac8bc530a2f2fb8cb7f3c278ec9360379f725070e71886a396f2"
+    },
+    "03-read-only-canon-snapshot.jsonl": {
+      "bytes": 23594,
+      "sha256": "adbc855da86757fb72fea1df4f578f4de66db61e822b56c2a4e98a75230f84b1"
+    },
+    "04-read-only-canon-snapshot-validation.sql": {
+      "bytes": 906,
+      "sha256": "a73147e37614d1a89534e4960aa24904054317c1c288f8f412904a52d9a9e56d"
+    },
+    "05-read-only-canon-snapshot-validation.jsonl": {
+      "bytes": 594,
+      "sha256": "6e3f9db601122584b04f037dd7480b6ccc082b221393cadea84a4e5ec20d3cc8"
+    }
+  },
+  "next_controlled_action": {
+    "name": "generate_canon_story_bible_draft",
+    "database_write": false,
+    "human_review_required": true
+  }
+}

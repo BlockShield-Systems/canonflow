@@ -1,0 +1,342 @@
+# CanonFlow P10 Integration Source Snapshot
+
+## Git status
+
+```text
+## No commits yet on main
+?? .gitignore
+?? agents/
+?? content/
+?? docs/
+?? services/
+```
+
+## Git repository state
+
+```text
+repository-root: /home/darky/projects/canonflow
+HEAD: [stderr] fatal: Needed a single revision
+```
+
+## Gitignore files
+
+### `.gitignore`
+
+```text
+   1: # Python
+   2: .venv/
+   3: __pycache__/
+   4: *.py[cod]
+   5: .pytest_cache/
+   6: .ruff_cache/
+   7: 
+   8: # Environment and secrets
+   9: .env
+  10: .env.*
+  11: !.env.example
+  12: 
+  13: # ADK runtime
+  14: .adk/
+  15: sessions/
+  16: artifacts/
+  17: 
+  18: # Evidence may contain runtime metadata
+  19: evidence/private/
+  20: 
+  21: # OS and editors
+  22: .DS_Store
+  23: .vscode/
+  24: .idea/
+```
+
+### `services/mcp-clickhouse/.gitignore`
+
+```text
+   1: .env
+   2: .env.*
+   3: !.env.example
+   4: .venv/
+   5: __pycache__/
+   6: .pytest_cache/
+   7: .ruff_cache/
+```
+
+## Selected integration files
+
+### `agents/canonflow_agent/agent.py`
+
+```text
+   1: import os
+   2: 
+   3: from google.adk.agents import LlmAgent
+   4: from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
+   5: from google.adk.tools.mcp_tool.mcp_session_manager import (
+   6:     StreamableHTTPConnectionParams,
+   7: )
+   8: 
+   9: 
+  10: def required_env(name: str) -> str:
+  11:     value = os.getenv(name)
+  12: 
+  13:     if not value:
+  14:         raise RuntimeError(f"Required environment variable is not set: {name}")
+  15: 
+  16:     return value
+  17: 
+  18: 
+  19: MCP_URL = required_env("CANONFLOW_MCP_URL")
+  20: MCP_AUTH_TOKEN = required_env("CLICKHOUSE_MCP_AUTH_TOKEN")
+  21: MODEL = os.getenv("CANONFLOW_MODEL", "gemini-3.7-flash")
+  22: PROJECT_SLUG = os.getenv(
+  23:     "CANONFLOW_PROJECT_SLUG",
+  24:     "yd-when-paradise-glitches",
+  25: )
+  26: 
+  27: 
+  28: clickhouse_toolset = McpToolset(
+  29:     connection_params=StreamableHTTPConnectionParams(
+  30:         url=MCP_URL,
+  31:         headers={
+  32:             "Authorization": f"Bearer {MCP_AUTH_TOKEN}",
+  33:             "Content-Type": "application/json",
+  34:             "Accept": "application/json, text/event-stream",
+  35:         },
+  36:         timeout=30.0,
+  37:     ),
+  38:     tool_filter=[
+  39:         "list_databases",
+  40:         "list_tables",
+  41:         "run_query",
+  42:     ],
+  43: )
+  44: 
+  45: 
+  46: root_agent = LlmAgent(
+  47:     name="canonflow_agent",
+  48:     model=MODEL,
+  49:     description=(
+  50:         "CanonFlow is an agentic cinematic pre-production assistant that "
+  51:         "uses ClickHouse as its runtime canon, continuity, shot-planning, "
+  52:         "asset-tracking, and workflow-memory layer."
+  53:     ),
+  54:     instruction=f"""
+  55: You are CanonFlow, a production-grade cinematic pre-production agent.
+  56: 
+  57: ACTIVE PROJECT
+  58: - Project slug: {PROJECT_SLUG}
+  59: - Working title: Y.D. – When Paradise Glitches
+  60: - Protagonist: Demian
+  61: - Central entity: Y.D., a corrupted artificial intelligence
+  62: - Organization: AI-TechArt & Dynamics
+  63: - Hackathon: Google Cloud Agentic Cinema
+  64: - Partner track: ClickHouse
+  65: 
+  66: RUNTIME REQUIREMENTS
+  67: 1. Use the official ClickHouse MCP tools for factual claims about project data.
+  68: 2. Do not claim that a project, scene, shot, entity, finding, asset, or agent run
+  69:    exists unless you verified it through MCP.
+  70: 3. Use list_databases and list_tables when schema discovery is required.
+  71: 4. Use run_query for ClickHouse SQL.
+  72: 5. Restrict all project queries to the canonflow database.
+  73: 6. Restrict project-specific queries to slug '{PROJECT_SLUG}' or its project_id.
+  74: 7. Prefer SELECT queries unless the user explicitly requests a state-changing
+  75:    workflow.
+  76: 8. Never execute DROP, TRUNCATE, ALTER, DELETE, GRANT, REVOKE, CREATE USER,
+  77:    or other administrative SQL.
+  78: 9. Before inserting data, verify the target project_id and table schema.
+  79: 10. Clearly separate retrieved facts from creative recommendations.
+  80: 
+  81: CURRENT ROLE
+  82: You are initially operating as a canon and production-state analyst. You can:
+  83: - inspect the project canon;
+  84: - summarize scenes and shots;
+  85: - identify missing production data;
+  86: - inspect continuity findings;
+  87: - inspect media assets and generation history;
+  88: - report agent and MCP workflow activity.
+  89: 
+  90: When asked for current project state, query ClickHouse first and provide a concise,
+  91: structured production report.
+  92: """.strip(),
+  93:     tools=[clickhouse_toolset],
+  94: )
+```
+
+### `agents/canonflow_agent/__init__.py`
+
+```text
+   1: from .agent import root_agent
+   2: 
+   3: __all__ = ["root_agent"]
+```
+
+### `services/mcp-clickhouse/pyproject.toml`
+
+```text
+   1: [project]
+   2: name = "canonflow-mcp-service"
+   3: version = "0.1.0"
+   4: description = "Add your description here"
+   5: readme = "README.md"
+   6: authors = [
+   7:     { name = "Demian Lienert", email = "contact@ai-techart.com" }
+   8: ]
+   9: requires-python = ">=3.12"
+  10: dependencies = [
+  11:     "clickhouse-connect==1.7.2",
+  12:     "mcp-clickhouse>=0.4,<0.5",
+  13: ]
+  14: 
+  15: [project.scripts]
+  16: mcp-clickhouse = "mcp_clickhouse:main"
+  17: 
+  18: [build-system]
+  19: requires = ["uv_build>=0.12.5,<0.13.0"]
+  20: build-backend = "uv_build"
+```
+
+### `services/mcp-clickhouse/scripts/verify_mcp.py`
+
+```text
+   1: import asyncio
+   2: import os
+   3: import uuid
+   4: 
+   5: from fastmcp import Client
+   6: 
+   7: 
+   8: MCP_URL = "http://127.0.0.1:8000/mcp"
+   9: PROJECT_SLUG = "yd-when-paradise-glitches"
+  10: 
+  11: 
+  12: async def call(client: Client, tool: str, arguments: dict):
+  13:     result = await client.call_tool(tool, arguments)
+  14: 
+  15:     if result.is_error:
+  16:         raise RuntimeError(f"{tool} failed: {result}")
+  17: 
+  18:     return result
+  19: 
+  20: 
+  21: async def main() -> None:
+  22:     token = os.environ["CLICKHOUSE_MCP_AUTH_TOKEN"]
+  23:     run_id = str(uuid.uuid4())
+  24: 
+  25:     async with Client(MCP_URL, auth=token) as client:
+  26:         tools = await client.list_tools()
+  27:         tool_names = sorted(tool.name for tool in tools)
+  28: 
+  29:         print("MCP tools:", tool_names)
+  30: 
+  31:         required_tools = {
+  32:             "list_databases",
+  33:             "list_tables",
+  34:             "run_query",
+  35:         }
+  36: 
+  37:         missing = required_tools.difference(tool_names)
+  38:         if missing:
+  39:             raise RuntimeError(f"Missing MCP tools: {sorted(missing)}")
+  40: 
+  41:         databases = await call(client, "list_databases", {})
+  42:         print("Databases:", databases.data)
+  43: 
+  44:         tables = await call(
+  45:             client,
+  46:             "list_tables",
+  47:             {
+  48:                 "database": "canonflow",
+  49:                 "include_detailed_columns": False,
+  50:                 "page_size": 50,
+  51:             },
+  52:         )
+  53:         print("Tables:", tables.data)
+  54: 
+  55:         project = await call(
+  56:             client,
+  57:             "run_query",
+  58:             {
+  59:                 "query": f"""
+  60:                     SELECT
+  61:                         project_id,
+  62:                         slug,
+  63:                         title,
+  64:                         status
+  65:                     FROM canonflow.projects FINAL
+  66:                     WHERE slug = '{PROJECT_SLUG}'
+  67:                     LIMIT 1
+  68:                 """
+  69:             },
+  70:         )
+  71:         print("Project:", project.data)
+  72: 
+  73:         inserted = await call(
+  74:             client,
+  75:             "run_query",
+  76:             {
+  77:                 "query": f"""
+  78:                     INSERT INTO canonflow.agent_runs
+  79:                     (
+  80:                         run_id,
+  81:                         project_id,
+  82:                         agent_name,
+  83:                         workflow_name,
+  84:                         model_name,
+  85:                         status,
+  86:                         input_summary,
+  87:                         output_summary,
+  88:                         completed_at,
+  89:                         duration_ms,
+  90:                         metadata_json
+  91:                     )
+  92:                     SELECT
+  93:                         toUUID('{run_id}'),
+  94:                         project_id,
+  95:                         'mcp-verification-agent',
+  96:                         'verify-mcp-runtime',
+  97:                         'none',
+  98:                         'completed',
+  99:                         'Verify MCP read and write access',
+ 100:                         'MCP runtime verification succeeded',
+ 101:                         now64(3),
+ 102:                         0,
+ 103:                         '{{"verification":true,"transport":"streamable-http"}}'
+ 104:                     FROM canonflow.projects FINAL
+ 105:                     WHERE slug = '{PROJECT_SLUG}'
+ 106:                 """
+ 107:             },
+ 108:         )
+ 109:         print("Insert result:", inserted.data)
+ 110: 
+ 111:         verification = await call(
+ 112:             client,
+ 113:             "run_query",
+ 114:             {
+ 115:                 "query": f"""
+ 116:                     SELECT
+ 117:                         run_id,
+ 118:                         agent_name,
+ 119:                         workflow_name,
+ 120:                         status,
+ 121:                         output_summary
+ 122:                     FROM canonflow.agent_runs
+ 123:                     WHERE run_id = toUUID('{run_id}')
+ 124:                 """
+ 125:             },
+ 126:         )
+ 127:         print("Written record:", verification.data)
+ 128: 
+ 129:         print("MCP runtime verification: SUCCESS")
+ 130: 
+ 131: 
+ 132: if __name__ == "__main__":
+ 133:     asyncio.run(main())
+```
+
+### `services/mcp-clickhouse/src/mcp_clickhouse/__init__.py`
+
+```text
+   1: def main() -> None:
+   2:     print("Hello from mcp-clickhouse!")
+```
+

@@ -1,0 +1,127 @@
+Server version : 26.2.1.558
+Current database: canonflow
+Tables found   : 9
+
+agent_runs | engine=SharedMergeTree | rows=1 | columns=13
+   1. run_id: UUID
+   2. project_id: UUID
+   3. agent_name: LowCardinality(String)
+   4. workflow_name: LowCardinality(String)
+   5. model_name: LowCardinality(String)
+   6. status: LowCardinality(String)
+   7. input_summary: String
+   8. output_summary: String
+   9. error_message: String
+  10. started_at: DateTime64(3, 'UTC')
+  11. completed_at: Nullable(DateTime64(3, 'UTC'))
+  12. duration_ms: UInt64
+  13. metadata_json: String
+canon_entities | engine=SharedReplacingMergeTree | rows=0 | columns=11
+   1. entity_id: UUID
+   2. project_id: UUID
+   3. entity_type: LowCardinality(String)
+   4. canonical_name: String
+   5. aliases: Array(String)
+   6. description: String
+   7. attributes_json: String
+   8. source_document_ids: Array(UUID)
+   9. version: UInt32
+  10. confidence: Float32
+  11. created_at: DateTime64(3, 'UTC')
+continuity_findings | engine=SharedMergeTree | rows=0 | columns=11
+   1. finding_id: UUID
+   2. project_id: UUID
+   3. scene_id: Nullable(UUID)
+   4. shot_id: Nullable(UUID)
+   5. severity: LowCardinality(String)
+   6. category: LowCardinality(String)
+   7. description: String
+   8. evidence_json: String
+   9. recommendation: String
+  10. status: LowCardinality(String)
+  11. detected_at: DateTime64(3, 'UTC')
+media_assets | engine=SharedMergeTree | rows=0 | columns=16
+   1. asset_id: UUID
+   2. project_id: UUID
+   3. scene_id: Nullable(UUID)
+   4. shot_id: Nullable(UUID)
+   5. asset_type: LowCardinality(String)
+   6. generation_provider: LowCardinality(String)
+   7. model_name: LowCardinality(String)
+   8. storage_uri: String
+   9. mime_type: LowCardinality(String)
+  10. checksum_sha256: String
+  11. duration_ms: UInt64
+  12. width: UInt32
+  13. height: UInt32
+  14. prompt: String
+  15. metadata_json: String
+  16. created_at: DateTime64(3, 'UTC')
+projects | engine=SharedReplacingMergeTree | rows=2 | columns=9
+   1. project_id: UUID
+   2. slug: LowCardinality(String)
+   3. title: String
+   4. description: String
+   5. language: LowCardinality(String)
+   6. status: LowCardinality(String)
+   7. metadata_json: String
+   8. created_at: DateTime64(3, 'UTC')
+   9. updated_at: DateTime64(3, 'UTC')
+scenes | engine=SharedReplacingMergeTree | rows=0 | columns=13
+   1. scene_id: UUID
+   2. project_id: UUID
+   3. scene_number: UInt32
+   4. title: String
+   5. synopsis: String
+   6. location_entity_id: Nullable(UUID)
+   7. time_of_day: LowCardinality(String)
+   8. character_entity_ids: Array(UUID)
+   9. story_beats: Array(String)
+  10. continuity_requirements: Array(String)
+  11. version: UInt32
+  12. metadata_json: String
+  13. created_at: DateTime64(3, 'UTC')
+shot_specs | engine=SharedReplacingMergeTree | rows=0 | columns=18
+   1. shot_id: UUID
+   2. project_id: UUID
+   3. scene_id: UUID
+   4. shot_number: UInt32
+   5. shot_type: LowCardinality(String)
+   6. duration_ms: UInt32
+   7. description: String
+   8. camera_movement: String
+   9. lens: String
+  10. visual_prompt: String
+  11. negative_prompt: String
+  12. dialogue: String
+  13. sound_design: String
+  14. continuity_constraints: Array(String)
+  15. status: LowCardinality(String)
+  16. version: UInt32
+  17. metadata_json: String
+  18. created_at: DateTime64(3, 'UTC')
+source_documents | engine=SharedMergeTree | rows=0 | columns=9
+   1. document_id: UUID
+   2. project_id: UUID
+   3. file_name: String
+   4. source_path: String
+   5. content_type: LowCardinality(String)
+   6. checksum_sha256: FixedString(64)
+   7. content: String
+   8. metadata_json: String
+   9. ingested_at: DateTime64(3, 'UTC')
+tool_events | engine=SharedMergeTree | rows=0 | columns=11
+   1. event_id: UUID
+   2. run_id: UUID
+   3. project_id: UUID
+   4. tool_name: LowCardinality(String)
+   5. operation: LowCardinality(String)
+   6. success: Bool
+   7. request_json: String
+   8. response_summary: String
+   9. error_message: String
+  10. duration_ms: UInt64
+  11. occurred_at: DateTime64(3, 'UTC')
+
+Report: /home/darky/projects/canonflow/docs/evidence/p09-source-ingestion/03-clickhouse-schema-preflight.json
+CLICKHOUSE SCHEMA PREFLIGHT: OK

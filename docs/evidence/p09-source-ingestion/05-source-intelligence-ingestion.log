@@ -1,0 +1,12 @@
+Project: Spider World
+Project ID: e8627781-5bf3-4c4d-905f-8dda49ab53d6
+
+source_documents: inserted=11, skipped=0, database=11
+source_pages: inserted=45, skipped=0, database=45
+source_chunks: inserted=65, skipped=0, database=65
+source_quality_dispositions: inserted=2, skipped=0, database=2
+canon_decisions: inserted=2, skipped=0, database=2
+Non-indexable pages : 2
+Non-indexable chunks: 2
+Report: /home/darky/projects/canonflow/docs/evidence/p09-source-ingestion/05-source-intelligence-ingestion.json
+SOURCE INTELLIGENCE INGESTION: OK

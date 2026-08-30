@@ -1,0 +1,8 @@
+MIGRATION OK: source_pages
+MIGRATION OK: source_chunks
+MIGRATION OK: source_quality_dispositions
+MIGRATION OK: canon_decisions
+
+Tables verified: 4
+Report: /home/darky/projects/canonflow/docs/evidence/p09-source-ingestion/04-source-intelligence-migration.json
+SOURCE INTELLIGENCE MIGRATION: OK
