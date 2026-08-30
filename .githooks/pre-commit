@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Blocks commits containing narrative substance.
+python3 - <<'PY'
+import re, subprocess, sys, pathlib
+pat = re.compile(r"Born in \d{4}|Demian's (identity|hangover)|Creative Direction|Senpai|"
+                 r"NEGATIVE PERSONA|ACT \d+ - Scene|Frames \d+ - \d+", re.I)
+staged = subprocess.run(["git","diff","--cached","--name-only","--diff-filter=ACM"],
+                        capture_output=True, text=True).stdout.split()
+bad = []
+for f in staged:
+    if f.startswith(".githooks/"): continue
+    p = pathlib.Path(f)
+    if not p.is_file() or p.suffix in (".jpg",".png",".pdf",".db",".lock"): continue
+    try: s = p.read_text(errors="ignore")
+    except Exception: continue
+    if len(pat.findall(s)) >= 3: bad.append(f)
+if bad:
+    print("COMMIT BLOCKED - narrative substance detected:")
+    for f in bad: print("  " + f)
+    print("Add to .gitignore or unstage.")
+    sys.exit(1)
+PY
