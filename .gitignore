@@ -38,3 +38,15 @@ docs/evidence/**/64-six-segment-showcase-selection-validation.json
 # Narrative source material - proprietary, not published
 content/
 docs/evidence/**/28a-second-revision-generation-input-builder.py
+
+# Narrative substance in evidence artefacts - kept local only
+docs/evidence/**/25-final-human-review-revision-authority.json
+docs/evidence/**/25a-final-human-review-revision-authority-builder.py
+docs/evidence/**/27-second-revision-contract.json
+docs/evidence/**/28-second-revision-request.md
+docs/evidence/**/28a-second-revision-generation-input-builder.py
+docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.before-timeout-fix.py
+docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.before-token-fix.py
+docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.py
+docs/evidence/**/33-second-revision-human-review.md
+docs/evidence/**/38a-r4-controlled-revision-builder.py
