@@ -10,26 +10,30 @@ configuration.
 
 MATERIAL NOT COVERED BY THE APACHE LICENSE
 The following material is the copyright of Demian Lienert / BlockShield Systems
-and is not licensed under Apache 2.0. It is excluded from this repository and
-is not distributed with it:
+and is not licensed under Apache 2.0.
+
+Not distributed with this repository:
 
   content/
       narrative source material, canon documents, derived story assets and
       generated media.
 
+  narrative drafts, beat sheets, story bible and generation inputs that
+  contain screenplay text. Their filenames, hashes and validation records
+  remain in docs/evidence/ as an integrity chain.
+
+Distributed with this repository under a limited grant:
+
   docs/evidence/p10g-canon-beat-sheet/reference-images/
       AI-generated character reference sheets, produced with Google Gemini,
-      depicting the author and one consenting private individual.
+      depicting the author and one consenting private individual. Required at
+      runtime by the scene shot compiler.
 
-  narrative drafts, beat sheets, story bible and generation inputs under
-  docs/evidence/ that contain screenplay text.
-
-Where any of this material is nevertheless made available for evaluation of
-this project, a limited grant applies: it may be reproduced, displayed and
-processed as required to build, run, test, evaluate and publicly demonstrate
-the software in this repository. Redistribution as standalone assets,
-derivative artwork, retraining of models, and use in unrelated productions
-require prior written permission.
+Limited grant: the material listed above as distributed may be reproduced,
+displayed and processed as required to build, run, test, evaluate and publicly
+demonstrate the software in this repository. Redistribution as standalone
+assets, derivative artwork, retraining of models, and use in unrelated
+productions require prior written permission.
 
 The audit and runtime evidence artefacts under docs/evidence/ that do not
 contain narrative text (manifests, contracts, validation reports, traces,
