@@ -1,5 +1,5 @@
 CanonFlow
-Copyright 2026 Demian
+Copyright 2026 Demian Lienert
 
 This product includes software developed for the CanonFlow project.
 
@@ -8,29 +8,32 @@ The Apache License 2.0 in the LICENSE file applies to the source code of this
 repository only: agents/, services/, and the build and deployment
 configuration.
 
-Narrative assets (character reference images under
-docs/evidence/p10g-canon-beat-sheet/reference-images/) remain the
-copyright of Demian Lienert / BlockShield Systems.
-
-Limited grant: these assets may be reproduced, displayed and processed
-as required to build, run, test and evaluate the software in this
-repository, including automated judging and public demonstration.
-Any other use - in particular redistribution as standalone assets,
-derivative artwork, or use in unrelated productions - requires prior
-written permission.
+MATERIAL NOT COVERED BY THE APACHE LICENSE
+The following material is the copyright of Demian Lienert / BlockShield Systems
+and is not licensed under Apache 2.0. It is excluded from this repository and
+is not distributed with it:
 
   content/
       narrative source material, canon documents, derived story assets and
       generated media.
 
-  docs/evidence/
-      project-specific audit and runtime evidence artefacts.
-
   docs/evidence/p10g-canon-beat-sheet/reference-images/
-      AI-generated character reference sheets, produced with Google Gemini Pro,
-      depicting real and identifiable persons. They are published solely as
-      technical evidence of the production pipeline. Any reuse,
-      redistribution, retraining or derivative use is prohibited.
+      AI-generated character reference sheets, produced with Google Gemini,
+      depicting the author and one consenting private individual.
+
+  narrative drafts, beat sheets, story bible and generation inputs under
+  docs/evidence/ that contain screenplay text.
+
+Where any of this material is nevertheless made available for evaluation of
+this project, a limited grant applies: it may be reproduced, displayed and
+processed as required to build, run, test, evaluate and publicly demonstrate
+the software in this repository. Redistribution as standalone assets,
+derivative artwork, retraining of models, and use in unrelated productions
+require prior written permission.
+
+The audit and runtime evidence artefacts under docs/evidence/ that do not
+contain narrative text (manifests, contracts, validation reports, traces,
+logs, builder scripts) are covered by the Apache License 2.0.
 
 THIRD-PARTY COMPONENTS
 This project depends on Google ADK, google-genai, FastMCP, mcp-clickhouse and
