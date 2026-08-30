@@ -8,9 +8,16 @@ The Apache License 2.0 in the LICENSE file applies to the source code of this
 repository only: agents/, services/, and the build and deployment
 configuration.
 
-NOT COVERED BY THE APACHE LICENSE
-The following are proprietary and All Rights Reserved. No license, express or
-implied, is granted for their use, reproduction, modification or distribution:
+Narrative assets (character reference images under
+docs/evidence/p10g-canon-beat-sheet/reference-images/) remain the
+copyright of Demian Lienert / BlockShield Systems.
+
+Limited grant: these assets may be reproduced, displayed and processed
+as required to build, run, test and evaluate the software in this
+repository, including automated judging and public demonstration.
+Any other use - in particular redistribution as standalone assets,
+derivative artwork, or use in unrelated productions - requires prior
+written permission.
 
   content/
       narrative source material, canon documents, derived story assets and
