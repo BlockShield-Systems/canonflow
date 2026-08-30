@@ -34,3 +34,7 @@ docs/evidence/**/*-canon-story-bible-draft*.md
 docs/evidence/**/07-source-audit-events.jsonl
 docs/evidence/**/08-source-audit-report.md
 docs/evidence/**/64-six-segment-showcase-selection-validation.json
+
+# Narrative source material - proprietary, not published
+content/
+docs/evidence/**/28a-second-revision-generation-input-builder.py
