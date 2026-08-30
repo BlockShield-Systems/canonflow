@@ -23,3 +23,14 @@ evidence/private/
 .vscode/
 .idea/
 .venv
+
+# Narrative full text - proprietary, kept local only
+docs/evidence/**/*-canon-beat-sheet-*draft*.md
+docs/evidence/**/*-generation-input.md
+docs/evidence/**/*second-revision-part-*.md
+docs/evidence/**/*second-revision-subpart-*.md
+docs/evidence/**/17-approved-canon-story-bible.md
+docs/evidence/**/*-canon-story-bible-draft*.md
+docs/evidence/**/07-source-audit-events.jsonl
+docs/evidence/**/08-source-audit-report.md
+docs/evidence/**/64-six-segment-showcase-selection-validation.json

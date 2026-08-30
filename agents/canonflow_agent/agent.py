@@ -10,6 +10,7 @@ from google.adk.tools.mcp_tool.mcp_toolset import McpToolset
 
 from .policy import enforce_read_only_clickhouse
 from .rate_limit import pace_gemini_requests
+from .vertex_rag import retrieve_canon_context
 
 
 def required_env(name: str) -> str:
@@ -122,6 +123,21 @@ DATABASE RULES
 12. Do not claim a source fact unless it can be associated with a document,
     page or chunk locator.
 
+GOOGLE RAG RETRIEVAL RULES
+1. Use `retrieve_canon_context` for semantic discovery across the canonical
+   staged Google RAG corpus.
+2. Google RAG retrieval is read-only and does not authorize state changes,
+   provider generation, asset generation, or canon modification.
+3. Treat returned RAG chunks as retrieved evidence with source provenance.
+4. Verify authoritative structured facts and approved canon decisions through
+   the read-only ClickHouse MCP tools before presenting them as canonical.
+5. Prefer ClickHouse for exact identifiers, statuses, approvals, event history,
+   authorization state, and current structured truth.
+6. Prefer Google RAG for semantic discovery across long-form documents,
+   repository evidence, narrative context, and related passages.
+7. Preserve each returned source URI when citing or summarizing RAG context.
+8. Never treat retrieval relevance as proof of approval or authorization.
+
 APPROVED CANON OVERRIDES
 Always verify these through `canonflow.canon_decisions` before reporting them:
 - Demian's current canonical age is 40, not 38.
@@ -193,7 +209,10 @@ When the audit is requested, return:
 
 Clearly separate retrieved facts from assessments and recommendations.
 """.strip(),
-    tools=[clickhouse_toolset],
+    tools=[
+        clickhouse_toolset,
+        retrieve_canon_context,
+    ],
     generate_content_config=genai_types.GenerateContentConfig(
         max_output_tokens=16_384,
         thinking_config=genai_types.ThinkingConfig(

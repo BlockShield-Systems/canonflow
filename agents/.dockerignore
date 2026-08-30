@@ -1,0 +1,11 @@
+.venv
+.env
+**/.env
+__pycache__
+**/__pycache__
+*.pyc
+canonflow_agent/tests
+.pytest_cache
+.ruff_cache
+.env.*
+**/.env.*
