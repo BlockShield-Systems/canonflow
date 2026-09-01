@@ -50,3 +50,9 @@ docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.before-token-fix.py
 docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.py
 docs/evidence/**/33-second-revision-human-review.md
 docs/evidence/**/38a-r4-controlled-revision-builder.py
+var/runs/
+var/
+agents/var/
+*.bak
+*.bak[0-9]
+*.bak-*
