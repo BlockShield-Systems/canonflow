@@ -6,9 +6,11 @@ requires-python = ">=3.12,<3.13"
 dependencies = [
     "google-adk[mcp]==2.7.1",
     "google-auth>=2.38",
+    "gradio==6.26.0",
     "httpx>=0.28",
     "pydantic>=2.10",
     "sqlglot>=30.17.0",
+    "uvicorn[standard]>=0.35",
 ]
 
 [tool.uv]

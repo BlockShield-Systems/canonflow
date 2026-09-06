@@ -4,7 +4,7 @@ from __future__ import annotations
 import os
 
 from typing import Literal
-from pydantic import BaseModel, Field
+from pydantic import ConfigDict, BaseModel, Field
 
 Tier = Literal["draft", "proof", "final", "hero"]
 
@@ -40,7 +40,7 @@ class Frames(BaseModel):
 
 
 class Audio(BaseModel):
-    dialogue: str = ""
+    dialogue: str | None = None
     voice_direction: str = ""
     score_cue: str = ""
     sfx: str = ""
@@ -48,6 +48,7 @@ class Audio(BaseModel):
 
 
 class Shot(BaseModel):
+    model_config = ConfigDict(extra="allow")
     beat_id: str
     scene_no: int
     shot_no: int

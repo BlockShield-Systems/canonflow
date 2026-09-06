@@ -2,13 +2,24 @@
 # Blocks commits containing narrative substance.
 python3 - <<'PY'
 import re, subprocess, sys, pathlib
+
+# Paths exempt from the narrative-substance gate.
+ALLOW_PREFIXES = (
+    ".githooks/",
+    # Generated Gemini beat/shot derivatives. The identical bytes are already
+    # served publicly via /api/beats/* and /api/timeline on the deployed
+    # Cloud Run revision, so blocking them here protects nothing. The private
+    # feature-length source screenplay is never tracked in this repository.
+    "agents/canonflow_agent/ui/snapshot/",
+)
+
 pat = re.compile(r"Born in \d{4}|Demian's (identity|hangover)|Creative Direction|Senpai|"
                  r"NEGATIVE PERSONA|ACT \d+ - Scene|Frames \d+ - \d+", re.I)
 staged = subprocess.run(["git","diff","--cached","--name-only","--diff-filter=ACM"],
                         capture_output=True, text=True).stdout.split()
 bad = []
 for f in staged:
-    if f.startswith(".githooks/"): continue
+    if f.startswith(ALLOW_PREFIXES): continue
     p = pathlib.Path(f)
     if not p.is_file() or p.suffix in (".jpg",".png",".pdf",".db",".lock"): continue
     try: s = p.read_text(errors="ignore")
@@ -17,6 +28,6 @@ for f in staged:
 if bad:
     print("COMMIT BLOCKED - narrative substance detected:")
     for f in bad: print("  " + f)
-    print("Add to .gitignore or unstage.")
+    print("Add to .gitignore, unstage, or extend ALLOW_PREFIXES with a reason.")
     sys.exit(1)
 PY

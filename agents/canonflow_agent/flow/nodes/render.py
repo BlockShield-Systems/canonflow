@@ -57,7 +57,7 @@ def _outdir(run_dir: str, name: str) -> pathlib.Path:
 def render_image(*, tier: str, batch_id: str, prompt: str, name: str,
                  run_dir: str, reference_uris: list[str] | None = None,
                  resolution: str | None = None, **_: Any) -> dict:
-    gate(tier, batch_id)
+    gate(tier, batch_id, name=name, run_dir=run_dir, extra=_)
     cfg = TIERS[tier]
     model = cfg["image"]
     res = resolution or cfg["image_res"]
@@ -99,7 +99,7 @@ def render_image(*, tier: str, batch_id: str, prompt: str, name: str,
 def render_video(*, tier: str, batch_id: str, request: dict, name: str,
                  run_dir: str, duration_s: int, poll_s: int = 15,
                  timeout_s: int = 1800, **_: Any) -> dict:
-    gate(tier, batch_id)
+    gate(tier, batch_id, name=name, run_dir=run_dir, extra=_)
     cfg = TIERS[tier]
     model = cfg["video"]
     location = "us-central1" if model.startswith("veo-") else "global"
@@ -152,3 +152,50 @@ def render_video(*, tier: str, batch_id: str, request: dict, name: str,
         raise RuntimeError(f"{model} returned no video payload; keys={list(data)[:8]}")
     return {"model": model, "tier": tier, "files": written,
             "est_usd": round(cfg["usd_video_per_s"] * duration_s, 4)}
+
+
+# ---------------------------------------------------------------------------
+# presentation intro render deny (P10G-BEAT-000)
+# The intro is pure typography, chroma split, datamosh, title and credit.
+# Generative image/video models do not render typography reliably, so this beat
+# is compositing work and must never reach a cost-bearing model by accident.
+# Override deliberately with CF_INTRO_RENDER_OK=P10G-BEAT-000.
+# ---------------------------------------------------------------------------
+import re as _re
+
+INTRO_BEAT_ID = "P10G-BEAT-000"
+_INTRO_PATTERNS = (
+    _re.compile(r"p10g[-_]?beat[-_]?000", _re.I),
+    _re.compile(r"(?:^|[^0-9])000-0[1-6](?:[^0-9]|$)"),
+)
+
+
+def _looks_like_intro(*values: object) -> str | None:
+    for v in values:
+        if not isinstance(v, str) or not v:
+            continue
+        for pat in _INTRO_PATTERNS:
+            if pat.search(v):
+                return v
+    return None
+
+
+_gate_pre_intro = gate
+
+
+def gate(tier: str, batch_id: str, *, name: str | None = None,  # noqa: F811
+         run_dir: str | None = None, extra: dict | None = None) -> None:
+    ex = extra or {}
+    beat_id = ex.get("beat_id") or ex.get("beatId")
+    hit = _looks_like_intro(beat_id, name, run_dir, ex.get("shot_id"))
+    if hit is not None:
+        if os.environ.get("CF_INTRO_RENDER_OK", "") != INTRO_BEAT_ID:
+            raise PermissionError(
+                f"{INTRO_BEAT_ID} is a presentation intro: typography, chroma "
+                f"split, datamosh, title and credit are compositing work, not "
+                f"model output. Render denied (matched on '{hit}'). Set "
+                f"CF_INTRO_RENDER_OK={INTRO_BEAT_ID} to override deliberately."
+            )
+        print(f"WARN {INTRO_BEAT_ID}: render override active via "
+              f"CF_INTRO_RENDER_OK", file=__import__("sys").stderr)
+    _gate_pre_intro(tier, batch_id)

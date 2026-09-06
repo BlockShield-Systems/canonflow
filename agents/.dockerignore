@@ -1,11 +1,16 @@
 .venv
 .env
 **/.env
+.env.*
+**/.env.*
 __pycache__
 **/__pycache__
 *.pyc
 canonflow_agent/tests
 .pytest_cache
 .ruff_cache
-.env.*
-**/.env.*
+# frontend: sources are built inside the image, artifacts must not leak in
+web/node_modules
+web/.next
+web/out
+canonflow_agent/ui/web
