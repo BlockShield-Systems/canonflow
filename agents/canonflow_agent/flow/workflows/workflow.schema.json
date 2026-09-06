@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://canonflow.local/workflow.schema.json",
+  "title": "Canonflow declarative workflow",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "nodes"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "config": {
+      "type": "object"
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "string",
+              "integer",
+              "number",
+              "boolean",
+              "object",
+              "array"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "default": {}
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9_]+$"
+          },
+          "kind": {
+            "enum": [
+              "rag.retrieve",
+              "mcp.query",
+              "model.json",
+              "model.count_tokens",
+              "python.fn",
+              "flow.assert",
+              "flow.passthrough",
+              "render.image",
+              "render.video",
+              "rag.list_corpora"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "params": {
+            "type": "object"
+          },
+          "on_error": {
+            "enum": [
+              "fail",
+              "continue"
+            ],
+            "default": "fail"
+          },
+          "on_error_output": {
+            "type": "object"
+          },
+          "ui": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

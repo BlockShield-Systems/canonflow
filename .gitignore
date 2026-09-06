@@ -50,3 +50,19 @@ docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.before-token-fix.py
 docs/evidence/**/29a-canon-beat-sheet-second-revision-runner.py
 docs/evidence/**/33-second-revision-human-review.md
 docs/evidence/**/38a-r4-controlled-revision-builder.py
+var/runs/
+var/
+agents/var/
+*.bak
+*.bak[0-9]
+*.bak-*
+agents/web/node_modules/
+agents/web/.next/
+agents/web/out/
+agents/canonflow_agent/ui/web/
+agents/web/next-env.d.ts
+
+# build output and local backups (release hygiene)
+agents/web/out/
+docs/attic/
+agents/web/tsconfig.tsbuildinfo

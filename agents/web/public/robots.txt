@@ -1,0 +1,32 @@
+# CANONFLOW - public read-only view of an agentic film pre-production pipeline.
+# Human reviewers and automated hackathon evaluation are welcome.
+# Bulk scraping and AI training crawls are not.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: *
+Allow: /
+Disallow: /dev-ui
+Disallow: /dev/
+Disallow: /apps/
+Disallow: /list-apps
+Disallow: /run
+Disallow: /run_sse
+Disallow: /config/
+Disallow: /agent-identity/
