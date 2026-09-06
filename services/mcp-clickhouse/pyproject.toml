@@ -9,7 +9,7 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "clickhouse-connect==1.7.2",
-    "mcp-clickhouse==0.4.1",
+    "mcp-clickhouse>=0.4.1",
     "Authlib==1.6.12",
 ]
 
